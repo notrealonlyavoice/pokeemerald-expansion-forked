@@ -1,0 +1,58 @@
+raw `
+INSIDEOFSHIPWITHWARPPPPPP_MapScripts::
+	.byte 0
+`
+
+script INSIDEOFSHIPWITHWARPPPPPP_EventScript_TrashBin {
+    lockall
+    msgbox("trash, yuck") 
+    releaseall
+}
+
+script INSIDEOFSHIPWITHWARPPPPPP_EventScript_StarterNote {
+
+    lockall
+    msgbox(format("A note from mom is on item ball: Hope you are having fun on your journey, take this item to help you. "))
+    msgbox("Pick up Item?", MSGBOX_YESNO)
+    if(var(VAR_RESULT) == YES){
+        giveitem(ITEM_FOCUS_SASH)
+        playfanfare(MUS_OBTAIN_ITEM)
+        setvar(VAR_UNUSED_0x40F7, 1)
+        msgbox("Picked up Item")
+        removeobject(1)
+        setflag(STARTED_GAME)  
+        }
+        
+    else{
+        hidemonpic
+        msgbox(Item_NotChosen)
+    }
+    waitmessage
+    releaseall
+    end
+ 
+}
+
+
+
+ 
+text Item_NotChosen{
+    "You did not Pick up the Item"
+    
+}
+
+script LittlerootTown_Trigger_TriggerStarter{
+    lockall 
+    msgbox("Check your room")
+    applymovement(OBJ_EVENT_ID_PLAYER, StopPlayer)
+    waitmovement(0) 
+    releaseall  
+} 
+
+
+
+
+movement StopPlayer{
+	walk_down 
+}
+

@@ -1,0 +1,212 @@
+raw `
+captianroom_MapScripts::
+	.byte 0
+`
+
+script captianroom_EventScript_Pokeball1{
+ 
+    lockall
+    showmonpic(SPECIES_SABLEYE, 10,3)
+    msgbox("Do you want to choose sableye?", MSGBOX_YESNO)
+    if(var(VAR_RESULT) == YES){
+        givemon(SPECIES_SABLEYE, 5, ITEM_BERRY_JUICE, abilityNum=2, move1=MOVE_WILL_O_WISP, move2=MOVE_FAKE_OUT, move3=MOVE_TOXIC, move4=MOVE_ENCORE)
+        if(var(VAR_RESULT) == MON_GIVEN_TO_PARTY){
+            playfanfare(MUS_OBTAIN_ITEM)
+            msgbox("Recieved sableye")
+            removeobject(3)
+            setvar(VAR_UNUSED_0x40FB, 1)
+            setvar(VAR_UNUSED_0x40FC, 1)
+            setvar(VAR_UNUSED_0x40FD, 2)
+            setflag(FLAG_UNUSED_0x021)
+            setflag(FLAG_SYS_POKEMON_GET)
+            call(NicknamePartyMon)
+        }
+        elif(var(VAR_RESULT) == MON_GIVEN_TO_PC){
+            playfanfare(MUS_OBTAIN_ITEM)
+            msgbox("Recieved sableye")
+            removeobject(1)
+            setflag(STARTED_GAME)
+            call(NicknameBoxMon)
+        }
+        if(flag(FLAG_SYS_POKEMON_GET)){
+            msgbox("dont be greedy!")
+            removeobject(1)
+            removeobject(4)
+        }
+        else{
+            hidemonpic
+            msgbox("No More Room")
+        }
+    }
+    else{
+        hidemonpic
+        msgbox(NewProfessor_NotChosen)
+    }
+    waitmessage
+    releaseall
+    end
+ 
+}
+
+script captianroom_EventScript_Pokeball2{
+ 
+    lockall
+    showmonpic(SPECIES_PARASECT, 10,3)
+    msgbox("Do you want to choose Parasect?", MSGBOX_YESNO)
+    if(var(VAR_RESULT) == YES){
+        givemon(SPECIES_PARASECT, 5, ITEM_BERRY_JUICE, abilityNum=1, move1=MOVE_SUBSTITUTE, move2=MOVE_SPORE, move3=MOVE_RAGE_POWDER, move4=MOVE_LEECH_SEED)
+        if(var(VAR_RESULT) == MON_GIVEN_TO_PARTY){
+            playfanfare(MUS_OBTAIN_ITEM)
+            msgbox("Recieved Parasect")
+            removeobject(1)
+            setvar(VAR_UNUSED_0x40FB, 1)
+            setvar(VAR_UNUSED_0x40FC, 1)
+            setvar(VAR_UNUSED_0x40FD, 2)
+            setflag(FLAG_UNUSED_0x021)
+            setflag(FLAG_SYS_POKEMON_GET)
+            call(NicknamePartyMon)
+        }
+        elif(var(VAR_RESULT) == MON_GIVEN_TO_PC){
+            playfanfare(MUS_OBTAIN_ITEM)
+            msgbox("Recieved Parasect")
+            removeobject(1)
+            setflag(STARTED_GAME)
+            call(NicknameBoxMon)
+        }
+        if(flag(FLAG_SYS_POKEMON_GET)){
+            msgbox("dont be greedy!")
+            removeobject(4)
+            removeobject(3)
+        }
+        else{
+            hidemonpic
+            msgbox("No More Room")
+        }
+    }
+    else{
+        hidemonpic
+        msgbox(NewProfessor_NotChosen)
+    }
+    waitmessage
+    releaseall
+    end
+ 
+}
+
+script captianroom_EventScript_Pokeball3{
+ 
+    lockall
+    showmonpic(SPECIES_TOGEDEMARU, 10,3)
+    msgbox("Do you want to choose Togidi?", MSGBOX_YESNO)
+    if(var(VAR_RESULT) == YES){
+        givemon(SPECIES_TOGEDEMARU, 5, ITEM_BERRY_JUICE, abilityNum=2, move1=MOVE_FAKE_OUT, move2=MOVE_RECYCLE, move3=MOVE_SPIKY_SHIELD, move4=MOVE_ENCORE, hpIv=0)
+        if(var(VAR_RESULT) == MON_GIVEN_TO_PARTY){
+            playfanfare(MUS_OBTAIN_ITEM)
+            msgbox("Recieved Togidi")
+            removeobject(4)
+            setvar(VAR_UNUSED_0x40FB, 1)
+            setvar(VAR_UNUSED_0x40FC, 1)
+            setvar(VAR_UNUSED_0x40FD, 2)
+            setflag(FLAG_UNUSED_0x021)
+            setflag(FLAG_SYS_POKEMON_GET)
+            call(NicknamePartyMon)
+        }
+        elif(var(VAR_RESULT) == MON_GIVEN_TO_PC){
+            playfanfare(MUS_OBTAIN_ITEM)
+            msgbox("Recieved Mudkip")
+            removeobject(4)
+            setflag(STARTED_GAME)
+            call(NicknameBoxMon)
+        }
+        if(flag(FLAG_UNUSED_0x021)){
+            msgbox("dont be greedy!")
+            removeobject(1)
+            removeobject(3)
+        }
+        else{
+            hidemonpic
+            msgbox("No More Room")
+        }
+    }
+    else{
+        hidemonpic
+        msgbox(NewProfessor_NotChosen)
+    }
+    waitmessage
+    releaseall
+    end
+ 
+}
+ 
+script NicknamePartyMon{
+ 
+    msgbox("Give it a nickname?", MSGBOX_YESNO)
+    hidemonpic
+    if(var(VAR_RESULT) == YES){
+        call(Common_EventScript_GetGiftMonPartySlot)
+        call(Common_EventScript_NameReceivedPartyMon)
+    }
+ 
+ 
+}
+ 
+script NicknameBoxMon{
+ 
+    msgbox("Give it a nickname?", MSGBOX_YESNO)
+    hidemonpic
+    if(var(VAR_RESULT) == YES){
+        call(Common_EventScript_NameReceivedBoxMon)
+    }
+    call(Common_EventScript_TransferredToPC)
+ 
+}
+ 
+text NewProfessor_NotChosen{
+    "You did not choose the Pokemon"
+}
+
+script captianroom_EventScript_captianspeech{
+    if(var(VAR_UNUSED_0x40FD) == 1){
+    faceplayer
+    msgbox(format("Go on, pick your starter!"))
+    closemessage
+    }
+    else{
+        faceplayer
+        msgbox("go find your friend")
+        closemessage
+    }
+
+}
+
+script captianroom_Trigger_startercutscene{
+    lockall
+    msgbox("Oh hello! come in, come in")
+    waitmessage
+    applymovement(OBJ_EVENT_ID_PLAYER, CutsceneStarterWalk)
+    waitmovement(0)
+    msgbox(format("You are the reasearcher the professor sent. The professor sent some pokemon for you to choose from so that you can use them on your journey."))
+    waitmessage
+    closemessage
+    setvar(VAR_UNUSED_0x40FD, 1)
+    releaseall    
+}
+
+movement CutsceneStarterWalk{
+    walk_up * 5
+}
+
+script captianroom_Trigger_DontLeaveYet{
+    lockall
+    msgbox("Wait! You havent picked!")
+    waitmessage
+    closemessage
+    applymovement(OBJ_EVENT_ID_PLAYER, HaventPicked)
+    waitmovement(0)
+    releaseall
+   
+}
+
+movement HaventPicked{
+    walk_up * 1
+}

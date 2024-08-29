@@ -1074,3 +1074,81 @@ EventScript_VsSeekerChargingDone::
 	.include "data/text/frontier_brain.inc"
 	.include "data/text/save.inc"
 	.include "data/text/birch_speech.inc"
+
+	.include "data/maps/ISLANDNEW/scripts.inc"
+
+	.include "data/maps/SHIPPP/scripts.inc"
+
+	.include "data/maps/INSIDEOFSHIPWITHWARPPPPPP/scripts.inc"
+
+	.include "data/maps/NewMap1/scripts.inc"
+
+	.include "data/maps/hallwaytocaptianroom/scripts.inc"
+
+	.include "data/maps/captianroom/scripts.inc"
+
+	.include "data/maps/NewMap2/scripts.inc"
+
+	.include "data/maps/NewMap3/scripts.inc"
+
+	.include "data/maps/REKTSHIPPP/scripts.inc"
+
+	.include "data/maps/SurfroomHM/scripts.inc"
+
+	.include "data/maps/ISLANDNEW2/scripts.inc"
+
+	.include "data/maps/pokemontunnel11/scripts.inc"
+
+	.include "data/maps/pokemontunnel12/scripts.inc"
+
+	.include "data/maps/pokemontunnel13/scripts.inc"
+
+	.include "data/maps/pokemontunnel14/scripts.inc"
+
+	.include "data/maps/pokemontunnel15/scripts.inc"
+
+	.include "data/maps/pokemontunnel16/scripts.inc"
+
+	.include "data/maps/pokemontunnel17/scripts.inc"
+
+	.include "data/maps/pokemontunnel18/scripts.inc"
+
+	.include "data/maps/pokemontunnel19/scripts.inc"
+
+	.include "data/maps/pokemontunnel20/scripts.inc"
+
+	.include "data/maps/teletunnel/scripts.inc"
+
+	.include "data/maps/teletunneldown/scripts.inc"
+
+	.include "data/maps/ndcave/scripts.inc"
+
+	.include "data/maps/NewMap5/scripts.inc"
+
+	.include "data/maps/seashorehousenew/scripts.inc"
+
+	.include "data/maps/Trouthouse/scripts.inc"
+
+	.include "data/maps/ONECAVE/scripts.inc"
+
+	.include "data/maps/pokemon1tunnel/scripts.inc"
+
+	.include "data/maps/pokemon2tunnel/scripts.inc"
+
+	.include "data/maps/NewMap4/scripts.inc"
+
+	.include "data/maps/pokemontunnel2/scripts.inc"
+
+	.include "data/maps/pokemontunnel3/scripts.inc"
+
+	.include "data/maps/pokemontunnel4/scripts.inc"
+
+	.include "data/maps/pokemontunnel5/scripts.inc"
+
+	.include "data/maps/pokemontunnel6/scripts.inc"
+
+	.include "data/maps/pokemontunnel7/scripts.inc"
+
+	.include "data/maps/pokemontunnel9/scripts.inc"
+
+	.include "data/maps/pokemontunnel10/scripts.inc"

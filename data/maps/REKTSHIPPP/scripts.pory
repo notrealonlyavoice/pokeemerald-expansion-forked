@@ -1,0 +1,48 @@
+raw `
+REKTSHIPPP_MapScripts::
+	.byte 0
+`
+
+script REKTSHIPPP_Trigger_dontgoback{
+    MSGBOX("there is no use")
+    waitmessage
+    applymovement(OBJ_EVENT_ID_PLAYER, dongobackmove)
+    closemessage
+}
+
+movement dongobackmove{
+    walk_right * 2
+}
+
+script REKTSHIPPP_Trigger_shipwreckshake{
+    lockall
+    call(ShipWrekCut)
+    releaseall
+}
+
+script REKTSHIPPP_EventScript_strengthpuzzleskip {
+    
+    lockall
+    giveitem(ITEM_HM_STRENGTH)
+    playfanfare(MUS_OBTAIN_ITEM)
+    setflag(FLAG_BADGE04_GET)
+    msgbox("Picked up Item")
+    removeobject(1)
+    setflag(PLAYER_HAS_STRENGTH)  
+    waitmessage
+    releaseall
+    end
+ 
+}
+
+script REKTSHIPPP_Trigger_endofship{
+    MSGBOX(format("you feel your body weakening... you must have been injured in the wreck"))
+    waitmessage
+    closemessage
+    fadescreen(FADE_TO_BLACK)
+    delay(50)
+    warpsilent(MAP_ISLANDNEW, 10, 32)
+    waitstate
+    end
+}
+

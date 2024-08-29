@@ -1,0 +1,369 @@
+raw`
+ISLANDNEW_MapScripts::
+	.byte 0
+`
+
+script ISLANDNEW_Trigger_triggeroneforcutscene{
+	applymovement(OBJ_EVENT_ID_PLAYER, correctfaceingdirection2)
+    MSGBOX(format("Hey! you finally woke up"))
+    waitmessage
+	closemessage
+    applymovement(1, wakeuphuman)
+    waitmovement(0)
+	MSGBOX(format("the ship went down but you somehow survived.. who are you? ... ... ... you need to get to the johto region for research? well thats unfortunate. This island is closed off from most of the outside world. if you want to use one of our boats, youll have to complete the ISLAND CHALLENGE. but that is very hard as no one has been able to complete it yet. do YOU think you are up for the task?"))
+	MSGBOX("accept the challenge", MSGBOX_YESNO)
+	if(var(VAR_RESULT) == YES){
+            MSGBOX(format("You are very confident"))
+			waitmessage
+			setvar((VAR_0x8006), 2)
+            call(remainingofcheckonplayercript)   
+	} else {
+		call(areyousure)
+	}
+}
+
+script ISLANDNEW_Trigger_triggeroneforcutscene2 {
+	applymovement(OBJ_EVENT_ID_PLAYER, correctfaceingdirection2)
+    MSGBOX(format("Hey! you finally woke up"))
+    waitmessage
+	closemessage
+    applymovement(1, wakeuphuman)
+    waitmovement(0)
+	MSGBOX(format("the ship went down but you somehow survived.. who are you? ... ... ... you need to get to the johto region for research? well thats unfortunate. This island is closed off from most of the outside world. if you want to use one of our boats, youll have to complete the ISLAND CHALLENGE. but that is very hard as no one has been able to complete it yet. do YOU think you are up for the task?"))
+	MSGBOX("accept the challenge", MSGBOX_YESNO)
+	if(var(VAR_RESULT) == YES){
+            MSGBOX(format("You are very confident"))
+			waitmessage
+			setvar((VAR_0x8006), 2)
+            call(remainingofcheckonplayercript2 )   
+	} else {
+		call(areyousure)
+	}
+}
+
+script ISLANDNEW_Trigger_triggeroneforcutscene3 {
+	applymovement(OBJ_EVENT_ID_PLAYER, correctfaceingdirection2)
+    MSGBOX(format("Hey! you finally woke up"))
+    waitmessage
+	closemessage
+    applymovement(1, wakeuphuman)
+    waitmovement(0)
+	MSGBOX(format("the ship went down but you somehow survived.. who are you? ... ... ... you need to get to the johto region for research? well thats unfortunate. This island is closed off from most of the outside world. if you want to use one of our boats, youll have to complete the ISLAND CHALLENGE. but that is very hard as no one has been able to complete it yet. do YOU think you are up for the task?"))
+	MSGBOX("accept the challenge", MSGBOX_YESNO)
+	if(var(VAR_RESULT) == YES){
+            MSGBOX(format("You are very confident"))
+			waitmessage
+			setvar((VAR_0x8006), 2)
+            call(remainingofcheckonplayercript3 )   
+	} else {
+		call(areyousure)
+	}
+}
+
+script ISLANDNEW_Trigger_triggeroneforcutscene4 {
+	applymovement(OBJ_EVENT_ID_PLAYER, correctfaceingdirection2)
+    MSGBOX(format("Hey! you finally woke up"))
+    waitmessage
+	closemessage
+    applymovement(1, wakeuphuman)
+    waitmovement(0)
+	MSGBOX(format("the ship went down but you somehow survived.. who are you? ... ... ... you need to get to the johto region for research? well thats unfortunate. This island is closed off from most of the outside world. if you want to use one of our boats, youll have to complete the ISLAND CHALLENGE. but that is very hard as no one has been able to complete it yet. do YOU think you are up for the task?"))
+	MSGBOX("accept the challenge", MSGBOX_YESNO)
+	if(var(VAR_RESULT) == YES){
+            MSGBOX(format("You are very confident"))
+			waitmessage
+			setvar((VAR_0x8006), 2)
+            call(remainingofcheckonplayercript4 )   
+	} else {
+		call(areyousure)
+	}
+}
+
+script areyousure {
+	msgbox(format("Are you sure? could be your only way off this island"), MSGBOX_YESNO) 
+	if(var(VAR_RESULT) == YES){
+		call(areyousure) 
+	} else {
+		call(remainingofcheckonplayercript)
+	}
+}
+
+script remainingofcheckonplayercript {
+	lockall
+	setvar(VAR_0x8008, 3)
+	MSGBOX(format("Great! lets get you started"))
+	applymovement(1, letsago)
+	waitmovement(0)
+	applymovement(OBJ_EVENT_ID_PLAYER, playerletsago)
+	waitmovement(0)
+	setvar(VAR_0x8008, 4)
+	MSGBOX(format("You might want to check out the mystery cave before challenging the other leaders. "))
+	waitmessage
+	MSGBOX(format("you might as well take this pokemon to help you, as I have no use for it. "))
+	waitmessage
+    givemon(SPECIES_MR_MIME, 5, ITEM_LEPPA_BERRY, abilityNum=1, move1=MOVE_TRICK, move2=MOVE_PROTECT, move3=MOVE_TRICK_ROOM, move4=MOVE_CONFUSION)
+    if(var(VAR_RESULT) == MON_GIVEN_TO_PARTY){
+            playfanfare(MUS_OBTAIN_ITEM)
+            msgbox("Recieved MR-MIME")
+            waitmessage
+            call(NicknamePartyMon)
+            closemessage
+			}
+    elif(var(VAR_RESULT) == MON_GIVEN_TO_PC){
+            playfanfare(MUS_OBTAIN_ITEM)
+            msgbox("Recieved MR-MIME")
+            call(NicknameBoxMon)
+			}
+	else{
+            hidemonpic
+            msgbox("No More Room")
+			}
+	MSGBOX("I'll be in the seashore house")
+	waitmessage
+	closemessage
+	applymovement(1, immadipfr)
+	waitmovement(0)
+	removeobject(1)
+	releaseall
+
+}
+
+script remainingofcheckonplayercript2 {
+	lockall
+	setvar(VAR_0x8008, 3)
+	MSGBOX(format("Great! lets get you started"))
+	applymovement(1, letsago)
+	waitmovement(0)
+	applymovement(OBJ_EVENT_ID_PLAYER, playerletsago2)
+	waitmovement(0)
+	setvar(VAR_0x8008, 4)
+	MSGBOX(format("You might want to check out the mystery cave before challenging the other leaders. "))
+	waitmessage
+	MSGBOX(format("you might as well take this pokemon to help you, as I have no use for it. "))
+	waitmessage
+    givemon(SPECIES_MR_MIME, 5, ITEM_LEPPA_BERRY, abilityNum=1, move1=MOVE_TRICK, move2=MOVE_PROTECT, move3=MOVE_TRICK_ROOM, move4=MOVE_CONFUSION)
+    if(var(VAR_RESULT) == MON_GIVEN_TO_PARTY){
+            playfanfare(MUS_OBTAIN_ITEM)
+            msgbox("Recieved MR-MIME")
+            waitmessage
+            call(NicknamePartyMon)
+            closemessage
+			}
+    elif(var(VAR_RESULT) == MON_GIVEN_TO_PC){
+            playfanfare(MUS_OBTAIN_ITEM)
+            msgbox("Recieved MR-MIME")
+            call(NicknameBoxMon)
+			}
+	else{
+            hidemonpic
+            msgbox("No More Room")
+			}
+	MSGBOX("I'll be in the seashore house")
+	waitmessage
+	closemessage
+	applymovement(1, immadipfr)
+	waitmovement(0)
+	removeobject(1)
+	releaseall
+
+}
+
+script remainingofcheckonplayercript3 {
+	lockall
+	setvar(VAR_0x8008, 3)
+	MSGBOX(format("Great! lets get you started"))
+	applymovement(1, letsago)
+	waitmovement(0)
+	applymovement(OBJ_EVENT_ID_PLAYER, playerletsago3)
+	waitmovement(0)
+	setvar(VAR_0x8008, 4)
+	MSGBOX(format("You might want to check out the mystery cave before challenging the other leaders. "))
+	waitmessage
+	MSGBOX(format("you might as well take this pokemon to help you, as I have no use for it. "))
+	waitmessage
+    givemon(SPECIES_MR_MIME, 5, ITEM_LEPPA_BERRY, abilityNum=1, move1=MOVE_TRICK, move2=MOVE_PROTECT, move3=MOVE_TRICK_ROOM, move4=MOVE_CONFUSION)
+    if(var(VAR_RESULT) == MON_GIVEN_TO_PARTY){
+            playfanfare(MUS_OBTAIN_ITEM)
+            msgbox("Recieved MR-MIME")
+            waitmessage
+            call(NicknamePartyMon)
+            closemessage
+			}
+    elif(var(VAR_RESULT) == MON_GIVEN_TO_PC){
+            playfanfare(MUS_OBTAIN_ITEM)
+            msgbox("Recieved MR-MIME")
+            call(NicknameBoxMon)
+			}
+	else{
+            hidemonpic
+            msgbox("No More Room")
+			}
+	MSGBOX("I'll be in the seashore house. talk to me when you want to start the first challenge")
+	waitmessage
+	closemessage
+	applymovement(1, immadipfr)
+	waitmovement(0)
+	removeobject(1)
+	releaseall
+}
+
+script remainingofcheckonplayercript4 {
+	lockall
+	setvar(VAR_0x8008, 3)
+	MSGBOX(format("Great! lets get you started"))
+	applymovement(1, letsago)
+	waitmovement(0)
+	applymovement(OBJ_EVENT_ID_PLAYER, playerletsago4)
+	waitmovement(0)
+	setvar(VAR_0x8008, 4)
+	MSGBOX(format("You might want to check out the mystery cave before challenging the other leaders. "))
+	waitmessage
+	MSGBOX(format("you might as well take this pokemon to help you, as I have no use for it. "))
+	waitmessage
+    givemon(SPECIES_MR_MIME, 5, ITEM_LEPPA_BERRY, abilityNum=1, move1=MOVE_TRICK, move2=MOVE_PROTECT, move3=MOVE_TRICK_ROOM, move4=MOVE_CONFUSION)
+    if(var(VAR_RESULT) == MON_GIVEN_TO_PARTY){
+            playfanfare(MUS_OBTAIN_ITEM)
+            msgbox("Recieved MR-MIME")
+            waitmessage
+            call(NicknamePartyMon)
+            closemessage
+			}
+    elif(var(VAR_RESULT) == MON_GIVEN_TO_PC){
+            playfanfare(MUS_OBTAIN_ITEM)
+            msgbox("Recieved MR-MIME")
+            call(NicknameBoxMon)
+			}
+	else{
+            hidemonpic
+            msgbox("No More Room")
+			}
+	MSGBOX("I'll be in the seashore house")
+	waitmessage
+	closemessage
+	applymovement(1, immadipfr)
+	waitmovement(0)
+	removeobject(1)
+	releaseall
+}
+
+movement wakeuphuman {
+	walk_down * 4
+}
+
+movement correctfaceingdirection2 {
+	face_up
+}
+
+movement letsago {
+	walk_up * 16
+	walk_right * 3
+	walk_up * 3 
+	face_right
+}
+
+movement playerletsago {
+	walk_up * 16
+	walk_right * 4 
+	walk_up * 4 
+}
+
+movement playerletsago2 {
+	walk_up * 17
+	walk_right * 3 
+	walk_up * 4 
+}
+
+movement playerletsago3 {
+	walk_up * 17
+	walk_right * 5 
+	walk_up * 4 
+} 
+
+movement playerletsago4 {
+	walk_up * 18
+	walk_right * 4 
+	walk_up * 4 
+}
+
+movement immadipfr {
+	walk_left * 8
+}
+
+script ISLANDNEW_Trigger_gocatchmondummy {
+	lockall
+	applymovement(OBJ_EVENT_ID_PLAYER, gocatchmon)
+	waitmovement(0)
+	MSGBOX(format("Check out the cool cave!!!"))
+	waitmessage
+	releaseall
+}
+
+script ISLANDNEW_Trigger_gocatchmondummy2 {
+	lockall
+	applymovement(OBJ_EVENT_ID_PLAYER, gocatchmon2)
+	waitmovement(0)
+	MSGBOX(format("Check out the cool cave!!!"))
+	waitmessage
+	releaseall
+}
+
+script ISLANDNEW_Trigger_gocatchmondummy3 {
+	lockall
+	applymovement(OBJ_EVENT_ID_PLAYER, gocatchmon3)
+	waitmovement(0)
+	MSGBOX(format("Check out the cool cave!!!"))
+	waitmessage
+	releaseall
+}
+
+
+movement gocatchmon {
+	walk_up
+}
+
+movement gocatchmon2 {
+	walk_left
+	face_up
+}
+
+movement gocatchmon3 {
+	walk_right
+	face_up
+}
+
+script ISLANDNEW_Sign_riddlermansighn {
+	lockall
+	MSGBOX(format("clevermans shop"))
+	waitmessage
+	closemessage
+	releaseall
+}
+
+script ISLANDNEW_Sign_Seashorehousesign {
+	lockall
+	MSGBOX(format("Seashore house"))
+	waitmessage
+	closemessage
+	releaseall
+}
+
+script ISLANDNEW_EventScript_wanderingdude1 {
+	lockall
+	faceplayer
+	MSGBOX(format("You're weird... we dont have many foriegners I guess is what I mean."))
+	waitmessage
+	closemessage
+	releaseall
+}
+
+script ISLANDNEW_EventScript_wanderingdude2 {
+	lockall
+	faceplayer
+	MSGBOX(format("this island may be small but its a great place to sunbathe if you have lots of money"))
+	waitmessage
+	closemessage
+	releaseall
+}
+
+
+

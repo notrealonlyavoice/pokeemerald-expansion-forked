@@ -1,0 +1,53 @@
+
+raw `
+SurfroomHM_MapScripts::
+	.byte 0
+
+`
+
+
+
+script REKTSHIPPP_EventScript_surfdudepuzzle{
+    MSGBOX(format("everyone else is gone, and i cant leave because im so old and tired... ... ... but you can save yourself! solve this little puzzle first and youll be free to go"))
+    MSGBOX("solve the puzzle?", MSGBOX_YESNO)
+    if(var(VAR_RESULT) == YES){
+        MSGBOX(format("ok here goes. the GRASS and FIGHTING legendary from sinnoh has more attack than pincusion")) 
+         MSGBOX("legendary is stonger right?", MSGBOX_YESNO)
+        if(var(VAR_RESULT) == YES){
+            MSGBOX(format("careful now... we havent implimented soflock saves yet KEKW"))
+            waitmessage
+            closemessage      
+        }
+        else {
+           MSGBOX(format("impressive, here take this pokemon and surf out of this hellscape."))
+            waitmessage
+            givemon(SPECIES_FRILLISH, 5, ITEM_BERRY_JUICE, abilityNum=0, move1=MOVE_WILL_O_WISP, move2=MOVE_WHIRLPOOL, move3=MOVE_PAIN_SPLIT, move4=MOVE_SURF)
+        if(var(VAR_RESULT) == MON_GIVEN_TO_PARTY){
+            playfanfare(MUS_OBTAIN_ITEM)
+            msgbox("Recieved frillish")
+            msgbox("ta-ta!")
+            waitmessage
+            removeobject(1)
+            setflag(FLAG_BADGE05_GET)
+            setflag(PLAYER_HAS_SURFMON)
+            call(NicknamePartyMon)
+            closemessage
+        }
+        elif(var(VAR_RESULT) == MON_GIVEN_TO_PC){
+            playfanfare(MUS_OBTAIN_ITEM)
+            msgbox("Recieved frillish")
+            setflag(FLAG_BADGE05_GET)
+            setflag(PLAYER_HAS_SURFMON)
+            call(NicknameBoxMon)
+        }
+        else{
+            hidemonpic
+            msgbox("No More Room")
+        }
+        }
+    }else {
+        msgbox(format("I doubt you can escape without my help..."))
+    }
+}
+
+

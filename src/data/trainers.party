@@ -1632,21 +1632,21 @@ Level: 35
 IVs: 17 HP / 17 Atk / 17 Def / 17 SpA / 17 SpD / 17 Spe
 
 === TRAINER_WARREN ===
-Name: WARREN
-Class: Cooltrainer
-Pic: Cooltrainer M
+Name: Trout
+Class: Gentleman
+Pic: Gentleman
 Gender: Male
 Music: Cool
-Items: Full Restore
 Double Battle: No
 AI: Check Bad Move / Try To Faint / Check Viability
 
-Graveler
-Level: 33
+Electrode 
+Level: 100
 IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
+- Explosion
 
-Ludicolo
-Level: 33
+Pincurchin 
+Level: 100
 IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
 
 === TRAINER_MARY ===
@@ -1668,35 +1668,32 @@ IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 === TRAINER_ALEXIA ===
 Name: ALEXIA
 Class: Cooltrainer
-Pic: Cooltrainer F
-Gender: Female
+Pic: Cooltrainer M
+Gender: Male
 Music: Cool
-Items: Hyper Potion
 Double Battle: No
 AI: Check Bad Move / Try To Faint / Check Viability
 
-Wigglytuff
-Level: 26
+Kingdra
+Level: 100
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Defense Curl
-- Double Edge
-- Shadow Ball
+- Dragon Claw
+- Dive 
 
 === TRAINER_JODY ===
-Name: JODY
-Class: Cooltrainer
-Pic: Cooltrainer F
-Gender: Female
-Music: Cool
-Items: Hyper Potion
+Name: MAX
+Class: Pokemaniac
+Pic: Pokemaniac
+Gender: Male
+Music: Suspicious
 Double Battle: No
 AI: Check Bad Move / Try To Faint / Setup First Turn
 
-Zangoose
-Level: 26
+Zangoose @ Lagging Tail
+Level: 100
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Swords Dance
-- Slash
+- CRUSH_CLAW
+- BRICK_BREAK
 
 === TRAINER_WENDY ===
 Name: WENDY

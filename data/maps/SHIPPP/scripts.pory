@@ -1,0 +1,61 @@
+raw`
+SHIPPP_MapScripts::
+	.byte 0
+`
+
+script SHIPPP_EventScript_SailorMessage {
+    lockall 
+    applymovement(1, LookAtPlayer)
+    MSGBOX(Format("These Doors go striaght to the deck")) 
+    releaseall   
+}
+
+movement LookAtPlayer{
+    faceplayer
+}
+
+script SHIPPP_Trigger_BlockDoorScript{
+    lockall 
+    msgbox("the captian was looking for you")
+    applymovement(OBJ_EVENT_ID_PLAYER, StopPlayerSHIP)
+    waitmovement(0) 
+    releaseall  
+} 
+
+movement StopPlayerSHIP{
+	walk_right * 2 
+}
+
+script SHIPPP_Trigger_BlockDoorScript2{
+    lockall
+    msgbox("the captian was looking for you")
+    applymovement(OBJ_EVENT_ID_PLAYER, StopPlayerNOPOKEMON)
+    waitmovement(0)
+    releaseall
+}
+
+movement StopPlayerNOPOKEMON{
+    walk_up * 1
+}
+
+script SHIPPP_EventScript_SillyKid{
+    lockall
+    faceplayer
+    msgbox("do you want to see this msg again?", MSGBOX_YESNO)
+    if(var(VAR_RESULT) == YES){
+        closemessage
+        call(SHIPPP_EventScript_SillyKid)
+    }
+    else{
+        msgbox("awwww")
+        closemessage
+    }
+}
+
+
+script SHIPPP_EventScript_scientisttest {
+    lockall
+    msgbox("placertext")
+    waitmessage
+    releaseall  
+}

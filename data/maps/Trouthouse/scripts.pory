@@ -1,0 +1,23 @@
+raw `
+Trouthouse_MapScripts::
+	.byte 0
+`
+
+
+script Trouthouse_EventScript_Troutgrnadaughter {
+    if(var(VAR_0x8006) == 3)
+    {
+    lockall
+    MSGBOX(format("oh... Youre doing grandpa trouts challenge? Its very hard but i know the combination to help you. The combination is ABABCCCBCBABCBABCBA SWITCHED!"))
+    setvar((VAR_0x8006), 4)
+    closemessage
+    releaseall
+    }
+    else {
+        lockall 
+        MSGBOX(format("I gave you the password already. go away"))
+        closemessage
+    }
+
+
+}

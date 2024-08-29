@@ -94,7 +94,7 @@
     {
       "id": "LAYOUT_LITTLEROOT_TOWN",
       "name": "LittlerootTown_Layout",
-      "width": 20,
+      "width": 30,
       "height": 20,
       "primary_tileset": "gTileset_General",
       "secondary_tileset": "gTileset_Petalburg",
@@ -2417,7 +2417,7 @@
       "width": 58,
       "height": 26,
       "primary_tileset": "gTileset_General",
-      "secondary_tileset": "0",
+      "secondary_tileset": "gTileset_Petalburg",
       "border_filepath": "data/layouts/UnusedOutdoorArea/border.bin",
       "blockdata_filepath": "data/layouts/UnusedOutdoorArea/map.bin"
     },
@@ -4410,6 +4410,396 @@
       "secondary_tileset": "gTileset_MysteryEventsHouse",
       "border_filepath": "data/layouts/SootopolisCity_MysteryEventsHouse_1F_StairsUnblocked/border.bin",
       "blockdata_filepath": "data/layouts/SootopolisCity_MysteryEventsHouse_1F_StairsUnblocked/map.bin"
+    },
+    {
+      "id": "LAYOUT_ONECAVE",
+      "name": "ONECAVE_Layout",
+      "width": 45,
+      "height": 45,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Cave",
+      "border_filepath": "data/layouts/ONECAVE/border.bin",
+      "blockdata_filepath": "data/layouts/ONECAVE/map.bin"
+    },
+    {
+      "id": "LAYOUT_ISLANDNEW",
+      "name": "ISLANDNEW_Layout",
+      "width": 40,
+      "height": 40,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Slateport",
+      "border_filepath": "data/layouts/ISLANDNEW/border.bin",
+      "blockdata_filepath": "data/layouts/ISLANDNEW/map.bin"
+    },
+    {
+      "id": "LAYOUT_SHIPPP",
+      "name": "SHIPPP_Layout",
+      "width": 40,
+      "height": 20,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_InsideShip",
+      "border_filepath": "data/layouts/SHIPPP/border.bin",
+      "blockdata_filepath": "data/layouts/SHIPPP/map.bin"
+    },
+    {
+      "id": "LAYOUT_INSIDEOFSHIPWITHWARPPPPPP",
+      "name": "INSIDEOFSHIPWITHWARPPPPPP_Layout",
+      "width": 20,
+      "height": 20,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_InsideShip",
+      "border_filepath": "data/layouts/INSIDEOFSHIPWITHWARPPPPPP/border.bin",
+      "blockdata_filepath": "data/layouts/INSIDEOFSHIPWITHWARPPPPPP/map.bin"
+    },
+    {
+      "id": "LAYOUT_NEW_MAP1",
+      "name": "NewMap1_Layout",
+      "width": 40,
+      "height": 20,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_IslandHarbor",
+      "border_filepath": "data/layouts/NewMap1/border.bin",
+      "blockdata_filepath": "data/layouts/NewMap1/map.bin"
+    },
+    {
+      "id": "LAYOUT_HALLWAYTOCAPTIANROOM",
+      "name": "hallwaytocaptianroom_Layout",
+      "width": 30,
+      "height": 10,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_InsideShip",
+      "border_filepath": "data/layouts/hallwaytocaptianroom/border.bin",
+      "blockdata_filepath": "data/layouts/hallwaytocaptianroom/map.bin"
+    },
+    {
+      "id": "LAYOUT_CAPTIANROOM",
+      "name": "captianroom_Layout",
+      "width": 15,
+      "height": 15,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_InsideShip",
+      "border_filepath": "data/layouts/captianroom/border.bin",
+      "blockdata_filepath": "data/layouts/captianroom/map.bin"
+    },
+    {
+      "id": "LAYOUT_NEW_MAP2",
+      "name": "NewMap2_Layout",
+      "width": 20,
+      "height": 20,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_InsideShip",
+      "border_filepath": "data/layouts/NewMap2/border.bin",
+      "blockdata_filepath": "data/layouts/NewMap2/map.bin"
+    },
+    {
+      "id": "LAYOUT_NEW_MAP3",
+      "name": "NewMap3_Layout",
+      "width": 40,
+      "height": 20,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_IslandHarbor",
+      "border_filepath": "data/layouts/NewMap3/border.bin",
+      "blockdata_filepath": "data/layouts/NewMap3/map.bin"
+    },
+    {
+      "id": "LAYOUT_REKTSHIPPP",
+      "name": "REKTSHIPPP_Layout",
+      "width": 40,
+      "height": 20,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_InsideShip",
+      "border_filepath": "data/layouts/REKTSHIPPP/border.bin",
+      "blockdata_filepath": "data/layouts/REKTSHIPPP/map.bin"
+    },
+    {
+      "id": "LAYOUT_SURFROOM_HM",
+      "name": "SurfroomHM_Layout",
+      "width": 20,
+      "height": 20,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_InsideShip",
+      "border_filepath": "data/layouts/SurfroomHM/border.bin",
+      "blockdata_filepath": "data/layouts/SurfroomHM/map.bin"
+    },
+    {
+      "id": "LAYOUT_ISLANDNEW2",
+      "name": "ISLANDNEW2_Layout",
+      "width": 30,
+      "height": 30,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Pacifidlog",
+      "border_filepath": "data/layouts/ISLANDNEW2/border.bin",
+      "blockdata_filepath": "data/layouts/ISLANDNEW2/map.bin"
+    },
+    {
+      "id": "LAYOUT_POKEMON1TUNNEL",
+      "name": "pokemon1tunnel_Layout",
+      "width": 11,
+      "height": 10,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Cave",
+      "border_filepath": "data/layouts/pokemon1tunnel/border.bin",
+      "blockdata_filepath": "data/layouts/pokemon1tunnel/map.bin"
+    },
+    {
+      "id": "LAYOUT_POKEMON2TUNNEL",
+      "name": "pokemon2tunnel_Layout",
+      "width": 11,
+      "height": 10,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Cave",
+      "border_filepath": "data/layouts/pokemon2tunnel/border.bin",
+      "blockdata_filepath": "data/layouts/pokemon2tunnel/map.bin"
+    },
+    {
+      "id": "LAYOUT_NEW_MAP4",
+      "name": "NewMap4_Layout",
+      "width": 11,
+      "height": 10,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Cave",
+      "border_filepath": "data/layouts/NewMap4/border.bin",
+      "blockdata_filepath": "data/layouts/NewMap4/map.bin"
+    },
+    {
+      "id": "LAYOUT_NEW_MAP5",
+      "name": "NewMap5_Layout",
+      "width": 13,
+      "height": 13,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_GenericBuilding",
+      "border_filepath": "data/layouts/NewMap5/border.bin",
+      "blockdata_filepath": "data/layouts/NewMap5/map.bin"
+    },
+    {
+      "id": "LAYOUT_SEASHOREHOUSENEW",
+      "name": "seashorehousenew_Layout",
+      "width": 13,
+      "height": 12,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_GenericBuilding",
+      "border_filepath": "data/layouts/seashorehousenew/border.bin",
+      "blockdata_filepath": "data/layouts/seashorehousenew/map.bin"
+    },
+    {
+      "id": "LAYOUT_TROUTHOUSE",
+      "name": "Trouthouse_Layout",
+      "width": 10,
+      "height": 10,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_GenericBuilding",
+      "border_filepath": "data/layouts/Trouthouse/border.bin",
+      "blockdata_filepath": "data/layouts/Trouthouse/map.bin"
+    },
+    {
+      "id": "LAYOUT_POKEMONTUNNEL2",
+      "name": "pokemontunnel2_Layout",
+      "width": 11,
+      "height": 10,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Cave",
+      "border_filepath": "data/layouts/pokemontunnel2/border.bin",
+      "blockdata_filepath": "data/layouts/pokemontunnel2/map.bin"
+    },
+    {
+      "id": "LAYOUT_POKEMONTUNNEL3",
+      "name": "pokemontunnel3_Layout",
+      "width": 11,
+      "height": 10,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Cave",
+      "border_filepath": "data/layouts/pokemontunnel3/border.bin",
+      "blockdata_filepath": "data/layouts/pokemontunnel3/map.bin"
+    },
+    {
+      "id": "LAYOUT_POKEMONTUNNEL4",
+      "name": "pokemontunnel4_Layout",
+      "width": 11,
+      "height": 10,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Cave",
+      "border_filepath": "data/layouts/pokemontunnel4/border.bin",
+      "blockdata_filepath": "data/layouts/pokemontunnel4/map.bin"
+    },
+    {
+      "id": "LAYOUT_POKEMONTUNNEL5",
+      "name": "pokemontunnel5_Layout",
+      "width": 11,
+      "height": 10,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Cave",
+      "border_filepath": "data/layouts/pokemontunnel5/border.bin",
+      "blockdata_filepath": "data/layouts/pokemontunnel5/map.bin"
+    },
+    {
+      "id": "LAYOUT_POKEMONTUNNEL6",
+      "name": "pokemontunnel6_Layout",
+      "width": 11,
+      "height": 10,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Cave",
+      "border_filepath": "data/layouts/pokemontunnel6/border.bin",
+      "blockdata_filepath": "data/layouts/pokemontunnel6/map.bin"
+    },
+    {
+      "id": "LAYOUT_POKEMONTUNNEL7",
+      "name": "pokemontunnel7_Layout",
+      "width": 11,
+      "height": 10,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Cave",
+      "border_filepath": "data/layouts/pokemontunnel7/border.bin",
+      "blockdata_filepath": "data/layouts/pokemontunnel7/map.bin"
+    },
+    {
+      "id": "LAYOUT_POKEMONTUNNEL9",
+      "name": "pokemontunnel9_Layout",
+      "width": 11,
+      "height": 10,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Cave",
+      "border_filepath": "data/layouts/pokemontunnel9/border.bin",
+      "blockdata_filepath": "data/layouts/pokemontunnel9/map.bin"
+    },
+    {
+      "id": "LAYOUT_POKEMONTUNNEL10",
+      "name": "pokemontunnel10_Layout",
+      "width": 11,
+      "height": 10,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Cave",
+      "border_filepath": "data/layouts/pokemontunnel10/border.bin",
+      "blockdata_filepath": "data/layouts/pokemontunnel10/map.bin"
+    },
+    {
+      "id": "LAYOUT_POKEMONTUNNEL11",
+      "name": "pokemontunnel11_Layout",
+      "width": 11,
+      "height": 10,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Cave",
+      "border_filepath": "data/layouts/pokemontunnel11/border.bin",
+      "blockdata_filepath": "data/layouts/pokemontunnel11/map.bin"
+    },
+    {
+      "id": "LAYOUT_POKEMONTUNNEL12",
+      "name": "pokemontunnel12_Layout",
+      "width": 11,
+      "height": 10,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Cave",
+      "border_filepath": "data/layouts/pokemontunnel12/border.bin",
+      "blockdata_filepath": "data/layouts/pokemontunnel12/map.bin"
+    },
+    {
+      "id": "LAYOUT_POKEMONTUNNEL13",
+      "name": "pokemontunnel13_Layout",
+      "width": 11,
+      "height": 10,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Cave",
+      "border_filepath": "data/layouts/pokemontunnel13/border.bin",
+      "blockdata_filepath": "data/layouts/pokemontunnel13/map.bin"
+    },
+    {
+      "id": "LAYOUT_POKEMONTUNNEL14",
+      "name": "pokemontunnel14_Layout",
+      "width": 11,
+      "height": 10,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Cave",
+      "border_filepath": "data/layouts/pokemontunnel14/border.bin",
+      "blockdata_filepath": "data/layouts/pokemontunnel14/map.bin"
+    },
+    {
+      "id": "LAYOUT_POKEMONTUNNEL15",
+      "name": "pokemontunnel15_Layout",
+      "width": 11,
+      "height": 10,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Cave",
+      "border_filepath": "data/layouts/pokemontunnel15/border.bin",
+      "blockdata_filepath": "data/layouts/pokemontunnel15/map.bin"
+    },
+    {
+      "id": "LAYOUT_POKEMONTUNNEL16",
+      "name": "pokemontunnel16_Layout",
+      "width": 11,
+      "height": 10,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Cave",
+      "border_filepath": "data/layouts/pokemontunnel16/border.bin",
+      "blockdata_filepath": "data/layouts/pokemontunnel16/map.bin"
+    },
+    {
+      "id": "LAYOUT_POKEMONTUNNEL17",
+      "name": "pokemontunnel17_Layout",
+      "width": 11,
+      "height": 10,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Cave",
+      "border_filepath": "data/layouts/pokemontunnel17/border.bin",
+      "blockdata_filepath": "data/layouts/pokemontunnel17/map.bin"
+    },
+    {
+      "id": "LAYOUT_POKEMONTUNNEL18",
+      "name": "pokemontunnel18_Layout",
+      "width": 11,
+      "height": 10,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Cave",
+      "border_filepath": "data/layouts/pokemontunnel18/border.bin",
+      "blockdata_filepath": "data/layouts/pokemontunnel18/map.bin"
+    },
+    {
+      "id": "LAYOUT_POKEMONTUNNEL19",
+      "name": "pokemontunnel19_Layout",
+      "width": 11,
+      "height": 10,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Cave",
+      "border_filepath": "data/layouts/pokemontunnel19/border.bin",
+      "blockdata_filepath": "data/layouts/pokemontunnel19/map.bin"
+    },
+    {
+      "id": "LAYOUT_POKEMONTUNNEL20",
+      "name": "pokemontunnel20_Layout",
+      "width": 20,
+      "height": 20,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Pacifidlog",
+      "border_filepath": "data/layouts/pokemontunnel20/border.bin",
+      "blockdata_filepath": "data/layouts/pokemontunnel20/map.bin"
+    },
+    {
+      "id": "LAYOUT_TELETUNNEL",
+      "name": "teletunnel_Layout",
+      "width": 20,
+      "height": 6,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Pacifidlog",
+      "border_filepath": "data/layouts/teletunnel/border.bin",
+      "blockdata_filepath": "data/layouts/teletunnel/map.bin"
+    },
+    {
+      "id": "LAYOUT_TELETUNNELDOWN",
+      "name": "teletunneldown_Layout",
+      "width": 6,
+      "height": 40,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Pacifidlog",
+      "border_filepath": "data/layouts/teletunneldown/border.bin",
+      "blockdata_filepath": "data/layouts/teletunneldown/map.bin"
+    },
+    {
+      "id": "LAYOUT_NDCAVE",
+      "name": "ndcave_Layout",
+      "width": 9,
+      "height": 9,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Cave",
+      "border_filepath": "data/layouts/ndcave/border.bin",
+      "blockdata_filepath": "data/layouts/ndcave/map.bin"
     }
   ]
 }

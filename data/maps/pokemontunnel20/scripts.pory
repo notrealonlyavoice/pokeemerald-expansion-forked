@@ -1,0 +1,27 @@
+raw`
+pokemontunnel20_MapScripts::
+	.byte 0
+`
+
+script pokemontunnel20_EventScript_grampatrout {
+    MSGBOX(format("Impressive that you found me. I normally use only 1 pokemon, but you have potential. I'll use two today. I hope you give this all you got!"))
+    waitmessage
+    trainerbattle_single(TRAINER_WARREN, Trout_Intro, Trout_Outro, PostTroutbattle)
+}
+
+text Trout_Intro {
+   "FIGHT!"
+}
+
+text Trout_Outro {
+   "W-what?"
+}
+
+script PostTroutbattle {
+    lockall
+    MSGBOX(format("you have far surpasses what I expected. I wish you luck in the other challenges"))
+    waitmessage
+    msgbox(format("Temp end for Beta."))
+    waitmessage
+    end
+}

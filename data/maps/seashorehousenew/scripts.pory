@@ -1,0 +1,47 @@
+raw`
+seashorehousenew_MapScripts::
+	.byte 0
+`
+
+
+script ISLANDNEW_EventScript_randomguy {
+	lockall
+	MSGBOX(format("NO!! 255 sptak ev zoroark 100% one shots you I DID THE CALCS!!!"))
+	waitmessage
+	closemessage
+	releaseall
+}
+
+script ISLANDNEW_EventScript_randomguy1 {
+	lockall
+	MSGBOX(format("NO! I'm MAX HP and i set up amnesia TWO TURNS AGO. I LIVE THE DARK PULSE"))
+	waitmessage
+	closemessage
+	releaseall
+}
+
+
+script ISLANDNEW_EventScript_sameladyasbefore {
+    if(var(VAR_0x8006) == 4 ){
+        MSGBOX(format("I belive in you!"))
+		closemessage
+    }elif(var(VAR_0x8006) == 3 ){
+		MSGBOX(format("Good luck!"))
+		closemessage
+	} 
+	else {
+	lockall
+	MSGBOX(format("oh hello. Ready to start the challenge?"))
+    waitmessage
+    MSGBOX(format("are you ready?"), MSGBOX_YESNO)
+	if(var(VAR_RESULT) == YES){
+        MSGBOX(format("Ok! Master trought lies at the end of the CONJOINED TUNNELS in mystery cave, but navigating it is treacherous... find someone who knows the combination")) 
+        setvar((VAR_0x8006), 3)
+		closemessage
+    }
+    else{
+        MSGBOX(format("later then. keep exploring"))
+        closemessage
+    }
+    }
+}

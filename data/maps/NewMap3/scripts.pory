@@ -1,0 +1,82 @@
+raw `
+NewMap3_MapScripts::
+	.byte 0
+`
+
+script NewMap3_Trigger_loadinscene {
+    applymovement(OBJ_EVENT_ID_PLAYER, checkonfriend)
+    msgbox(format("SAVE YOURSELF! I CANT HOLD ON MUCH LONGER"))
+    closemessage
+    call(ShipWrekCut)
+    delay(20)
+    fadescreen(FADE_TO_BLACK)
+    removeobject(1)
+    setvar(VAR_0x8008, 1)
+    setflag(FRIEND_IS_DED)
+    fadescreen(FADE_FROM_BLACK)
+
+
+}
+
+script NewMap3_Trigger_loadinscene2 {
+    applymovement(OBJ_EVENT_ID_PLAYER, checkonfriend2)
+    msgbox(format("SAVE YOURSELF! I CANT HOLD ON MUCH LONGER"))
+    closemessage
+    call(ShipWrekCut)
+    delay(20)
+    fadescreen(FADE_TO_BLACK)
+    removeobject(1)
+    setvar(VAR_0x8008, 1)
+    setflag(FRIEND_IS_DED)
+    fadescreen(FADE_FROM_BLACK)
+}
+
+script NewMap3_Trigger_loadinscene3 {
+    applymovement(OBJ_EVENT_ID_PLAYER, checkonfriend3)
+    msgbox(format("SAVE YOURSELF! I CANT HOLD ON MUCH LONGER"))
+    closemessage
+    call(ShipWrekCut)
+    delay(20)
+    fadescreen(FADE_TO_BLACK)
+    removeobject(1)
+    setvar(VAR_0x8008, 1)
+    setflag(FRIEND_IS_DED)
+    fadescreen(FADE_FROM_BLACK)
+
+
+}
+
+script NewMap3_Trigger_loadinscenedown {
+    msgbox(format("SAVE YOURSELF! I CANT HOLD ON MUCH LONGER"))
+    closemessage
+    call(ShipWrekCut)
+    delay(20)
+    fadescreen(FADE_TO_BLACK)
+    removeobject(1)
+    setvar(VAR_0x8008, 1)
+    setflag(FRIEND_IS_DED)
+    fadescreen(FADE_FROM_BLACK)
+
+
+}
+
+movement checkonfriend {
+    walk_down 
+}
+
+movement checkonfriend2 {
+    walk_left 
+    walk_down
+}
+
+movement checkonfriend3 {
+    walk_left
+    walk_down
+}
+
+
+script checkmovementsteps {
+    if(var(VAR_FRIENDSHIP_STEP_COUNTER) == 80){
+        MSGBOX("Placer text")
+    }
+}

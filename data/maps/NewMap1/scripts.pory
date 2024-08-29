@@ -1,0 +1,132 @@
+raw `
+NewMap1_MapScripts::
+	.byte 0
+`
+
+script ScriptForTailSetup{
+    MSGBOX(format("HEY! I HAVE ITEM THAT MAKE POKEMON GO BRRR, BATTLE ME AND GET ITEM OK?" ))
+    MSGBOX("battle maniac?", MSGBOX_YESNO)
+    if(var(VAR_RESULT) == YES){
+    trainerbattle_single(TRAINER_JODY, Max_Intro, Max_Outro, PostTailbattle) 
+    } 
+    else{
+        MSGBOX(format("OK! YOU MISSED YOUR MOMENT."))
+        waitmessage
+        closemessage
+        applymovement(1, Maxleave)
+        waitmovement(0)
+        removeobject(1)
+    }
+
+    
+}
+
+script NewMap1_Trigger_triggerbattleNOW {
+    applymovement(1, TriggerMAX)
+    waitmovement(0)
+    call(ScriptForTailSetup)
+    setvar(VAR_UNUSED_0x40FD, 4)
+}
+
+
+text Max_Intro{
+    "OK! BUT I VERY STRONG!"
+}
+
+text Max_Outro{
+    "NO WAY! YOU CHEAT!"
+}
+
+script PostTailbattle{
+    lockall
+    MSGBOX(format("FINE, TAKE MY ITEM. TEEHEE"))
+    waitmessage
+    giveitem(ITEM_LAGGING_TAIL)
+    applymovement(1, Maxleave)
+    waitmovement(0)
+    removeobject(1)
+    setflag(FLAG_UNUSED_0x02D)
+    releaseall
+
+
+}
+
+movement Maxleave {
+    walk_left * 7
+
+}
+
+movement TriggerMAX {
+    walk_right * 4
+}
+
+script NewMap1_Eventscript_CutsceneTriggerPlayerFriend{
+    lockall 
+    faceplayer
+    msgbox(format("Hey, what do you mean you dont remember??? I'm your best friend! Anyways you ready to go have some fun or do you still want to explore the ship"))
+    MSGBOX("done exploring?", MSGBOX_YESNO)
+    if(var(VAR_RESULT) == YES){
+        MSGBOX(format("Nice! Now lets-- ... ... ... ?"))
+        waitmessage
+        call(ShipWrekCut)
+        fadescreen(FADE_TO_BLACK)
+        delay(20)
+        fadescreen(FADE_FROM_BLACK)
+        call(ShipWrekCut)
+        MSGBOX("WHATS HAPPENING?--")
+        setweather(WEATHER_DOWNPOUR)
+        doweather
+        call(ShipWrekCut)
+        MSGBOX(format("EVERYONE REMAIN CALM, WE HAVE RUN INTO AN UNEXPECTED STORM THAT-- "))
+        waitmessage 
+        call(ShipWrekCut)
+        delay(20)
+        applymovement(OBJ_EVENT_GFX_SCIENTIST_2, PANIC)
+        waitmovement(0)
+        MSGBOX("WE'RE GONNA DIEEE")
+        call(ShipWrekCut)
+        fadescreen(FADE_TO_BLACK)
+        delay(5)
+        fadescreen(FADE_FROM_BLACK)
+        call(ShipWrekCut)
+        MSGBOX("we need to--")
+        waitmessage
+        call(ShipWrekCut)
+        fadescreen(FADE_TO_BLACK)
+        delay(15)
+        warpsilent(MAP_NEW_MAP3, 2, 10)
+        waitstate
+        end
+
+
+
+
+        
+    }
+    else{
+        closemessage
+    }
+
+}
+
+script ShipWrekCut {
+    delay(30)
+    setvar(VAR_0x8004, 2)  //@ vertical pan
+	setvar(VAR_0x8005, 6)  //@ horizontal pan
+    setvar(VAR_0x8006, 8)  //@ num shakes
+    setvar(VAR_0x8007, 4)  //@ shake delay
+    special(ShakeCamera)
+	waitstate
+	delay(60)
+}
+
+movement PANIC {
+    walk_right * 8
+
+}
+script NewMap1_Eventscript_defaultpanicscientist {
+    lockall
+    faceplayer
+    MSGBOX(format("you have good pokemon, you will be much help during our research"))
+    releaseall
+}

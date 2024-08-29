@@ -1,0 +1,51 @@
+raw`
+NewMap2_MapScripts::
+	.byte 0
+`
+
+script NewMap2_EventScript_SashTrade {
+    if(flag(NO_SASH_HASKOFFING)){
+        faceplayer
+        msgbox(format("go explore the ship and find your friend"))
+        waitmessage
+        closemessage
+    }
+    else{
+    faceplayer
+    msgbox(format("Would you like to make a trade. I have a useful pokemon that makes other INTRESTING POKEMON very weak. Do you want this pokemon in exchange for that focus sash you have?"))
+    msgbox("make the trade?", MSGBOX_YESNO)
+    if(var(VAR_RESULT) == YES){
+        removeitem(ITEM_FOCUS_SASH)
+        givemon(SPECIES_KOFFING, 5, ITEM_CUSTAP_BERRY, abilityNum=0, move1=MOVE_WILL_O_WISP, move2=MOVE_GASTRO_ACID, move3=MOVE_ENDURE, move4=MOVE_TAUNT)
+        if(var(VAR_RESULT) == MON_GIVEN_TO_PARTY){
+            playfanfare(MUS_OBTAIN_ITEM)
+            msgbox("Recieved Koffing")
+            msgbox("pleasure doing business with you")
+            waitmessage
+            setflag(NO_SASH_HASKOFFING)
+            call(NicknamePartyMon)
+            closemessage
+        }
+        elif(var(VAR_RESULT) == MON_GIVEN_TO_PC){
+            playfanfare(MUS_OBTAIN_ITEM)
+            msgbox("Recieved Koffing")
+            setflag(NO_SASH_HASKOFFING)
+            call(NicknameBoxMon)
+        }
+        else{
+            hidemonpic
+            msgbox("No More Room")
+        }
+    }
+    else{
+        msgbox(format("unfortunate. hope you change your mind before its too late."))
+        closemessage
+    }
+    }
+}
+
+script NewMap2_EventScript_RandomSceneryBoy {
+    lockall
+    msgbox("THE ROOMS ARE SO BIG!")
+    releaseall
+} 

@@ -3025,6 +3025,9 @@ extern const u8 gText_Summary2[];
 extern const u8 gText_PkmnForSwap[];
 extern const u8 gText_SamePkmnInPartyAlready[];
 extern const u8 gText_Cancel3[];
+extern const u8 gText_R1A1[];
+extern const u8 gText_R1A2[];
+extern const u8 gText_R1A3[];
 
 // Naming Screen
 extern const u8 gText_MoveOkBack[];

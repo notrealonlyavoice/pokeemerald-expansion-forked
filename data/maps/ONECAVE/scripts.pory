@@ -1,0 +1,101 @@
+mapscripts ONECAVE_MapScripts {
+	MAP_SCRIPT_ON_TRANSITION: ONECAVE_MapScripts_OnTransition
+	MAP_SCRIPT_ON_RESUME: CableClub_OnResume
+}
+
+script ONECAVE_MapScripts_OnTransition {
+    setrespawn(HEAL_LOCATION_ONECAVE)
+    end
+}
+
+script Scriptforjake {
+    MSGBOX(format("Oh? you are the shipwrecked kid. well I test people starting the island challenge and you look weak."))
+    trainerbattle_single(TRAINER_ALEXIA, Jakes_Intro, Jakes_Outro, PostJakebattle)     
+}
+
+text Jakes_Intro{
+    "Prepare to lose"
+}
+
+text Jakes_Outro{
+    "....???"
+}
+
+script PostJakebattle{
+    lockall
+    MSGBOX(format("impressive. you suprise me. I'll tell the others that you are ready for the challenge. "))
+    waitmessage
+    applymovement(OBJ_EVENT_ID_PLAYER, scootbish)
+    waitmovement(0)
+    setvar(VAR_0x8008, 5)
+    setvar(VAR_0x8008, 6)
+    applymovement(1, jakeleave)
+    waitmovement(0)
+    removeobject(1)
+    setflag(FOUGHT_JAKE_FLAG)
+    releaseall
+}
+
+movement jakeleave{
+walk_down * 2
+}
+
+script ONECAVE_Trigger_triggerjakebattleNOW {
+    applymovement(1, TriggerJAKE)
+    waitmovement(0)
+    call(Scriptforjake)
+}
+
+movement TriggerJAKE {
+walk_down * 5
+}
+
+movement scootbish {
+walk_right
+face_down 
+}
+
+
+
+
+script ONECAVE_EventScript_conjoinedcaveschecker {
+    if(var(VAR_0x8006) == 4) {
+        lockall
+        MSGBOX(format("I wish you luck in locating Master trout"))
+        waitmessage
+        closemessage
+        applymovement(2, okillmove)
+        waitmovement(0)
+        releaseall
+    }
+    else {
+        lockall 
+        MSGBOX(format("I will not move until you are worthy of entering the CONJOINED CAVES"))
+        waitmessage
+        closemessage
+        releaseall
+    }
+}
+
+script ISLANDNEW_Sign_Conjoinedcavessign {
+	lockall
+	MSGBOX(format("Conjoined Caves"))
+	waitmessage
+	closemessage
+	releaseall
+}
+
+movement okillmove {
+    walk_up
+    walk_left
+    face_right
+}
+
+
+
+script ONECAVE_Trigger_Triggerheal {
+    lockall
+    special(HealPlayerParty)
+    setvar(VAR_0x8006, 1)
+    releaseall
+}

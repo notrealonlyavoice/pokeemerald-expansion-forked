@@ -1834,3 +1834,7 @@ const u8 gText_Fertilize[] = _("FERTILIZE");
 const u8 gText_PlantBerry[] = _("PLANT BERRY");
 const u8 gText_AM[] = _("AM");
 const u8 gText_PM[] = _("PM");
+
+const u8 gText_R1A1[] = _("MISMAGIUS");
+const u8 gText_R1A2[] = _("HARIYAMA");
+const u8 gText_R1A3[] = _("DELIBIRD");

@@ -1,0 +1,40 @@
+raw`
+ISLANDNEW2_MapScripts::
+	.byte 0
+`
+
+script ISLANDNEW2_Trigger_haventstartedtrout {
+    if(var(VAR_0x8006) == 3){
+    lockall
+    MSGBOX(format("this path will probably softlock you, so please save"))
+    releaseall
+    }
+    elif(var(VAR_0x8006) == 2){
+    lockall 
+    MSGBOX(format("this path has to do with MASTER TROUT's challenge which you havent started. "))
+    waitmessage
+    applymovement(OBJ_EVENT_ID_PLAYER, troutnotyet)
+    waitmovement(0)
+    releaseall
+    } 
+}
+
+movement troutnotyet {
+    walk_right * 2
+}
+
+script ISLANDNEW2_EventScript_boygoaheadif {
+    if(var(VAR_0x8006) == 3){
+    lockall
+    MSGBOX("go on through")
+    closemessage
+    releaseall
+    }
+    elif(var(VAR_0x8006) == 2){
+        lockall
+        MSGBOX("sorry, cant let you through")
+        closemessage
+        releaseall
+    }
+    }
+    
