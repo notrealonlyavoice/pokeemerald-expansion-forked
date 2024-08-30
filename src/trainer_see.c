@@ -433,7 +433,7 @@ bool8 CheckForTrainersWantingBattle(void)
 static u8 CheckTrainer(u8 objectEventId)
 {
     const u8 *scriptPtr;
-    u8 numTrainers = 1;
+    u8 ret = 1;
     u8 approachDistance;
     u16 scriptFlag = GetObjectEventTrainerSightFlagByObjectEventId(objectEventId);
     
@@ -468,7 +468,7 @@ static u8 CheckTrainer(u8 objectEventId)
             {
                 // TRAINER_TYPE_RUN_SCRIPT
                 FlagSet(scriptFlag);
-                numTrainers = 0xFF;
+                ret = 0xFF;
             }
             else
             {
@@ -484,7 +484,7 @@ static u8 CheckTrainer(u8 objectEventId)
                 if (GetMonsStateToDoubles_2() != 0)
                     return 0;
 
-                numTrainers = 2;
+                ret = 2;
             }
         }
 
@@ -494,7 +494,7 @@ static u8 CheckTrainer(u8 objectEventId)
         InitTrainerApproachTask(&gObjectEvents[objectEventId], approachDistance - 1);
         gNoOfApproachingTrainers++;
 
-        return numTrainers;
+        return ret;
     }
 
     return 0;
