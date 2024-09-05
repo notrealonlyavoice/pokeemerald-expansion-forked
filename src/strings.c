@@ -1838,3 +1838,7 @@ const u8 gText_PM[] = _("PM");
 const u8 gText_R1A1[] = _("MISMAGIUS");
 const u8 gText_R1A2[] = _("HARIYAMA");
 const u8 gText_R1A3[] = _("DELIBIRD");
+
+const u8 gText_R2A1[] = _("BUG");
+const u8 gText_R2A2[] = _("FAIRY");
+const u8 gText_R2A3[] = _("DARK");

@@ -87,6 +87,10 @@
 #define MAP_TELETUNNEL                (78 | (0 << 8))
 #define MAP_TELETUNNELDOWN            (79 | (0 << 8))
 #define MAP_NDCAVE                    (80 | (0 << 8))
+#define MAP_TEMPESCAPETUNNEL          (81 | (0 << 8))
+#define MAP_NEW_MAP6                  (82 | (0 << 8))
+#define MAP_NEW_MAP7                  (83 | (0 << 8))
+#define MAP_NEW_MAP8                  (84 | (0 << 8))
 
 // gMapGroup_IndoorLittleroot
 #define MAP_LITTLEROOT_TOWN_BRENDANS_HOUSE_1F    (0 | (1 << 8))

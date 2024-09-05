@@ -116,7 +116,11 @@
     "pokemontunnel20",
     "teletunnel",
     "teletunneldown",
-    "ndcave"
+    "ndcave",
+    "tempescapetunnel",
+    "NewMap6",
+    "NewMap7",
+    "NewMap8"
   ],
   "gMapGroup_IndoorLittleroot": [
     "LittlerootTown_BrendansHouse_1F",

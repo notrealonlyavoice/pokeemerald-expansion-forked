@@ -16,7 +16,7 @@ script NewMap2_EventScript_SashTrade {
     msgbox("make the trade?", MSGBOX_YESNO)
     if(var(VAR_RESULT) == YES){
         removeitem(ITEM_FOCUS_SASH)
-        givemon(SPECIES_KOFFING, 5, ITEM_CUSTAP_BERRY, abilityNum=0, move1=MOVE_WILL_O_WISP, move2=MOVE_GASTRO_ACID, move3=MOVE_ENDURE, move4=MOVE_TAUNT)
+        givemon(SPECIES_KOFFING, 5, ITEM_CUSTAP_BERRY, abilityNum=1, move1=MOVE_WILL_O_WISP, move2=MOVE_GASTRO_ACID, move3=MOVE_ENDURE, move4=MOVE_TAUNT)
         if(var(VAR_RESULT) == MON_GIVEN_TO_PARTY){
             playfanfare(MUS_OBTAIN_ITEM)
             msgbox("Recieved Koffing")

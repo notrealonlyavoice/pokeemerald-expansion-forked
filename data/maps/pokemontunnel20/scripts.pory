@@ -19,9 +19,19 @@ text Trout_Outro {
 
 script PostTroutbattle {
     lockall
-    MSGBOX(format("you have far surpasses what I expected. I wish you luck in the other challenges"))
+    MSGBOX(format("you have far surpassed what I expected. I wish you luck in the other challenges"))
     waitmessage
-    msgbox(format("Temp end for Beta."))
+    msgbox(format("take the door behind me to avoid getting lost in the CONJOINED CAVES"))
     waitmessage
+    applymovement(1, troutscoot)
+    setvar(VAR_0x8008, 5)
+    setvar(VAR_0x8008, 9)
+    waitmovement(0)
     end
 }
+
+movement troutscoot {
+    walk_left
+
+}
+

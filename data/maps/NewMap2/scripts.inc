@@ -38,7 +38,7 @@ NewMap2_EventScript_SashTrade_4:
 # 18 "data/maps/NewMap2/scripts.pory"
 	removeitem ITEM_FOCUS_SASH
 # 19 "data/maps/NewMap2/scripts.pory"
-	givemon SPECIES_KOFFING, 5, ITEM_CUSTAP_BERRY, abilityNum = 0, move1 = MOVE_WILL_O_WISP, move2 = MOVE_GASTRO_ACID, move3 = MOVE_ENDURE, move4 = MOVE_TAUNT
+	givemon SPECIES_KOFFING, 5, ITEM_CUSTAP_BERRY, abilityNum = 1, move1 = MOVE_WILL_O_WISP, move2 = MOVE_GASTRO_ACID, move3 = MOVE_ENDURE, move4 = MOVE_TAUNT
 # 20 "data/maps/NewMap2/scripts.pory"
 	compare VAR_RESULT, MON_GIVEN_TO_PARTY
 	goto_if_eq NewMap2_EventScript_SashTrade_7

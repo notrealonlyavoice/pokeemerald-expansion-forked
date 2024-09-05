@@ -11,7 +11,7 @@ script REKTSHIPPP_EventScript_surfdudepuzzle{
     MSGBOX(format("everyone else is gone, and i cant leave because im so old and tired... ... ... but you can save yourself! solve this little puzzle first and youll be free to go"))
     MSGBOX("solve the puzzle?", MSGBOX_YESNO)
     if(var(VAR_RESULT) == YES){
-        MSGBOX(format("ok here goes. the GRASS and FIGHTING legendary from sinnoh has more attack than pincusion")) 
+        MSGBOX(format("ok here goes. the GRASS and FIGHTING legendary from Unova has more attack than pincusion")) 
          MSGBOX("legendary is stonger right?", MSGBOX_YESNO)
         if(var(VAR_RESULT) == YES){
             MSGBOX(format("careful now... we havent implimented soflock saves yet KEKW"))

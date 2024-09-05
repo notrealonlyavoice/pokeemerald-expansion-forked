@@ -26,8 +26,22 @@ PostTroutbattle::
 	msgbox PostTroutbattle_Text_1
 # 25 "data/maps/pokemontunnel20/scripts.pory"
 	waitmessage
+# 26 "data/maps/pokemontunnel20/scripts.pory"
+	applymovement 1, troutscoot
+# 27 "data/maps/pokemontunnel20/scripts.pory"
+	setvar VAR_0x8008, 5
+# 28 "data/maps/pokemontunnel20/scripts.pory"
+	setvar VAR_0x8008, 9
+# 29 "data/maps/pokemontunnel20/scripts.pory"
+	waitmovement 0
 	end
 
+
+# 33 "data/maps/pokemontunnel20/scripts.pory"
+troutscoot:
+# 34 "data/maps/pokemontunnel20/scripts.pory"
+	walk_left
+	step_end
 
 pokemontunnel20_EventScript_grampatrout_Text_0:
 # 7 "data/maps/pokemontunnel20/scripts.pory"
@@ -38,13 +52,14 @@ pokemontunnel20_EventScript_grampatrout_Text_0:
 
 PostTroutbattle_Text_0:
 # 22 "data/maps/pokemontunnel20/scripts.pory"
-	.string "you have far surpasses what I\n"
+	.string "you have far surpassed what I\n"
 	.string "expected. I wish you luck in the other\l"
 	.string "challenges$"
 
 PostTroutbattle_Text_1:
 # 24 "data/maps/pokemontunnel20/scripts.pory"
-	.string "Temp end for Beta.$"
+	.string "take the door behind me to avoid\n"
+	.string "getting lost in the CONJOINED CAVES$"
 
 Trout_Intro::
 # 12 "data/maps/pokemontunnel20/scripts.pory"

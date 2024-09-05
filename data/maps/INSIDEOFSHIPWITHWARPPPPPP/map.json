@@ -30,25 +30,11 @@
   ],
   "warp_events": [
     {
-      "x": 15,
-      "y": 19,
-      "elevation": 0,
-      "dest_map": "MAP_LITTLEROOT_TOWN",
-      "dest_warp_id": "3"
-    },
-    {
       "x": 3,
       "y": 0,
       "elevation": 0,
       "dest_map": "MAP_SHIPPP",
       "dest_warp_id": "0"
-    },
-    {
-      "x": 16,
-      "y": 19,
-      "elevation": 0,
-      "dest_map": "MAP_LITTLEROOT_TOWN",
-      "dest_warp_id": "3"
     },
     {
       "x": 4,

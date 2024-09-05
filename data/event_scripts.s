@@ -1152,3 +1152,11 @@ EventScript_VsSeekerChargingDone::
 	.include "data/maps/pokemontunnel9/scripts.inc"
 
 	.include "data/maps/pokemontunnel10/scripts.inc"
+
+	.include "data/maps/tempescapetunnel/scripts.inc"
+
+	.include "data/maps/NewMap6/scripts.inc"
+
+	.include "data/maps/NewMap7/scripts.inc"
+
+	.include "data/maps/NewMap8/scripts.inc"

@@ -101,7 +101,7 @@ REKTSHIPPP_EventScript_surfdudepuzzle_Text_1:
 REKTSHIPPP_EventScript_surfdudepuzzle_Text_2:
 # 14 "data/maps/SurfroomHM/scripts.pory"
 	.string "ok here goes. the GRASS and FIGHTING\n"
-	.string "legendary from sinnoh has more attack\l"
+	.string "legendary from Unova has more attack\l"
 	.string "than pincusion$"
 
 REKTSHIPPP_EventScript_surfdudepuzzle_Text_3:

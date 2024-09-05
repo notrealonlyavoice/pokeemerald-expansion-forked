@@ -1,0 +1,16 @@
+raw`
+NewMap7_MapScripts::
+	.byte 0
+`
+
+script NewMap7_EventScript_clopscript {
+    lockall
+    playmoncry(SPECIES_DUSCLOPS, CRY_MODE_ENCOUNTER)
+    delay(40)
+    MSGBOX(format("GYUUUUUU"))
+    playmoncry(SPECIES_DUSCLOPS, CRY_MODE_ENCOUNTER)
+    warpsilent(MAP_NEW_MAP7, 17, 31)
+    waitmessage
+    closemessage
+    releaseall
+}

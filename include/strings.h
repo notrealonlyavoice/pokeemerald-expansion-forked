@@ -3028,6 +3028,9 @@ extern const u8 gText_Cancel3[];
 extern const u8 gText_R1A1[];
 extern const u8 gText_R1A2[];
 extern const u8 gText_R1A3[];
+extern const u8 gText_R2A1[];
+extern const u8 gText_R2A2[];
+extern const u8 gText_R2A3[];
 
 // Naming Screen
 extern const u8 gText_MoveOkBack[];

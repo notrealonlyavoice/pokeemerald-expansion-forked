@@ -28,8 +28,27 @@ script ISLANDNEW_EventScript_sameladyasbefore {
     }elif(var(VAR_0x8006) == 3 ){
 		MSGBOX(format("Good luck!"))
 		closemessage
-	} 
-	else {
+	} elif(var(VAR_0x8006) == 5 ){
+		MSGBOX(format("Congrats on Beating the first of 4 ISLAND CHALLENGES"))
+		setvar(VAR_0x8006, 6)
+		waitmessage
+		if(var(VAR_0x8006) == 7 ){
+			MSGBOX(format("OK! Now that you are ready let me give you a brief overview of the second challenge. SPINCLOPS FOREST is a spooky place where the second challenge leader resides. you will need skill to navigate towards it... "))
+			delay(20)
+			MSGBOX("...")
+			delay(20)
+			MSGBOX("...")
+			delay(20)
+			MSGBOX("Oh by the way you cant really escape the forest unless you beat--")
+			fadescreen(FADE_TO_BLACK)
+			delay(40)
+			warpsilent(MAP_NEW_MAP6, 5, 7)
+			waitstate
+		} elif(var(VAR_0x8006) == 6 ){
+			MSGBOX(format("Go check if cleverman has any riddles for you before you start thee next ISLAND CHALLENGE"))
+			closemessage
+		}
+	} else {
 	lockall
 	MSGBOX(format("oh hello. Ready to start the challenge?"))
     waitmessage
