@@ -21,7 +21,7 @@ script REKTSHIPPP_EventScript_surfdudepuzzle{
         else {
            MSGBOX(format("impressive, here take this pokemon and surf out of this hellscape."))
             waitmessage
-            givemon(SPECIES_FRILLISH, 5, ITEM_BERRY_JUICE, abilityNum=0, move1=MOVE_WILL_O_WISP, move2=MOVE_WHIRLPOOL, move3=MOVE_PAIN_SPLIT, move4=MOVE_SURF)
+            givemon(SPECIES_FRILLISH, 5, ITEM_STICKY_BARB, abilityNum=0, move1=MOVE_WILL_O_WISP, move2=MOVE_WHIRLPOOL, move3=MOVE_PAIN_SPLIT, move4=MOVE_SURF)
         if(var(VAR_RESULT) == MON_GIVEN_TO_PARTY){
             playfanfare(MUS_OBTAIN_ITEM)
             msgbox("Recieved frillish")

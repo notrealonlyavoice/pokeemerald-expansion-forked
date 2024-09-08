@@ -472,7 +472,12 @@
     "pokemontunnel6",
     "pokemontunnel7",
     "pokemontunnel9",
-    "pokemontunnel10"
+    "pokemontunnel10",
+    "Icecaves1",
+    "stcave",
+    "icecaves2",
+    "NewMap9",
+    "Finalicecave"
   ],
   "gMapGroup_IndoorDynamic": [
     "SecretBase_RedCave1",

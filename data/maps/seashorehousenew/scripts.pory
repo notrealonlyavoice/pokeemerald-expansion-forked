@@ -22,6 +22,7 @@ script ISLANDNEW_EventScript_randomguy1 {
 
 
 script ISLANDNEW_EventScript_sameladyasbefore {
+	applymovement(2, correctfacingD)
     if(var(VAR_0x8006) == 4 ){
         MSGBOX(format("I belive in you!"))
 		closemessage
@@ -31,23 +32,36 @@ script ISLANDNEW_EventScript_sameladyasbefore {
 	} elif(var(VAR_0x8006) == 5 ){
 		MSGBOX(format("Congrats on Beating the first of 4 ISLAND CHALLENGES"))
 		setvar(VAR_0x8006, 6)
-		waitmessage
-		if(var(VAR_0x8006) == 7 ){
-			MSGBOX(format("OK! Now that you are ready let me give you a brief overview of the second challenge. SPINCLOPS FOREST is a spooky place where the second challenge leader resides. you will need skill to navigate towards it... "))
-			delay(20)
-			MSGBOX("...")
-			delay(20)
-			MSGBOX("...")
-			delay(20)
-			MSGBOX("Oh by the way you cant really escape the forest unless you beat--")
-			fadescreen(FADE_TO_BLACK)
-			delay(40)
-			warpsilent(MAP_NEW_MAP6, 5, 7)
-			waitstate
-		} elif(var(VAR_0x8006) == 6 ){
-			MSGBOX(format("Go check if cleverman has any riddles for you before you start thee next ISLAND CHALLENGE"))
-			closemessage
-		}
+		closemessage
+	} elif(var(VAR_0x8006) == 8 ){
+		MSGBOX(format("Congrats on Being HALFWAY DONE with the ISLAND CHALLENGES, at this rate you'll be home in no time"))
+		setvar(VAR_0x8006, 9)
+		closemessage
+	}elif(var(VAR_0x8006) == 7 ){
+		MSGBOX(format("OK! Now that you are ready let me give you a brief overview of the second challenge. SPINCLOPS FOREST is a spooky place where the second challenge leader resides. you will need skill to navigate towards it... "))
+		delay(20)
+		MSGBOX("...")
+		delay(20)
+		MSGBOX("...")
+		delay(20)
+		MSGBOX(format("Oh by the way you cant really escape the forest unless you beat--"))
+		fadescreen(FADE_TO_BLACK)
+		delay(40)
+		warpsilent(MAP_NEW_MAP6, 5, 7)
+		waitstate
+	}elif(var(VAR_0x8006) == 10 ){
+		MSGBOX(format("OK! The third challenge leader is very young and spends most of his time playing in the ice caves. navigating the caves are treacherous and maybe HM STRENGTH would help..... hmmm....."))
+		setvar(VAR_0x8006, 11)
+		closemessage
+	} elif(var(VAR_0x8006) == 6 ){
+		MSGBOX(format("Go check if cleverman has any riddles for you before you start the next ISLAND CHALLENGE"))
+		closemessage
+	} elif(var(VAR_0x8006) == 11 ){
+		MSGBOX(format("Good luck!"))
+		closemessage
+	} elif(var(VAR_0x8006) == 9 ){
+		MSGBOX(format("Go check Check if cleverman has another riddle ready for you"))
+		closemessage
 	} else {
 	lockall
 	MSGBOX(format("oh hello. Ready to start the challenge?"))
@@ -63,4 +77,8 @@ script ISLANDNEW_EventScript_sameladyasbefore {
         closemessage
     }
     }
+}
+
+movement correctfacingD {
+	faceplayer
 }

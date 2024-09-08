@@ -1,7 +1,12 @@
-raw`
-SHIPPP_MapScripts::
-	.byte 0
-`
+mapscripts SHIPPP_MapScripts {
+	MAP_SCRIPT_ON_TRANSITION: SHIPPP_MapScripts_OnTransition
+	MAP_SCRIPT_ON_RESUME: CableClub_OnResume
+}
+
+script SHIPPP_MapScripts_OnTransition {
+    setrespawn(HEAL_LOCATION_SHIPPP)
+    end
+}
 
 script SHIPPP_EventScript_SailorMessage {
     lockall 
@@ -55,7 +60,9 @@ script SHIPPP_EventScript_SillyKid{
 
 script SHIPPP_EventScript_scientisttest {
     lockall
-    msgbox("placertext")
+    msgbox("HELLO!")
     waitmessage
-    releaseall  
+    closemessage
+    warpsilent(MAP_NEW_MAP8, 7, 8)
+    waitstate
 }

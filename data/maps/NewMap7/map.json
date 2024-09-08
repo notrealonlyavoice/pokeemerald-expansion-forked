@@ -472,15 +472,15 @@
     {
       "graphics_id": "OBJ_EVENT_GFX_DUSCLOPS",
       "x": 20,
-      "y": 12,
+      "y": 13,
       "elevation": 0,
-      "movement_type": "MOVEMENT_TYPE_WALK_DOWN_AND_UP",
-      "movement_range_x": 4,
+      "movement_type": "MOVEMENT_TYPE_WANDER_UP_AND_DOWN",
+      "movement_range_x": 7,
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_RUN_SCRIPT",
       "trainer_sight_or_berry_tree_id": "5",
       "script": "NewMap7_EventScript_clopscript",
-      "flag": "0"
+      "flag": "FLAG_TEMP_6"
     }
   ],
   "warp_events": [
@@ -510,7 +510,7 @@
       "y": 1,
       "elevation": 0,
       "dest_map": "MAP_NEW_MAP8",
-      "dest_warp_id": "0"
+      "dest_warp_id": "1"
     }
   ],
   "coord_events": [

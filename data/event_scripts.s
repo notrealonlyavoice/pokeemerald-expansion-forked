@@ -1160,3 +1160,13 @@ EventScript_VsSeekerChargingDone::
 	.include "data/maps/NewMap7/scripts.inc"
 
 	.include "data/maps/NewMap8/scripts.inc"
+
+	.include "data/maps/Icecaves1/scripts.inc"
+
+	.include "data/maps/stcave/scripts.inc"
+
+	.include "data/maps/icecaves2/scripts.inc"
+
+	.include "data/maps/NewMap9/scripts.inc"
+
+	.include "data/maps/Finalicecave/scripts.inc"

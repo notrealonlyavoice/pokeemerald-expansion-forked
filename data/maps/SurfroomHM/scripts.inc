@@ -30,7 +30,7 @@ REKTSHIPPP_EventScript_surfdudepuzzle_1:
 # 23 "data/maps/SurfroomHM/scripts.pory"
 	waitmessage
 # 24 "data/maps/SurfroomHM/scripts.pory"
-	givemon SPECIES_FRILLISH, 5, ITEM_BERRY_JUICE, abilityNum = 0, move1 = MOVE_WILL_O_WISP, move2 = MOVE_WHIRLPOOL, move3 = MOVE_PAIN_SPLIT, move4 = MOVE_SURF
+	givemon SPECIES_FRILLISH, 5, ITEM_STICKY_BARB, abilityNum = 0, move1 = MOVE_WILL_O_WISP, move2 = MOVE_WHIRLPOOL, move3 = MOVE_PAIN_SPLIT, move4 = MOVE_SURF
 # 25 "data/maps/SurfroomHM/scripts.pory"
 	compare VAR_RESULT, MON_GIVEN_TO_PARTY
 	goto_if_eq REKTSHIPPP_EventScript_surfdudepuzzle_7

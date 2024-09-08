@@ -9,7 +9,7 @@ script captianroom_EventScript_Pokeball1{
     showmonpic(SPECIES_SABLEYE, 10,3)
     msgbox("Do you want to choose sableye?", MSGBOX_YESNO)
     if(var(VAR_RESULT) == YES){
-        givemon(SPECIES_SABLEYE, 5, ITEM_BERRY_JUICE, abilityNum=2, move1=MOVE_WILL_O_WISP, move2=MOVE_FAKE_OUT, move3=MOVE_TOXIC, move4=MOVE_ENCORE)
+        givemon(SPECIES_SABLEYE, 5, ITEM_BERRY_JUICE, abilityNum=2, move1=MOVE_WILL_O_WISP, move2=MOVE_FAKE_OUT, move3=MOVE_QUASH, move4=MOVE_ENCORE)
         if(var(VAR_RESULT) == MON_GIVEN_TO_PARTY){
             playfanfare(MUS_OBTAIN_ITEM)
             msgbox("Recieved sableye")

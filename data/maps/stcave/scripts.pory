@@ -1,0 +1,12 @@
+raw `
+stcave_MapScripts::
+	.byte 0
+`
+
+script stcave_EventScript_samehikerasbefore {
+    lockall 
+    MSGBOX(format("remember to save often during puzzles!"))
+    waitmessage
+    closemessage
+    releaseall
+}

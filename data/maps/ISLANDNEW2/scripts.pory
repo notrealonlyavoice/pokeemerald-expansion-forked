@@ -38,3 +38,24 @@ script ISLANDNEW2_EventScript_boygoaheadif {
     }
     }
     
+    
+
+    script ISLANDNEW2_EventScript_hikerblockicecave {
+        if(var(VAR_0x8006) == 11 ){
+		MSGBOX(format("Good luck in the caves."))
+        waitmessage
+        applymovement(3, hikermove)
+        waitmovement(0)
+        removeobject(3)
+        setflag(FLAG_Dontletguyrespawn)
+		closemessage
+        } else{ 
+         MSGBOX(format("Aint movin till you start the challenge regarding these caves"))
+         waitmessage
+         closemessage
+        }
+    }
+
+    movement hikermove {
+        walk_up
+    }

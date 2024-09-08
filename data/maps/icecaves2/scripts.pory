@@ -1,0 +1,9 @@
+mapscripts icecaves2_MapScripts {
+	MAP_SCRIPT_ON_TRANSITION: icecaves2_MapScripts_OnTransition
+	MAP_SCRIPT_ON_RESUME: CableClub_OnResume
+}
+
+script icecaves2_MapScripts_OnTransition {
+    setrespawn(HEAL_LOCATION_ICECAVES2)
+    end
+}

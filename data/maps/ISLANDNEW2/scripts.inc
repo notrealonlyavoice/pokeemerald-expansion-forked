@@ -79,6 +79,42 @@ ISLANDNEW2_EventScript_boygoaheadif_2:
 	return
 
 
+ISLANDNEW2_EventScript_hikerblockicecave::
+# 44 "data/maps/ISLANDNEW2/scripts.pory"
+	compare VAR_0x8006, 11
+	goto_if_eq ISLANDNEW2_EventScript_hikerblockicecave_1
+# 53 "data/maps/ISLANDNEW2/scripts.pory"
+	MSGBOX ISLANDNEW2_EventScript_hikerblockicecave_Text_1
+# 54 "data/maps/ISLANDNEW2/scripts.pory"
+	waitmessage
+# 55 "data/maps/ISLANDNEW2/scripts.pory"
+	closemessage
+	return
+
+ISLANDNEW2_EventScript_hikerblockicecave_1:
+# 45 "data/maps/ISLANDNEW2/scripts.pory"
+	MSGBOX ISLANDNEW2_EventScript_hikerblockicecave_Text_0
+# 46 "data/maps/ISLANDNEW2/scripts.pory"
+	waitmessage
+# 47 "data/maps/ISLANDNEW2/scripts.pory"
+	applymovement 3, hikermove
+# 48 "data/maps/ISLANDNEW2/scripts.pory"
+	waitmovement 0
+# 49 "data/maps/ISLANDNEW2/scripts.pory"
+	removeobject 3
+# 50 "data/maps/ISLANDNEW2/scripts.pory"
+	setflag FLAG_Dontletguyrespawn
+# 51 "data/maps/ISLANDNEW2/scripts.pory"
+	closemessage
+	return
+
+
+# 59 "data/maps/ISLANDNEW2/scripts.pory"
+hikermove:
+# 60 "data/maps/ISLANDNEW2/scripts.pory"
+	walk_up
+	step_end
+
 ISLANDNEW2_Trigger_haventstartedtrout_Text_0:
 # 9 "data/maps/ISLANDNEW2/scripts.pory"
 	.string "this path will probably softlock you, so\n"
@@ -96,3 +132,12 @@ ISLANDNEW2_EventScript_boygoaheadif_Text_0:
 ISLANDNEW2_EventScript_boygoaheadif_Text_1:
 # 35 "data/maps/ISLANDNEW2/scripts.pory"
 	.string "sorry, cant let you through$"
+
+ISLANDNEW2_EventScript_hikerblockicecave_Text_0:
+# 45 "data/maps/ISLANDNEW2/scripts.pory"
+	.string "Good luck in the caves.$"
+
+ISLANDNEW2_EventScript_hikerblockicecave_Text_1:
+# 53 "data/maps/ISLANDNEW2/scripts.pory"
+	.string "Aint movin till you start the challenge\n"
+	.string "regarding these caves$"

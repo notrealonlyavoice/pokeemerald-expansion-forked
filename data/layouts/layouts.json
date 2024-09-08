@@ -4834,12 +4834,62 @@
     {
       "id": "LAYOUT_NEW_MAP8",
       "name": "NewMap8_Layout",
-      "width": 5,
-      "height": 5,
+      "width": 11,
+      "height": 10,
       "primary_tileset": "gTileset_General",
-      "secondary_tileset": "gTileset_Petalburg",
+      "secondary_tileset": "gTileset_Rustboro",
       "border_filepath": "data/layouts/NewMap8/border.bin",
       "blockdata_filepath": "data/layouts/NewMap8/map.bin"
+    },
+    {
+      "id": "LAYOUT_ICECAVES1",
+      "name": "Icecaves1_Layout",
+      "width": 20,
+      "height": 20,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Cave",
+      "border_filepath": "data/layouts/Icecaves1/border.bin",
+      "blockdata_filepath": "data/layouts/Icecaves1/map.bin"
+    },
+    {
+      "id": "LAYOUT_STCAVE",
+      "name": "stcave_Layout",
+      "width": 11,
+      "height": 10,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Cave",
+      "border_filepath": "data/layouts/stcave/border.bin",
+      "blockdata_filepath": "data/layouts/stcave/map.bin"
+    },
+    {
+      "id": "LAYOUT_ICECAVES2",
+      "name": "icecaves2_Layout",
+      "width": 25,
+      "height": 25,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Cave",
+      "border_filepath": "data/layouts/icecaves2/border.bin",
+      "blockdata_filepath": "data/layouts/icecaves2/map.bin"
+    },
+    {
+      "id": "LAYOUT_NEW_MAP9",
+      "name": "NewMap9_Layout",
+      "width": 25,
+      "height": 25,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_SootopolisGym",
+      "border_filepath": "data/layouts/NewMap9/border.bin",
+      "blockdata_filepath": "data/layouts/NewMap9/map.bin"
+    },
+    {
+      "id": "LAYOUT_FINALICECAVE",
+      "name": "Finalicecave_Layout",
+      "width": 15,
+      "height": 15,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Cave",
+      "border_filepath": "data/layouts/Finalicecave/border.bin",
+      "blockdata_filepath": "data/layouts/Finalicecave/map.bin"
     }
   ]
 }

@@ -1,0 +1,9 @@
+mapscripts NewMap6_MapScripts {
+	MAP_SCRIPT_ON_TRANSITION: NewMap6_MapScripts_OnTransition
+	MAP_SCRIPT_ON_RESUME: CableClub_OnResume
+}
+
+script NewMap6_MapScripts_OnTransition {
+    setrespawn(HEAL_LOCATION_NEW_MAP6)
+    end
+}

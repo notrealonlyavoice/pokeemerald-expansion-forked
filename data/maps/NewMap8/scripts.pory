@@ -1,0 +1,32 @@
+raw `
+NewMap8_MapScripts::
+	.byte 0
+`
+
+script NewMap8_EventScript_leadermoria {
+    MSGBOX(format("You managed to navitage the treacherous SPINCLOPS FOREST without going insane. for that commend you. unfortunatly you now have to fight me and i'm afraid this is where your island challenge ends"))
+    waitmessage
+    trainerbattle_single(TRAINER_MARY, Moria_Intro, Moria_Outro, PostMoriaBattle)
+}
+
+text Moria_Intro {
+   "Prepare to lose."
+}
+
+text Moria_Outro {
+   "..."
+}
+
+script PostMoriaBattle {
+    lockall
+    MSGBOX(format("Despite your pathetic team you have somehow overcome me in this battle. I commend you for your exceptional strategy."))
+    waitmessage
+    msgbox(format("I no longer have use for you. Return back to the main island and leave me in peace"))
+    waitmessage
+    fadescreen(FADE_TO_BLACK)
+    setvar(VAR_0x8006, 8)
+    setvar(VAR_0x8008, 11)
+	delay(40)
+	warpsilent(MAP_ISLANDNEW, 14, 18)
+    waitstate
+}

@@ -28,7 +28,7 @@ captianroom_EventScript_Pokeball1_1:
 
 captianroom_EventScript_Pokeball1_2:
 # 12 "data/maps/captianroom/scripts.pory"
-	givemon SPECIES_SABLEYE, 5, ITEM_BERRY_JUICE, abilityNum = 2, move1 = MOVE_WILL_O_WISP, move2 = MOVE_FAKE_OUT, move3 = MOVE_TOXIC, move4 = MOVE_ENCORE
+	givemon SPECIES_SABLEYE, 5, ITEM_BERRY_JUICE, abilityNum = 2, move1 = MOVE_WILL_O_WISP, move2 = MOVE_FAKE_OUT, move3 = MOVE_QUASH, move4 = MOVE_ENCORE
 # 13 "data/maps/captianroom/scripts.pory"
 	compare VAR_RESULT, MON_GIVEN_TO_PARTY
 	goto_if_eq captianroom_EventScript_Pokeball1_6

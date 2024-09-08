@@ -268,7 +268,7 @@ remainingofcheckonplayercript2::
 # 143 "data/maps/ISLANDNEW/scripts.pory"
 	waitmessage
 # 144 "data/maps/ISLANDNEW/scripts.pory"
-	givemon SPECIES_MR_MIME, 5, ITEM_LEPPA_BERRY, abilityNum = 1, move1 = MOVE_TRICK, move2 = MOVE_PROTECT, move3 = MOVE_TRICK_ROOM, move4 = MOVE_CONFUSION
+	givemon SPECIES_MR_MIME, 5, ITEM_LEPPA_BERRY, abilityNum = 1, move1 = MOVE_TRICK, move2 = MOVE_PROTECT, move3 = MOVE_TRICK_ROOM, move4 = MOVE_TAUNT
 # 145 "data/maps/ISLANDNEW/scripts.pory"
 	compare VAR_RESULT, MON_GIVEN_TO_PARTY
 	goto_if_eq remainingofcheckonplayercript2_2

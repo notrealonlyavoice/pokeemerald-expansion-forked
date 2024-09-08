@@ -29,17 +29,19 @@ PostTroutbattle::
 # 26 "data/maps/pokemontunnel20/scripts.pory"
 	applymovement 1, troutscoot
 # 27 "data/maps/pokemontunnel20/scripts.pory"
-	setvar VAR_0x8008, 5
+	closemessage
 # 28 "data/maps/pokemontunnel20/scripts.pory"
-	setvar VAR_0x8008, 9
+	setvar VAR_0x8006, 5
 # 29 "data/maps/pokemontunnel20/scripts.pory"
+	setvar VAR_0x8008, 9
+# 30 "data/maps/pokemontunnel20/scripts.pory"
 	waitmovement 0
 	end
 
 
-# 33 "data/maps/pokemontunnel20/scripts.pory"
-troutscoot:
 # 34 "data/maps/pokemontunnel20/scripts.pory"
+troutscoot:
+# 35 "data/maps/pokemontunnel20/scripts.pory"
 	walk_left
 	step_end
 

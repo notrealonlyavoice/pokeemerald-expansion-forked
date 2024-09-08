@@ -1456,22 +1456,25 @@ Level: 43
 IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
 
 === TRAINER_ALBERT ===
-Name: ALBERT
-Class: Cooltrainer
-Pic: Cooltrainer M
+Name: Miles
+Class: School Kid 
+Pic: School Kid M
 Gender: Male
 Music: Cool
-Items: Full Restore
 Double Battle: No
 AI: Check Bad Move / Try To Faint / Check Viability
 
-Magneton
-Level: 43
+Glalie
+Level: 100
 IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
+- Explosion
 
-Muk
-Level: 43
+Clefable
+Ability: Magic Guard
+Level: 100
 IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
+- Flamethrower
+- Meteor Mash
 
 === TRAINER_SAMUEL ===
 Name: SAMUEL
@@ -1653,20 +1656,28 @@ IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
 
 
 === TRAINER_MARY ===
-Name: MARY
-Class: Cooltrainer
-Pic: Cooltrainer F
+Name: Moria
+Class: Hex Maniac
+Pic: Hex Maniac
 Gender: Female
 Music: Cool
-Items: Hyper Potion
+Items: Awakening 
 Double Battle: No
-AI: Check Bad Move / Try To Faint / Check Viability
+AI: Try To Faint / Check Viability / HP Aware / Check Bad Move
 
-Delcatty
-Level: 26
+Weezing
+Level: 100
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Feint Attack
-- Shock Wave
+- Explosion
+- Toxic Spikes
+
+Dusclops
+Level: 100
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Swagger
+- Taunt
+- Rest
+- Spikes
 
 === TRAINER_ALEXIA ===
 Name: ALEXIA
@@ -1677,7 +1688,7 @@ Music: Cool
 Double Battle: No
 AI: Check Bad Move / Try To Faint / Check Viability
 
-Kingdra
+Kingdra @ Lum Berry
 Level: 100
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 - Dragon Claw

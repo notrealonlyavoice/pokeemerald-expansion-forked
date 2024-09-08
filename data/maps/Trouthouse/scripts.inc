@@ -36,7 +36,7 @@ Trouthouse_EventScript_Troutgrnadaughter_Text_0:
 	.string "oh... Youre doing grandpa trouts\n"
 	.string "challenge? Its very hard but i know the\l"
 	.string "combination to help you. The\l"
-	.string "combination is ABABCCCBCBABCBABCBA\l"
+	.string "combination is ABABCCCBCBABCBABCBAC\l"
 	.string "SWITCHED!$"
 
 Trouthouse_EventScript_Troutgrnadaughter_Text_1:

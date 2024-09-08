@@ -1,0 +1,40 @@
+raw `
+Finalicecave_MapScripts::
+	.byte 0
+`
+
+
+script Finalicecave_EventScript_KidMiles {
+    MSGBOX(format("Yoooooo. Super rad that you found me bro! isnt this cave lit??? Oh.... Island challenge. I guess I could spare a couple mins to beat you in STYLE!"))
+    waitmessage
+    trainerbattle_single(TRAINER_ALBERT, Miles_Intro, Miles_Outro, PostMilesbattle)
+}
+
+text Miles_Intro {
+   "WOOHOO!"
+}
+
+text Miles_Outro {
+   "Nowaybrohow---?"
+}
+
+script PostMilesbattle {
+    lockall
+    MSGBOX(format("Dam. Your battle strats are lokey slick my dude."))
+    waitmessage
+    msgbox(format("You might be ready to finish the ISLAND CHALLENGES after all..."))
+    waitmessage
+    applymovement(1, Milesscoot)
+    closemessage
+   
+    waitmovement(0)
+    end
+}
+
+movement Milesscoot {
+    walk_up
+    walk_left
+    face_right
+
+}
+
