@@ -1846,3 +1846,7 @@ const u8 gText_R2A3[] = _("DARK");
 const u8 gText_R3A1[] = _("GLIMMET");
 const u8 gText_R3A2[] = _("TAPU KOKO");
 const u8 gText_R3A3[] = _("MILOTIC");
+
+const u8 gText_RFA1[] = _("One");
+const u8 gText_RFA2[] = _("Two");
+const u8 gText_RFA3[] = _("Four");

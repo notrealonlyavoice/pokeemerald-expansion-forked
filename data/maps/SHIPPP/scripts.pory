@@ -63,6 +63,4 @@ script SHIPPP_EventScript_scientisttest {
     msgbox("HELLO!")
     waitmessage
     closemessage
-    warpsilent(MAP_NEW_MAP8, 7, 8)
-    waitstate
 }

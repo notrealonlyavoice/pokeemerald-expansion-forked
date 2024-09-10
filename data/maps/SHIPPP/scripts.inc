@@ -105,10 +105,6 @@ SHIPPP_EventScript_scientisttest::
 	waitmessage
 # 65 "data/maps/SHIPPP/scripts.pory"
 	closemessage
-# 66 "data/maps/SHIPPP/scripts.pory"
-	warpsilent MAP_NEW_MAP8, 7, 8
-# 67 "data/maps/SHIPPP/scripts.pory"
-	waitstate
 	return
 
 

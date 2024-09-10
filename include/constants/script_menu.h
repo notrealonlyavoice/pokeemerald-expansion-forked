@@ -126,6 +126,7 @@
 #define MULTI_RIDDLE_ONE                   115
 #define MULTI_RIDDLE_TWO                   116
 #define MULTI_RIDDLE_THREE                 117
+#define MULTI_RIDDLE_FINAL                 118
 
 // Lilycove SS Tidal Multichoice Selections
 #define SSTIDAL_SELECTION_SLATEPORT        0

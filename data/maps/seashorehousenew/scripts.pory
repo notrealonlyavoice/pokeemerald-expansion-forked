@@ -22,7 +22,6 @@ script ISLANDNEW_EventScript_randomguy1 {
 
 
 script ISLANDNEW_EventScript_sameladyasbefore {
-	applymovement(2, correctfacingD)
     if(var(VAR_0x8006) == 4 ){
         MSGBOX(format("I belive in you!"))
 		closemessage
@@ -62,6 +61,9 @@ script ISLANDNEW_EventScript_sameladyasbefore {
 	} elif(var(VAR_0x8006) == 9 ){
 		MSGBOX(format("Go check Check if cleverman has another riddle ready for you"))
 		closemessage
+	}elif(var(VAR_0x8006) == 12 ){
+		MSGBOX(format("You've come so far! go talk to cleverman before i give you the briefing on your last challenge!"))
+		closemessage
 	} else {
 	lockall
 	MSGBOX(format("oh hello. Ready to start the challenge?"))
@@ -79,6 +81,5 @@ script ISLANDNEW_EventScript_sameladyasbefore {
     }
 }
 
-movement correctfacingD {
-	faceplayer
-}
+
+

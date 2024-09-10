@@ -4890,6 +4890,26 @@
       "secondary_tileset": "gTileset_Cave",
       "border_filepath": "data/layouts/Finalicecave/border.bin",
       "blockdata_filepath": "data/layouts/Finalicecave/map.bin"
+    },
+    {
+      "id": "LAYOUT_TRICKHOUSE_FINALE",
+      "name": "trickhouseFINALE_Layout",
+      "width": 40,
+      "height": 40,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_TrickHousePuzzle",
+      "border_filepath": "data/layouts/trickhouseFINALE/border.bin",
+      "blockdata_filepath": "data/layouts/trickhouseFINALE/map.bin"
+    },
+    {
+      "id": "LAYOUT_NEW_MAP10",
+      "name": "NewMap10_Layout",
+      "width": 10,
+      "height": 10,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_TrickHousePuzzle",
+      "border_filepath": "data/layouts/NewMap10/border.bin",
+      "blockdata_filepath": "data/layouts/NewMap10/map.bin"
     }
   ]
 }

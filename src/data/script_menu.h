@@ -804,6 +804,13 @@ static const struct MenuAction MultichoiceList_R3ANSWERS[] =
     {gText_R3A3},
 };
 
+static const struct MenuAction MultichoiceList_RFANSWERS[] =
+{
+    {gText_RFA1},
+    {gText_RFA2},
+    {gText_RFA3},
+};
+
 struct MultichoiceListStruct
 {
     const struct MenuAction *list;
@@ -930,6 +937,7 @@ static const struct MultichoiceListStruct sMultichoiceLists[] =
     [MULTI_RIDDLE_ONE]                 = MULTICHOICE(MultichoiceList_R1ANSWERS),
     [MULTI_RIDDLE_TWO]                 = MULTICHOICE(MultichoiceList_R2ANSWERS),
     [MULTI_RIDDLE_THREE]               = MULTICHOICE(MultichoiceList_R3ANSWERS),
+    [MULTI_RIDDLE_FINAL]               = MULTICHOICE(MultichoiceList_RFANSWERS),
 };
 
 const u8 *const gStdStrings[] =

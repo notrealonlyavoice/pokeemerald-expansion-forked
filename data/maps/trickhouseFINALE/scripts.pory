@@ -1,0 +1,439 @@
+raw `
+trickhouseFINALE_MapScripts::
+	map_script MAP_SCRIPT_ON_RESUME, trickhouseFINALE_OnResume
+	map_script MAP_SCRIPT_ON_TRANSITION, trickhouseFINALE_OnTransition
+	map_script MAP_SCRIPT_ON_LOAD, trickhouseFINALE_OnLoad
+	map_script MAP_SCRIPT_ON_FRAME_TABLE, trickhouseFINALE_OnFrame
+	.byte 0
+
+trickhouseFINALE_OnResume:
+	call_if_eq VAR_TEMP_1, 1, trickhouseFINALE_EventScript_PressButton1
+	call_if_eq VAR_TEMP_2, 1, trickhouseFINALE_EventScript_PressButton2
+	call_if_eq VAR_TEMP_3, 1, trickhouseFINALE_EventScript_PressButton3
+	call_if_eq VAR_TEMP_4, 1, trickhouseFINALE_EventScript_PressButton4
+	call trickhouseFINALE_EventScript_UpdateSwitchMetatiles
+	end
+
+trickhouseFINALE_OnTransition:
+	setvar VAR_TEMP_1, 0
+	setvar VAR_TEMP_2, 0
+	setvar VAR_TEMP_3, 0
+	setvar VAR_TEMP_4, 0
+	goto_if_eq VAR_TRICK_HOUSE_PUZZLE_7_STATE_2, 1, trickhouseFINALE_EventScript_TeleportedTransition
+	end
+
+trickhouseFINALE_OnLoad:
+	call_if_eq VAR_TRICK_HOUSE_PUZZLE_7_STATE_2, 1, trickhouseFINALE_EventScript_UpdateSwitchMetatiles
+    goto_if_set FLAG_realitempicked, trickhouseFINALE_EventScript_respawntile
+    goto_if_eq VAR_UNUSED_0x40FD, 1, trickhouseFINALE_EventScript_respawnswitch2
+    goto_if_eq VAR_UNUSED_0x40DC, 1, trickhouseFINALE_EventScript_respawnswitch3
+    goto_if_eq VAR_UNUSED_0x40FC, 1, trickhouseFINALE_EventScript_respawnswitch4
+    goto_if_eq VAR_UNUSED_0x40DB, 1, trickhouseFINALE_EventScript_respawnswitch5
+	end
+ 
+trickhouseFINALE_OnFrame:
+	map_script_2 VAR_TRICK_HOUSE_PUZZLE_7_STATE_2, 1, trickhouseFINALE_EventScript_ClearState2
+	.2byte 0
+
+trickhouseFINALE_EventScript_Scroll::
+	lockall
+	goto_if_eq VAR_TRICK_HOUSE_PUZZLE_2_STATE, 0, trickhouseFINALE_EventScript_FoundScroll
+	goto Route110_TrickHousePuzzle_EventScript_ReadScrollAgain
+	end
+
+trickhouseFINALE_EventScript_FoundScroll::
+	setvar VAR_TRICK_HOUSE_PUZZLE_2_STATE, 1
+	goto Route110_TrickHousePuzzle_EventScript_FoundScroll
+	end
+
+trickhouseFINALE_EventScript_respawntile::
+	setmetatile 3, 15, METATILE_TrickHousePuzzle_Door_Shuttered, FALSE
+	end
+
+trickhouseFINALE_EventScript_respawnswitch2::
+    setmetatile 13, 4, METATILE_TrickHousePuzzle_Arrow_RedOnBlack_Up, FALSE
+	setmetatile 18, 12, METATILE_TrickHousePuzzle_Lever_On, TRUE
+    setflag FLAG_TRICK_HOUSE_PUZZLE_7_SWITCH_2
+	Return
+
+trickhouseFINALE_EventScript_respawnswitch3::
+    setmetatile 22, 17, METATILE_TrickHousePuzzle_Arrow_RedOnBlack_Down, FALSE
+	setmetatile 30, 32, METATILE_TrickHousePuzzle_Lever_On, TRUE
+    setflag FLAG_TRICK_HOUSE_PUZZLE_7_SWITCH_3
+	Return
+
+trickhouseFINALE_EventScript_respawnswitch4::
+    setmetatile 25, 22, METATILE_TrickHousePuzzle_Arrow_RedOnBlack_Right, FALSE
+	setmetatile 28, 2, METATILE_TrickHousePuzzle_Lever_On, TRUE
+    setflag FLAG_TRICK_HOUSE_PUZZLE_7_SWITCH_4
+	Return
+
+trickhouseFINALE_EventScript_respawnswitch5::
+    setmetatile 37, 18, METATILE_TrickHousePuzzle_Arrow_RedOnBlack_Left, FALSE
+	setmetatile 2, 10, METATILE_TrickHousePuzzle_Lever_On, TRUE
+    setflag FLAG_TRICK_HOUSE_PUZZLE_7_SWITCH_5
+	Return
+
+
+
+
+trickhouseFINALE_EventScript_Button1::
+	lockall
+	setvar VAR_TEMP_1, 1
+	playse SE_PIN
+	call trickhouseFINALE_EventScript_PressButton1
+	special DrawWholeMapView
+	releaseall
+	end
+
+trickhouseFINALE_EventScript_Button2::
+	lockall
+	setvar VAR_TEMP_2, 1
+	playse SE_PIN
+	call trickhouseFINALE_EventScript_PressButton2
+	special DrawWholeMapView
+	releaseall
+	end
+
+trickhouseFINALE_EventScript_Button3::
+	lockall
+	setvar VAR_TEMP_3, 1
+	playse SE_PIN
+	call trickhouseFINALE_EventScript_PressButton3
+	special DrawWholeMapView
+	releaseall
+	end
+
+trickhouseFINALE_EventScript_Button4::
+	lockall
+	setvar VAR_TEMP_4, 1
+	playse SE_PIN
+	call trickhouseFINALE_EventScript_PressButton4
+	special DrawWholeMapView
+	releaseall
+	end
+
+trickhouseFINALE_EventScript_PressButton1::
+	setmetatile 27, 37, METATILE_TrickHousePuzzle_Button_Pressed, FALSE
+	setmetatile 13, 33, METATILE_TrickHousePuzzle_Door_Shuttered, FALSE
+	return
+
+trickhouseFINALE_EventScript_PressButton2::
+	setmetatile 13, 30, METATILE_TrickHousePuzzle_Button_Pressed, FALSE
+	setmetatile 30, 38, METATILE_TrickHousePuzzle_Door_Shuttered, FALSE
+	return
+
+trickhouseFINALE_EventScript_PressButton3::
+	setmetatile 18, 24, METATILE_TrickHousePuzzle_Button_Pressed, FALSE
+	setmetatile 23, 24, METATILE_TrickHousePuzzle_Door_Shuttered, FALSE
+	return
+
+trickhouseFINALE_EventScript_PressButton4::
+	setmetatile 18, 28, METATILE_TrickHousePuzzle_Button_Pressed, FALSE
+	setmetatile 23, 28, METATILE_TrickHousePuzzle_Door_Shuttered, FALSE
+	return
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@ Puzzle Room 7 in RSE uses whatever puzzle Mossdeep Gym uses
+@ Because Mossdeep Gym was redesigned for Emerald, theres a good deal of leftover script from the old R/S puzzle
+
+
+trickhouseFINALE_EventScript_UpdateSwitchMetatiles::
+	call_if_set FLAG_TRICK_HOUSE_PUZZLE_7_SWITCH_1, trickhouseFINALE_EventScript_SetSwitch1MetatilesOn
+	call_if_set FLAG_TRICK_HOUSE_PUZZLE_7_SWITCH_2, trickhouseFINALE_EventScript_SetSwitch2MetatilesOn
+	call_if_set FLAG_TRICK_HOUSE_PUZZLE_7_SWITCH_3, trickhouseFINALE_EventScript_SetSwitch3MetatilesOn
+	call_if_set FLAG_TRICK_HOUSE_PUZZLE_7_SWITCH_4, trickhouseFINALE_EventScript_SetSwitch4MetatilesOn
+	call_if_set FLAG_TRICK_HOUSE_PUZZLE_7_SWITCH_5, trickhouseFINALE_EventScript_SetSwitch5MetatilesOn
+	return
+
+@ Leftover from R/S, none of the below metatile scripts are ever called
+trickhouseFINALE_EventScript_SetSwitch1MetatilesOn::
+	setmetatile 20, 37, METATILE_TrickHousePuzzle_Arrow_RedOnBlack_Up, FALSE
+	setmetatile 34, 38, METATILE_TrickHousePuzzle_Lever_On, TRUE
+	return
+
+trickhouseFINALE_EventScript_SetSwitch2MetatilesOn::
+	setmetatile 13, 4, METATILE_TrickHousePuzzle_Arrow_RedOnBlack_Up, FALSE
+	setmetatile 18, 12, METATILE_TrickHousePuzzle_Lever_On, TRUE
+	return
+
+trickhouseFINALE_EventScript_SetSwitch3MetatilesOn::
+	setmetatile 22, 17, METATILE_TrickHousePuzzle_Arrow_RedOnBlack_Down, FALSE
+	setmetatile 30, 32, METATILE_TrickHousePuzzle_Lever_On, TRUE
+	return
+
+trickhouseFINALE_EventScript_SetSwitch4MetatilesOn::
+	setmetatile 25, 22, METATILE_TrickHousePuzzle_Arrow_RedOnBlack_Right, FALSE
+	setmetatile 28, 2, METATILE_TrickHousePuzzle_Lever_On, TRUE
+	return
+
+trickhouseFINALE_EventScript_SetSwitch5MetatilesOn::
+	setmetatile 37, 18, METATILE_TrickHousePuzzle_Arrow_RedOnBlack_Left, FALSE
+	setmetatile 2, 10, METATILE_TrickHousePuzzle_Lever_On, TRUE
+	return
+
+trickhouseFINALE_EventScript_SetSwitch1MetatilesOff::
+	setmetatile 20, 37, METATILE_TrickHousePuzzle_Arrow_RedOnBlack_Down, FALSE
+	setmetatile 34, 38, METATILE_TrickHousePuzzle_Lever_Off, TRUE
+	return
+
+trickhouseFINALE_EventScript_SetSwitch2MetatilesOff::
+	setmetatile 13, 4, METATILE_TrickHousePuzzle_Arrow_RedOnBlack_Down, FALSE
+	setmetatile 18, 12, METATILE_TrickHousePuzzle_Lever_Off, TRUE
+	return
+
+trickhouseFINALE_EventScript_SetSwitch3MetatilesOff::
+	setmetatile 22, 17, METATILE_TrickHousePuzzle_Arrow_RedOnBlack_Up, FALSE
+	setmetatile 30, 32, METATILE_TrickHousePuzzle_Lever_Off, TRUE
+	return
+
+trickhouseFINALE_EventScript_SetSwitch4MetatilesOff::
+	setmetatile 25, 22, METATILE_TrickHousePuzzle_Arrow_RedOnBlack_Left, FALSE
+	setmetatile 2, 28, METATILE_TrickHousePuzzle_Lever_Off, TRUE
+	return
+
+trickhouseFINALE_EventScript_SetSwitch5MetatilesOff::
+	setmetatile 27, 18, METATILE_TrickHousePuzzle_Arrow_RedOnBlack_Up, FALSE
+	setmetatile 10, 25, METATILE_TrickHousePuzzle_Lever_Off, TRUE
+	return
+
+
+trickhouseFINALE_EventScript_TeleportedTransition::
+	end
+
+trickhouseFINALE_EventScript_ClearState2::
+	setvar VAR_TRICK_HOUSE_PUZZLE_7_STATE_2, 0
+	end
+
+
+
+@ Unused, leftover from R/S
+trickhouseFINALE_EventScript_TeleportPad::
+	lockall
+	setvar VAR_TRICK_HOUSE_PUZZLE_7_STATE_2, 1
+	warpteleport MAP_ROUTE110_TRICK_HOUSE_PUZZLE7, 3, 19
+	waitstate
+	releaseall
+	end
+
+@ All the below switch scripts are unused leftover from R/S
+trickhouseFINALE_EventScript_Switch1::
+	lockall
+	delay 32
+	call_if_unset FLAG_TRICK_HOUSE_PUZZLE_7_SWITCH_1, trickhouseFINALE_EventScript_SetSwitch1MetatilesOn
+	call_if_set FLAG_TRICK_HOUSE_PUZZLE_7_SWITCH_1, trickhouseFINALE_EventScript_SetSwitch1MetatilesOff
+	special DrawWholeMapView
+	playse SE_CLICK
+	goto_if_unset FLAG_TRICK_HOUSE_PUZZLE_7_SWITCH_1, trickhouseFINALE_EventScript_SetSwitch1On
+	goto_if_set FLAG_TRICK_HOUSE_PUZZLE_7_SWITCH_1, trickhouseFINALE_EventScript_SetSwitch1Off
+	end
+
+trickhouseFINALE_EventScript_Switch2::
+	lockall
+	delay 32
+    setvar VAR_UNUSED_0x40FD, 1
+	call_if_unset FLAG_TRICK_HOUSE_PUZZLE_7_SWITCH_2, trickhouseFINALE_EventScript_SetSwitch2MetatilesOn
+	call_if_set FLAG_TRICK_HOUSE_PUZZLE_7_SWITCH_2, trickhouseFINALE_EventScript_SetSwitch2MetatilesOff
+	special DrawWholeMapView
+	playse SE_CLICK
+	goto_if_unset FLAG_TRICK_HOUSE_PUZZLE_7_SWITCH_2, trickhouseFINALE_EventScript_SetSwitch2On
+	goto_if_set FLAG_TRICK_HOUSE_PUZZLE_7_SWITCH_2, trickhouseFINALE_EventScript_SetSwitch2Off
+	end
+
+trickhouseFINALE_EventScript_Switch3::
+	lockall
+	delay 32
+    setvar VAR_UNUSED_0x40DC, 1
+	call_if_unset FLAG_TRICK_HOUSE_PUZZLE_7_SWITCH_3, trickhouseFINALE_EventScript_SetSwitch3MetatilesOn
+	call_if_set FLAG_TRICK_HOUSE_PUZZLE_7_SWITCH_3, trickhouseFINALE_EventScript_SetSwitch3MetatilesOff
+	special DrawWholeMapView
+	playse SE_CLICK
+	goto_if_unset FLAG_TRICK_HOUSE_PUZZLE_7_SWITCH_3, trickhouseFINALE_EventScript_SetSwitch3On
+	goto_if_set FLAG_TRICK_HOUSE_PUZZLE_7_SWITCH_3, trickhouseFINALE_EventScript_SetSwitch3Off
+	end
+
+trickhouseFINALE_EventScript_Switch4::
+	lockall
+	delay 32
+    setvar VAR_UNUSED_0x40FC, 1
+	call_if_unset FLAG_TRICK_HOUSE_PUZZLE_7_SWITCH_4, trickhouseFINALE_EventScript_SetSwitch4MetatilesOn
+	call_if_set FLAG_TRICK_HOUSE_PUZZLE_7_SWITCH_4, trickhouseFINALE_EventScript_SetSwitch4MetatilesOff
+	special DrawWholeMapView
+	playse SE_CLICK
+	goto_if_unset FLAG_TRICK_HOUSE_PUZZLE_7_SWITCH_4, trickhouseFINALE_EventScript_SetSwitch4On
+	goto_if_set FLAG_TRICK_HOUSE_PUZZLE_7_SWITCH_4, trickhouseFINALE_EventScript_SetSwitch4Off
+	end
+
+trickhouseFINALE_EventScript_Switch5::
+	lockall
+	delay 32
+    setvar VAR_UNUSED_0x40DB, 1
+	call_if_unset FLAG_TRICK_HOUSE_PUZZLE_7_SWITCH_5, trickhouseFINALE_EventScript_SetSwitch5MetatilesOn
+	call_if_set FLAG_TRICK_HOUSE_PUZZLE_7_SWITCH_5, trickhouseFINALE_EventScript_SetSwitch5MetatilesOff
+	special DrawWholeMapView
+	playse SE_CLICK
+	goto_if_unset FLAG_TRICK_HOUSE_PUZZLE_7_SWITCH_5, trickhouseFINALE_EventScript_SetSwitch5On
+	goto_if_set FLAG_TRICK_HOUSE_PUZZLE_7_SWITCH_5, trickhouseFINALE_EventScript_SetSwitch5Off
+	end
+
+@ All the below switch scripts are unused leftover from R/S
+trickhouseFINALE_EventScript_SetSwitch1On::
+	setflag FLAG_TRICK_HOUSE_PUZZLE_7_SWITCH_1
+	releaseall
+	end
+
+trickhouseFINALE_EventScript_SetSwitch1Off::
+	clearflag FLAG_TRICK_HOUSE_PUZZLE_7_SWITCH_1
+	releaseall
+	end
+
+trickhouseFINALE_EventScript_SetSwitch2On::
+	setflag FLAG_TRICK_HOUSE_PUZZLE_7_SWITCH_2
+    setvar VAR_UNUSED_0x40FD, 1
+	releaseall
+	end
+
+trickhouseFINALE_EventScript_SetSwitch2Off::
+	clearflag FLAG_TRICK_HOUSE_PUZZLE_7_SWITCH_2
+    setvar VAR_UNUSED_0x40FD, 0
+	releaseall
+	end
+
+trickhouseFINALE_EventScript_SetSwitch3On::
+	setflag FLAG_TRICK_HOUSE_PUZZLE_7_SWITCH_3
+    setvar VAR_UNUSED_0x40DC, 1
+	releaseall
+	end
+
+trickhouseFINALE_EventScript_SetSwitch3Off::
+	clearflag FLAG_TRICK_HOUSE_PUZZLE_7_SWITCH_3
+    setvar VAR_UNUSED_0x40DC, 0
+	releaseall
+	end
+
+trickhouseFINALE_EventScript_SetSwitch4On::
+	setflag FLAG_TRICK_HOUSE_PUZZLE_7_SWITCH_4
+    setvar VAR_UNUSED_0x40FC, 1
+	releaseall
+	end
+
+trickhouseFINALE_EventScript_SetSwitch4Off::
+	clearflag FLAG_TRICK_HOUSE_PUZZLE_7_SWITCH_4
+    setvar VAR_UNUSED_0x40FC, 0
+	releaseall
+	end
+
+trickhouseFINALE_EventScript_SetSwitch5On::
+	setflag FLAG_TRICK_HOUSE_PUZZLE_7_SWITCH_5
+    setvar VAR_UNUSED_0x40DB, 1
+	releaseall
+	end
+
+trickhouseFINALE_EventScript_SetSwitch5Off::
+	clearflag FLAG_TRICK_HOUSE_PUZZLE_7_SWITCH_5
+    setvar VAR_UNUSED_0x40DB, 0
+	releaseall
+	end
+
+
+`
+
+script trickhouseFINALE_EventScript_Duditem {
+    lockall
+    MSGBOX("It's a Dud!")
+    closemessage
+    releaseall
+}
+
+script trickhouseFINALE_EventScript_realitem {
+    lockall
+    MSGBOX("A gear clicked somewhere in the floor")
+    setflag(FLAG_realitempicked)
+    setmetatile(3, 15, METATILE_TrickHousePuzzle_Door_Shuttered, FALSE)
+    closemessage
+    releaseall
+} 
+
+script trickhouseFINALE_EventScript_finalriddle {
+    MSGBOX(format("This is it... one final riddle!"))
+            MSGBOX(format("Begin the Final riddle?"), MSGBOX_YESNO)
+            if(var(VAR_RESULT) == YES){
+                message(format("Ha! lets see how attentive you've been! How many children have appeared through this hack?"))
+                multichoice(25, 5, MULTI_RIDDLE_FINAL, 0)
+                closemessage
+                if(var(VAR_RESULT) == 0){
+                    call(RFFailed)
+                }
+                elif(var(VAR_RESULT) == 1){
+                    call(RFFailed)
+                }
+                elif(var(VAR_RESULT) == 2){
+                    call(RFCorrect)
+                }
+            }else {
+                MSGBOX(format(".... wut-"))
+                closemessage
+            }
+}
+
+
+
+
+script RFFailed {
+    lockall
+    MSGBOX(format("HAH! you players these days never pay attention!"))
+    waitmessage
+    clearflag(FLAG_realitempicked)
+    setvar(VAR_UNUSED_0x40FD, 0)
+    setvar(VAR_UNUSED_0x40DC, 0)
+    setvar(VAR_UNUSED_0x40FC, 0)
+    setvar(VAR_UNUSED_0x40DB, 0)
+    fadescreen(FADE_TO_BLACK)
+    warpsilent(MAP_TRICKHOUSE_FINALE, 20, 39)
+    waitstate
+}
+
+script RFCorrect {
+    lockall
+    MSGBOX(format("....."))
+    delay(20)
+    MSGBOX(format("....."))
+    delay(20)
+    MSGBOX(format("very well. meet me in the room ahead for our final showdown!"))
+    waitmessage
+    closemessage
+    applymovement(6, ominouswalkfr)
+    waitmovement(0)
+    removeobject(6)
+    releaseall
+}
+
+
+movement ominouswalkfr {
+    walk_up * 7
+}
+

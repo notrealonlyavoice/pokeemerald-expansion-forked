@@ -25,6 +25,8 @@ script PostMilesbattle {
     msgbox(format("You might be ready to finish the ISLAND CHALLENGES after all..."))
     waitmessage
     applymovement(1, Milesscoot)
+    setvar(VAR_0x8006, 12)
+    setvar(VAR_0x8008, 13)
     closemessage
    
     waitmovement(0)

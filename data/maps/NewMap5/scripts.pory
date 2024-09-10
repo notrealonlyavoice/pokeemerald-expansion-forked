@@ -19,6 +19,8 @@ script NewMap5_EventScript_clevermanscript {
         call(R3)
     } elif(var(VAR_0x8008) == 12) {
         call(waitfornextriddle)
+    } elif(var(VAR_0x8008) == 13) {
+        call(R4cutscene)
     }
 
 
@@ -102,6 +104,23 @@ script  R3 {
             }
 }
 
+script R4cutscene {
+    lockall
+    MSGBOX(format("wow.. you've made it this far. just one more island challenge...."))
+    delay(40)
+    MSGBOX("...")
+    delay(40)
+    MSGBOX("...")
+    delay(40)
+    MSGBOX(format("oh? you want another simple riddle... a and a free tool to help you in the last challenge...."))
+    delay(40)
+    MSGBOX(format("very well.. riddle me this: why would two strangers who've never met you suddenly decide to help you get off this island... ... ... ... She convinced me to give you a chance and i must say you've impressed me... unfortunatly your final challenge is ME! CLEVERMAN! GOOD LUCK CHALLENGER!"))
+    delay(40)
+    fadescreen(FADE_TO_BLACK)
+    special(HealPlayerParty)
+    warpsilent(MAP_TRICKHOUSE_FINALE, 20, 39)
+    waitstate
+}
 
 
 script R1Correct {

@@ -91,6 +91,8 @@
 #define MAP_NEW_MAP6                  (82 | (0 << 8))
 #define MAP_NEW_MAP7                  (83 | (0 << 8))
 #define MAP_NEW_MAP8                  (84 | (0 << 8))
+#define MAP_TRICKHOUSE_FINALE         (85 | (0 << 8))
+#define MAP_NEW_MAP10                 (86 | (0 << 8))
 
 // gMapGroup_IndoorLittleroot
 #define MAP_LITTLEROOT_TOWN_BRENDANS_HOUSE_1F    (0 | (1 << 8))

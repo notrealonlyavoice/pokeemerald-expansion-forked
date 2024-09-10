@@ -29,19 +29,23 @@ PostMilesbattle::
 # 27 "data/maps/Finalicecave/scripts.pory"
 	applymovement 1, Milesscoot
 # 28 "data/maps/Finalicecave/scripts.pory"
-	closemessage
+	setvar VAR_0x8006, 12
+# 29 "data/maps/Finalicecave/scripts.pory"
+	setvar VAR_0x8008, 13
 # 30 "data/maps/Finalicecave/scripts.pory"
+	closemessage
+# 32 "data/maps/Finalicecave/scripts.pory"
 	waitmovement 0
 	end
 
 
-# 34 "data/maps/Finalicecave/scripts.pory"
-Milesscoot:
-# 35 "data/maps/Finalicecave/scripts.pory"
-	walk_up
 # 36 "data/maps/Finalicecave/scripts.pory"
-	walk_left
+Milesscoot:
 # 37 "data/maps/Finalicecave/scripts.pory"
+	walk_up
+# 38 "data/maps/Finalicecave/scripts.pory"
+	walk_left
+# 39 "data/maps/Finalicecave/scripts.pory"
 	face_right
 	step_end
 
