@@ -347,7 +347,7 @@ R3Correct::
 # 166 "data/maps/NewMap5/scripts.pory"
 	waitmessage
 # 167 "data/maps/NewMap5/scripts.pory"
-	givemon SPECIES_BONSLY, 5, ITEM_BERRY_JUICE, abilityNum = 0, move1 = MOVE_SWITCHEROO, move2 = MOVE_STEALTH_ROCK, move3 = MOVE_COPYCAT, move4 = MOVE_ENDEAVOR
+	givemon SPECIES_BONSLY, 5, ITEM_BERRY_JUICE, abilityNum = 0, move1 = MOVE_SWITCHEROO, move2 = MOVE_STEALTH_ROCK, move3 = MOVE_TORMENT, move4 = MOVE_ENDEAVOR
 # 168 "data/maps/NewMap5/scripts.pory"
 	compare VAR_RESULT, MON_GIVEN_TO_PARTY
 	goto_if_eq R3Correct_2

@@ -907,6 +907,266 @@ ISLANDNEW_EventScript_wanderingdude2::
 	return
 
 
+ISLANDNEW_Trigger_triggerendscene1::
+# 369 "data/maps/ISLANDNEW/scripts.pory"
+	lockall
+# 370 "data/maps/ISLANDNEW/scripts.pory"
+	applymovement 4, checkonplayerlastime
+# 371 "data/maps/ISLANDNEW/scripts.pory"
+	waitmovement 0
+# 372 "data/maps/ISLANDNEW/scripts.pory"
+	applymovement OBJ_EVENT_ID_PLAYER, checkonplayerlookatlady
+# 373 "data/maps/ISLANDNEW/scripts.pory"
+	waitmovement 0
+# 374 "data/maps/ISLANDNEW/scripts.pory"
+	MSGBOX ISLANDNEW_Trigger_triggerendscene1_Text_0
+# 375 "data/maps/ISLANDNEW/scripts.pory"
+	waitmessage
+# 376 "data/maps/ISLANDNEW/scripts.pory"
+	applymovement 4, byemartlady
+# 377 "data/maps/ISLANDNEW/scripts.pory"
+	waitmovement 0
+# 378 "data/maps/ISLANDNEW/scripts.pory"
+	fadescreenspeed FADE_TO_BLACK, 24
+# 379 "data/maps/ISLANDNEW/scripts.pory"
+	special GameClear
+	return
+
+
+ISLANDNEW_Trigger_triggerendscene2::
+# 383 "data/maps/ISLANDNEW/scripts.pory"
+	lockall
+# 384 "data/maps/ISLANDNEW/scripts.pory"
+	applymovement 4, checkonplayerlastime
+# 385 "data/maps/ISLANDNEW/scripts.pory"
+	waitmovement 0
+# 386 "data/maps/ISLANDNEW/scripts.pory"
+	applymovement OBJ_EVENT_ID_PLAYER, checkonplayerlookatlady
+# 387 "data/maps/ISLANDNEW/scripts.pory"
+	waitmovement 0
+# 388 "data/maps/ISLANDNEW/scripts.pory"
+	MSGBOX ISLANDNEW_Trigger_triggerendscene1_Text_0
+# 389 "data/maps/ISLANDNEW/scripts.pory"
+	waitmessage
+# 390 "data/maps/ISLANDNEW/scripts.pory"
+	applymovement 4, byemartlady
+# 391 "data/maps/ISLANDNEW/scripts.pory"
+	waitmovement 0
+# 392 "data/maps/ISLANDNEW/scripts.pory"
+	fadescreenspeed FADE_TO_BLACK, 24
+# 393 "data/maps/ISLANDNEW/scripts.pory"
+	special GameClear
+	return
+
+
+ISLANDNEW_Trigger_triggerendscene3::
+# 397 "data/maps/ISLANDNEW/scripts.pory"
+	lockall
+# 398 "data/maps/ISLANDNEW/scripts.pory"
+	applymovement 4, checkonplayerlastime
+# 399 "data/maps/ISLANDNEW/scripts.pory"
+	waitmovement 0
+# 400 "data/maps/ISLANDNEW/scripts.pory"
+	applymovement OBJ_EVENT_ID_PLAYER, checkonplayerlookatlady
+# 401 "data/maps/ISLANDNEW/scripts.pory"
+	waitmovement 0
+# 402 "data/maps/ISLANDNEW/scripts.pory"
+	MSGBOX ISLANDNEW_Trigger_triggerendscene1_Text_0
+# 403 "data/maps/ISLANDNEW/scripts.pory"
+	waitmessage
+# 404 "data/maps/ISLANDNEW/scripts.pory"
+	applymovement 4, byemartlady
+# 405 "data/maps/ISLANDNEW/scripts.pory"
+	waitmovement 0
+# 406 "data/maps/ISLANDNEW/scripts.pory"
+	fadescreenspeed FADE_TO_BLACK, 24
+# 407 "data/maps/ISLANDNEW/scripts.pory"
+	special GameClear
+	return
+
+
+ISLANDNEW_Trigger_triggerendscene4::
+# 411 "data/maps/ISLANDNEW/scripts.pory"
+	lockall
+# 412 "data/maps/ISLANDNEW/scripts.pory"
+	applymovement 4, checkonplayerlastime
+# 413 "data/maps/ISLANDNEW/scripts.pory"
+	waitmovement 0
+# 414 "data/maps/ISLANDNEW/scripts.pory"
+	applymovement OBJ_EVENT_ID_PLAYER, checkonplayerlookatlady
+# 415 "data/maps/ISLANDNEW/scripts.pory"
+	waitmovement 0
+# 416 "data/maps/ISLANDNEW/scripts.pory"
+	MSGBOX ISLANDNEW_Trigger_triggerendscene1_Text_0
+# 417 "data/maps/ISLANDNEW/scripts.pory"
+	waitmessage
+# 418 "data/maps/ISLANDNEW/scripts.pory"
+	applymovement 4, byemartlady
+# 419 "data/maps/ISLANDNEW/scripts.pory"
+	waitmovement 0
+# 420 "data/maps/ISLANDNEW/scripts.pory"
+	fadescreenspeed FADE_TO_BLACK, 24
+# 421 "data/maps/ISLANDNEW/scripts.pory"
+	special GameClear
+	return
+
+
+ISLANDNEW_Trigger_triggerendscene5::
+# 425 "data/maps/ISLANDNEW/scripts.pory"
+	lockall
+# 426 "data/maps/ISLANDNEW/scripts.pory"
+	applymovement 4, checkonplayerlastime
+# 427 "data/maps/ISLANDNEW/scripts.pory"
+	waitmovement 0
+# 428 "data/maps/ISLANDNEW/scripts.pory"
+	applymovement OBJ_EVENT_ID_PLAYER, checkonplayerlookatlady
+# 429 "data/maps/ISLANDNEW/scripts.pory"
+	waitmovement 0
+# 430 "data/maps/ISLANDNEW/scripts.pory"
+	MSGBOX ISLANDNEW_Trigger_triggerendscene1_Text_0
+# 431 "data/maps/ISLANDNEW/scripts.pory"
+	waitmessage
+# 432 "data/maps/ISLANDNEW/scripts.pory"
+	applymovement 4, byemartlady
+# 433 "data/maps/ISLANDNEW/scripts.pory"
+	waitmovement 0
+# 434 "data/maps/ISLANDNEW/scripts.pory"
+	fadescreenspeed FADE_TO_BLACK, 24
+# 435 "data/maps/ISLANDNEW/scripts.pory"
+	special GameClear
+	return
+
+
+ISLANDNEW_Trigger_triggerendscene6::
+# 439 "data/maps/ISLANDNEW/scripts.pory"
+	lockall
+# 440 "data/maps/ISLANDNEW/scripts.pory"
+	applymovement 4, checkonplayerlastime
+# 441 "data/maps/ISLANDNEW/scripts.pory"
+	waitmovement 0
+# 442 "data/maps/ISLANDNEW/scripts.pory"
+	applymovement OBJ_EVENT_ID_PLAYER, checkonplayerlookatlady
+# 443 "data/maps/ISLANDNEW/scripts.pory"
+	waitmovement 0
+# 444 "data/maps/ISLANDNEW/scripts.pory"
+	MSGBOX ISLANDNEW_Trigger_triggerendscene1_Text_0
+# 445 "data/maps/ISLANDNEW/scripts.pory"
+	waitmessage
+# 446 "data/maps/ISLANDNEW/scripts.pory"
+	applymovement 4, byemartlady
+# 447 "data/maps/ISLANDNEW/scripts.pory"
+	waitmovement 0
+# 448 "data/maps/ISLANDNEW/scripts.pory"
+	fadescreenspeed FADE_TO_BLACK, 24
+# 449 "data/maps/ISLANDNEW/scripts.pory"
+	special GameClear
+	return
+
+
+ISLANDNEW_Trigger_triggerendscene7::
+# 454 "data/maps/ISLANDNEW/scripts.pory"
+	lockall
+# 455 "data/maps/ISLANDNEW/scripts.pory"
+	applymovement 4, checkonplayerlastime
+# 456 "data/maps/ISLANDNEW/scripts.pory"
+	waitmovement 0
+# 457 "data/maps/ISLANDNEW/scripts.pory"
+	applymovement OBJ_EVENT_ID_PLAYER, checkonplayerlookatlady
+# 458 "data/maps/ISLANDNEW/scripts.pory"
+	waitmovement 0
+# 459 "data/maps/ISLANDNEW/scripts.pory"
+	MSGBOX ISLANDNEW_Trigger_triggerendscene1_Text_0
+# 460 "data/maps/ISLANDNEW/scripts.pory"
+	waitmessage
+# 461 "data/maps/ISLANDNEW/scripts.pory"
+	applymovement 4, byemartlady
+# 462 "data/maps/ISLANDNEW/scripts.pory"
+	waitmovement 0
+# 463 "data/maps/ISLANDNEW/scripts.pory"
+	fadescreenspeed FADE_TO_BLACK, 24
+# 464 "data/maps/ISLANDNEW/scripts.pory"
+	special GameClear
+	return
+
+
+ISLANDNEW_Trigger_triggerendscene8::
+# 468 "data/maps/ISLANDNEW/scripts.pory"
+	lockall
+# 469 "data/maps/ISLANDNEW/scripts.pory"
+	applymovement 4, checkonplayerlastime
+# 470 "data/maps/ISLANDNEW/scripts.pory"
+	waitmovement 0
+# 471 "data/maps/ISLANDNEW/scripts.pory"
+	applymovement OBJ_EVENT_ID_PLAYER, checkonplayerlookatlady
+# 472 "data/maps/ISLANDNEW/scripts.pory"
+	waitmovement 0
+# 473 "data/maps/ISLANDNEW/scripts.pory"
+	MSGBOX ISLANDNEW_Trigger_triggerendscene1_Text_0
+# 474 "data/maps/ISLANDNEW/scripts.pory"
+	waitmessage
+# 475 "data/maps/ISLANDNEW/scripts.pory"
+	applymovement 4, byemartlady
+# 476 "data/maps/ISLANDNEW/scripts.pory"
+	waitmovement 0
+# 477 "data/maps/ISLANDNEW/scripts.pory"
+	fadescreenspeed FADE_TO_BLACK, 24
+# 478 "data/maps/ISLANDNEW/scripts.pory"
+	special GameClear
+# 479 "data/maps/ISLANDNEW/scripts.pory"
+	waitstate
+	return
+
+
+# 485 "data/maps/ISLANDNEW/scripts.pory"
+checkonplayerlastime:
+# 486 "data/maps/ISLANDNEW/scripts.pory"
+	walk_left
+# 486 "data/maps/ISLANDNEW/scripts.pory"
+	walk_left
+# 486 "data/maps/ISLANDNEW/scripts.pory"
+	walk_left
+# 486 "data/maps/ISLANDNEW/scripts.pory"
+	walk_left
+# 486 "data/maps/ISLANDNEW/scripts.pory"
+	walk_left
+# 486 "data/maps/ISLANDNEW/scripts.pory"
+	walk_left
+# 486 "data/maps/ISLANDNEW/scripts.pory"
+	walk_left
+# 487 "data/maps/ISLANDNEW/scripts.pory"
+	walk_up
+# 487 "data/maps/ISLANDNEW/scripts.pory"
+	walk_up
+# 487 "data/maps/ISLANDNEW/scripts.pory"
+	walk_up
+# 487 "data/maps/ISLANDNEW/scripts.pory"
+	walk_up
+	step_end
+
+# 490 "data/maps/ISLANDNEW/scripts.pory"
+checkonplayerlookatlady:
+# 491 "data/maps/ISLANDNEW/scripts.pory"
+	face_down
+	step_end
+
+# 494 "data/maps/ISLANDNEW/scripts.pory"
+byemartlady:
+# 495 "data/maps/ISLANDNEW/scripts.pory"
+	walk_down
+# 495 "data/maps/ISLANDNEW/scripts.pory"
+	walk_down
+# 495 "data/maps/ISLANDNEW/scripts.pory"
+	walk_down
+# 495 "data/maps/ISLANDNEW/scripts.pory"
+	walk_down
+# 495 "data/maps/ISLANDNEW/scripts.pory"
+	walk_down
+# 495 "data/maps/ISLANDNEW/scripts.pory"
+	walk_down
+# 495 "data/maps/ISLANDNEW/scripts.pory"
+	walk_down
+	step_end
+
 ISLANDNEW_Trigger_triggeroneforcutscene_Text_0:
 # 8 "data/maps/ISLANDNEW/scripts.pory"
 	.string "Hey! you finally woke up$"
@@ -991,3 +1251,17 @@ ISLANDNEW_EventScript_wanderingdude2_Text_0:
 	.string "this island may be small but its a great\n"
 	.string "place to sunbathe if you have lots of\l"
 	.string "money$"
+
+ISLANDNEW_Trigger_triggerendscene1_Text_0:
+# 374 "data/maps/ISLANDNEW/scripts.pory"
+	.string "You've done it....... I must come clean to\n"
+	.string "you I am the leader of this island, and\l"
+	.string "cleverman is the lockal trainer expert.\l"
+	.string "I kinda wanted to have a little fun with\l"
+	.string "some strangers so I picked you to do\l"
+	.string "the ISLAND CHALLENGE... in all honesty I\l"
+	.string "you Couldve left the island at any\l"
+	.string "time... well its been nice knowing you.\l"
+	.string "this boat will take you to to your\l"
+	.string "destination... Hope you visit us again\l"
+	.string "on better terms! Goodbye!$"

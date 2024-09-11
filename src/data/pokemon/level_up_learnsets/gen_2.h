@@ -3980,7 +3980,7 @@ static const struct LevelUpMove sAzumarillLevelUpLearnset[] = {
 #if P_GEN_4_CROSS_EVOS
 static const struct LevelUpMove sBonslyLevelUpLearnset[] = {
     LEVEL_UP_MOVE( 1, MOVE_FAKE_TEARS),
-    LEVEL_UP_MOVE( 1, MOVE_COPYCAT),
+    LEVEL_UP_MOVE( 1, MOVE_TORMENT),
     LEVEL_UP_MOVE( 6, MOVE_FLAIL),
     LEVEL_UP_MOVE( 9, MOVE_LOW_KICK),
     LEVEL_UP_MOVE(14, MOVE_ROCK_THROW),

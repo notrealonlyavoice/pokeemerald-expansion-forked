@@ -71,7 +71,7 @@ NewMap9_EventScript_FallThroughIce::
 	waitmovement 0
 	playse SE_FALL
 	delay 60
-	warphole MAP_SOOTOPOLIS_CITY_GYM_B1F
+	warphole MAP_NEW_MAP11
 	waitstate
 	end
 

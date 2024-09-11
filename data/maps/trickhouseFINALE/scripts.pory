@@ -7,6 +7,7 @@ trickhouseFINALE_MapScripts::
 	.byte 0
 
 trickhouseFINALE_OnResume:
+    call CableClub_OnResume
 	call_if_eq VAR_TEMP_1, 1, trickhouseFINALE_EventScript_PressButton1
 	call_if_eq VAR_TEMP_2, 1, trickhouseFINALE_EventScript_PressButton2
 	call_if_eq VAR_TEMP_3, 1, trickhouseFINALE_EventScript_PressButton3
@@ -15,6 +16,7 @@ trickhouseFINALE_OnResume:
 	end
 
 trickhouseFINALE_OnTransition:
+    setrespawn HEAL_LOCATION_TRICKHOUSE_FINALE
 	setvar VAR_TEMP_1, 0
 	setvar VAR_TEMP_2, 0
 	setvar VAR_TEMP_3, 0
@@ -23,7 +25,7 @@ trickhouseFINALE_OnTransition:
 	end
 
 trickhouseFINALE_OnLoad:
-	call_if_eq VAR_TRICK_HOUSE_PUZZLE_7_STATE_2, 1, trickhouseFINALE_EventScript_UpdateSwitchMetatiles
+	call trickhouseFINALE_EventScript_UpdateSwitchMetatiles
     goto_if_set FLAG_realitempicked, trickhouseFINALE_EventScript_respawntile
     goto_if_eq VAR_UNUSED_0x40FD, 1, trickhouseFINALE_EventScript_respawnswitch2
     goto_if_eq VAR_UNUSED_0x40DC, 1, trickhouseFINALE_EventScript_respawnswitch3
@@ -177,21 +179,25 @@ trickhouseFINALE_EventScript_SetSwitch1MetatilesOn::
 	return
 
 trickhouseFINALE_EventScript_SetSwitch2MetatilesOn::
+    setvar VAR_UNUSED_0x40FD, 1
 	setmetatile 13, 4, METATILE_TrickHousePuzzle_Arrow_RedOnBlack_Up, FALSE
 	setmetatile 18, 12, METATILE_TrickHousePuzzle_Lever_On, TRUE
 	return
 
 trickhouseFINALE_EventScript_SetSwitch3MetatilesOn::
+    setvar VAR_UNUSED_0x40DC, 1
 	setmetatile 22, 17, METATILE_TrickHousePuzzle_Arrow_RedOnBlack_Down, FALSE
 	setmetatile 30, 32, METATILE_TrickHousePuzzle_Lever_On, TRUE
 	return
 
 trickhouseFINALE_EventScript_SetSwitch4MetatilesOn::
+    setvar VAR_UNUSED_0x40FC, 1
 	setmetatile 25, 22, METATILE_TrickHousePuzzle_Arrow_RedOnBlack_Right, FALSE
 	setmetatile 28, 2, METATILE_TrickHousePuzzle_Lever_On, TRUE
 	return
 
 trickhouseFINALE_EventScript_SetSwitch5MetatilesOn::
+    setvar VAR_UNUSED_0x40DB, 1
 	setmetatile 37, 18, METATILE_TrickHousePuzzle_Arrow_RedOnBlack_Left, FALSE
 	setmetatile 2, 10, METATILE_TrickHousePuzzle_Lever_On, TRUE
 	return
@@ -436,4 +442,7 @@ script RFCorrect {
 movement ominouswalkfr {
     walk_up * 7
 }
+
+
+
 

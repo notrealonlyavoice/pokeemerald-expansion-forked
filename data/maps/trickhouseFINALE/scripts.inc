@@ -17,259 +17,259 @@ trickhouseFINALE_MapScripts::
 # 9 "data/maps/trickhouseFINALE/scripts.pory"
 trickhouseFINALE_OnResume:
 # 10 "data/maps/trickhouseFINALE/scripts.pory"
-	call_if_eq VAR_TEMP_1, 1, trickhouseFINALE_EventScript_PressButton1
+    call CableClub_OnResume
 # 11 "data/maps/trickhouseFINALE/scripts.pory"
-	call_if_eq VAR_TEMP_2, 1, trickhouseFINALE_EventScript_PressButton2
+	call_if_eq VAR_TEMP_1, 1, trickhouseFINALE_EventScript_PressButton1
 # 12 "data/maps/trickhouseFINALE/scripts.pory"
-	call_if_eq VAR_TEMP_3, 1, trickhouseFINALE_EventScript_PressButton3
+	call_if_eq VAR_TEMP_2, 1, trickhouseFINALE_EventScript_PressButton2
 # 13 "data/maps/trickhouseFINALE/scripts.pory"
-	call_if_eq VAR_TEMP_4, 1, trickhouseFINALE_EventScript_PressButton4
+	call_if_eq VAR_TEMP_3, 1, trickhouseFINALE_EventScript_PressButton3
 # 14 "data/maps/trickhouseFINALE/scripts.pory"
-	call trickhouseFINALE_EventScript_UpdateSwitchMetatiles
+	call_if_eq VAR_TEMP_4, 1, trickhouseFINALE_EventScript_PressButton4
 # 15 "data/maps/trickhouseFINALE/scripts.pory"
-	end
+	call trickhouseFINALE_EventScript_UpdateSwitchMetatiles
 # 16 "data/maps/trickhouseFINALE/scripts.pory"
-
+	end
 # 17 "data/maps/trickhouseFINALE/scripts.pory"
-trickhouseFINALE_OnTransition:
+
 # 18 "data/maps/trickhouseFINALE/scripts.pory"
-	setvar VAR_TEMP_1, 0
+trickhouseFINALE_OnTransition:
 # 19 "data/maps/trickhouseFINALE/scripts.pory"
-	setvar VAR_TEMP_2, 0
+    setrespawn HEAL_LOCATION_TRICKHOUSE_FINALE
 # 20 "data/maps/trickhouseFINALE/scripts.pory"
-	setvar VAR_TEMP_3, 0
+	setvar VAR_TEMP_1, 0
 # 21 "data/maps/trickhouseFINALE/scripts.pory"
-	setvar VAR_TEMP_4, 0
+	setvar VAR_TEMP_2, 0
 # 22 "data/maps/trickhouseFINALE/scripts.pory"
-	goto_if_eq VAR_TRICK_HOUSE_PUZZLE_7_STATE_2, 1, trickhouseFINALE_EventScript_TeleportedTransition
+	setvar VAR_TEMP_3, 0
 # 23 "data/maps/trickhouseFINALE/scripts.pory"
-	end
+	setvar VAR_TEMP_4, 0
 # 24 "data/maps/trickhouseFINALE/scripts.pory"
-
+	goto_if_eq VAR_TRICK_HOUSE_PUZZLE_7_STATE_2, 1, trickhouseFINALE_EventScript_TeleportedTransition
 # 25 "data/maps/trickhouseFINALE/scripts.pory"
-trickhouseFINALE_OnLoad:
+	end
 # 26 "data/maps/trickhouseFINALE/scripts.pory"
-	call_if_eq VAR_TRICK_HOUSE_PUZZLE_7_STATE_2, 1, trickhouseFINALE_EventScript_UpdateSwitchMetatiles
+
 # 27 "data/maps/trickhouseFINALE/scripts.pory"
-    goto_if_set FLAG_realitempicked, trickhouseFINALE_EventScript_respawntile
+trickhouseFINALE_OnLoad:
 # 28 "data/maps/trickhouseFINALE/scripts.pory"
-    goto_if_eq VAR_UNUSED_0x40FD, 1, trickhouseFINALE_EventScript_respawnswitch2
+	call trickhouseFINALE_EventScript_UpdateSwitchMetatiles
 # 29 "data/maps/trickhouseFINALE/scripts.pory"
-    goto_if_eq VAR_UNUSED_0x40DC, 1, trickhouseFINALE_EventScript_respawnswitch3
+    goto_if_set FLAG_realitempicked, trickhouseFINALE_EventScript_respawntile
 # 30 "data/maps/trickhouseFINALE/scripts.pory"
-    goto_if_eq VAR_UNUSED_0x40FC, 1, trickhouseFINALE_EventScript_respawnswitch4
+    goto_if_eq VAR_UNUSED_0x40FD, 1, trickhouseFINALE_EventScript_respawnswitch2
 # 31 "data/maps/trickhouseFINALE/scripts.pory"
-    goto_if_eq VAR_UNUSED_0x40DB, 1, trickhouseFINALE_EventScript_respawnswitch5
+    goto_if_eq VAR_UNUSED_0x40DC, 1, trickhouseFINALE_EventScript_respawnswitch3
 # 32 "data/maps/trickhouseFINALE/scripts.pory"
-	end
+    goto_if_eq VAR_UNUSED_0x40FC, 1, trickhouseFINALE_EventScript_respawnswitch4
 # 33 "data/maps/trickhouseFINALE/scripts.pory"
- 
+    goto_if_eq VAR_UNUSED_0x40DB, 1, trickhouseFINALE_EventScript_respawnswitch5
 # 34 "data/maps/trickhouseFINALE/scripts.pory"
-trickhouseFINALE_OnFrame:
+	end
 # 35 "data/maps/trickhouseFINALE/scripts.pory"
-	map_script_2 VAR_TRICK_HOUSE_PUZZLE_7_STATE_2, 1, trickhouseFINALE_EventScript_ClearState2
+ 
 # 36 "data/maps/trickhouseFINALE/scripts.pory"
-	.2byte 0
+trickhouseFINALE_OnFrame:
 # 37 "data/maps/trickhouseFINALE/scripts.pory"
-
+	map_script_2 VAR_TRICK_HOUSE_PUZZLE_7_STATE_2, 1, trickhouseFINALE_EventScript_ClearState2
 # 38 "data/maps/trickhouseFINALE/scripts.pory"
-trickhouseFINALE_EventScript_Scroll::
+	.2byte 0
 # 39 "data/maps/trickhouseFINALE/scripts.pory"
-	lockall
+
 # 40 "data/maps/trickhouseFINALE/scripts.pory"
-	goto_if_eq VAR_TRICK_HOUSE_PUZZLE_2_STATE, 0, trickhouseFINALE_EventScript_FoundScroll
+trickhouseFINALE_EventScript_Scroll::
 # 41 "data/maps/trickhouseFINALE/scripts.pory"
-	goto Route110_TrickHousePuzzle_EventScript_ReadScrollAgain
+	lockall
 # 42 "data/maps/trickhouseFINALE/scripts.pory"
-	end
+	goto_if_eq VAR_TRICK_HOUSE_PUZZLE_2_STATE, 0, trickhouseFINALE_EventScript_FoundScroll
 # 43 "data/maps/trickhouseFINALE/scripts.pory"
-
+	goto Route110_TrickHousePuzzle_EventScript_ReadScrollAgain
 # 44 "data/maps/trickhouseFINALE/scripts.pory"
-trickhouseFINALE_EventScript_FoundScroll::
+	end
 # 45 "data/maps/trickhouseFINALE/scripts.pory"
-	setvar VAR_TRICK_HOUSE_PUZZLE_2_STATE, 1
+
 # 46 "data/maps/trickhouseFINALE/scripts.pory"
-	goto Route110_TrickHousePuzzle_EventScript_FoundScroll
+trickhouseFINALE_EventScript_FoundScroll::
 # 47 "data/maps/trickhouseFINALE/scripts.pory"
-	end
+	setvar VAR_TRICK_HOUSE_PUZZLE_2_STATE, 1
 # 48 "data/maps/trickhouseFINALE/scripts.pory"
-
+	goto Route110_TrickHousePuzzle_EventScript_FoundScroll
 # 49 "data/maps/trickhouseFINALE/scripts.pory"
-trickhouseFINALE_EventScript_respawntile::
-# 50 "data/maps/trickhouseFINALE/scripts.pory"
-	setmetatile 3, 15, METATILE_TrickHousePuzzle_Door_Shuttered, FALSE
-# 51 "data/maps/trickhouseFINALE/scripts.pory"
 	end
+# 50 "data/maps/trickhouseFINALE/scripts.pory"
+
+# 51 "data/maps/trickhouseFINALE/scripts.pory"
+trickhouseFINALE_EventScript_respawntile::
 # 52 "data/maps/trickhouseFINALE/scripts.pory"
-
+	setmetatile 3, 15, METATILE_TrickHousePuzzle_Door_Shuttered, FALSE
 # 53 "data/maps/trickhouseFINALE/scripts.pory"
-trickhouseFINALE_EventScript_respawnswitch2::
+	end
 # 54 "data/maps/trickhouseFINALE/scripts.pory"
-    setmetatile 13, 4, METATILE_TrickHousePuzzle_Arrow_RedOnBlack_Up, FALSE
+
 # 55 "data/maps/trickhouseFINALE/scripts.pory"
-	setmetatile 18, 12, METATILE_TrickHousePuzzle_Lever_On, TRUE
+trickhouseFINALE_EventScript_respawnswitch2::
 # 56 "data/maps/trickhouseFINALE/scripts.pory"
-    setflag FLAG_TRICK_HOUSE_PUZZLE_7_SWITCH_2
+    setmetatile 13, 4, METATILE_TrickHousePuzzle_Arrow_RedOnBlack_Up, FALSE
 # 57 "data/maps/trickhouseFINALE/scripts.pory"
-	Return
+	setmetatile 18, 12, METATILE_TrickHousePuzzle_Lever_On, TRUE
 # 58 "data/maps/trickhouseFINALE/scripts.pory"
-
+    setflag FLAG_TRICK_HOUSE_PUZZLE_7_SWITCH_2
 # 59 "data/maps/trickhouseFINALE/scripts.pory"
-trickhouseFINALE_EventScript_respawnswitch3::
+	Return
 # 60 "data/maps/trickhouseFINALE/scripts.pory"
-    setmetatile 22, 17, METATILE_TrickHousePuzzle_Arrow_RedOnBlack_Down, FALSE
+
 # 61 "data/maps/trickhouseFINALE/scripts.pory"
-	setmetatile 30, 32, METATILE_TrickHousePuzzle_Lever_On, TRUE
+trickhouseFINALE_EventScript_respawnswitch3::
 # 62 "data/maps/trickhouseFINALE/scripts.pory"
-    setflag FLAG_TRICK_HOUSE_PUZZLE_7_SWITCH_3
+    setmetatile 22, 17, METATILE_TrickHousePuzzle_Arrow_RedOnBlack_Down, FALSE
 # 63 "data/maps/trickhouseFINALE/scripts.pory"
-	Return
+	setmetatile 30, 32, METATILE_TrickHousePuzzle_Lever_On, TRUE
 # 64 "data/maps/trickhouseFINALE/scripts.pory"
-
+    setflag FLAG_TRICK_HOUSE_PUZZLE_7_SWITCH_3
 # 65 "data/maps/trickhouseFINALE/scripts.pory"
-trickhouseFINALE_EventScript_respawnswitch4::
+	Return
 # 66 "data/maps/trickhouseFINALE/scripts.pory"
-    setmetatile 25, 22, METATILE_TrickHousePuzzle_Arrow_RedOnBlack_Right, FALSE
+
 # 67 "data/maps/trickhouseFINALE/scripts.pory"
-	setmetatile 28, 2, METATILE_TrickHousePuzzle_Lever_On, TRUE
+trickhouseFINALE_EventScript_respawnswitch4::
 # 68 "data/maps/trickhouseFINALE/scripts.pory"
-    setflag FLAG_TRICK_HOUSE_PUZZLE_7_SWITCH_4
+    setmetatile 25, 22, METATILE_TrickHousePuzzle_Arrow_RedOnBlack_Right, FALSE
 # 69 "data/maps/trickhouseFINALE/scripts.pory"
-	Return
+	setmetatile 28, 2, METATILE_TrickHousePuzzle_Lever_On, TRUE
 # 70 "data/maps/trickhouseFINALE/scripts.pory"
-
+    setflag FLAG_TRICK_HOUSE_PUZZLE_7_SWITCH_4
 # 71 "data/maps/trickhouseFINALE/scripts.pory"
-trickhouseFINALE_EventScript_respawnswitch5::
-# 72 "data/maps/trickhouseFINALE/scripts.pory"
-    setmetatile 37, 18, METATILE_TrickHousePuzzle_Arrow_RedOnBlack_Left, FALSE
-# 73 "data/maps/trickhouseFINALE/scripts.pory"
-	setmetatile 2, 10, METATILE_TrickHousePuzzle_Lever_On, TRUE
-# 74 "data/maps/trickhouseFINALE/scripts.pory"
-    setflag FLAG_TRICK_HOUSE_PUZZLE_7_SWITCH_5
-# 75 "data/maps/trickhouseFINALE/scripts.pory"
 	Return
+# 72 "data/maps/trickhouseFINALE/scripts.pory"
+
+# 73 "data/maps/trickhouseFINALE/scripts.pory"
+trickhouseFINALE_EventScript_respawnswitch5::
+# 74 "data/maps/trickhouseFINALE/scripts.pory"
+    setmetatile 37, 18, METATILE_TrickHousePuzzle_Arrow_RedOnBlack_Left, FALSE
+# 75 "data/maps/trickhouseFINALE/scripts.pory"
+	setmetatile 2, 10, METATILE_TrickHousePuzzle_Lever_On, TRUE
 # 76 "data/maps/trickhouseFINALE/scripts.pory"
-
+    setflag FLAG_TRICK_HOUSE_PUZZLE_7_SWITCH_5
 # 77 "data/maps/trickhouseFINALE/scripts.pory"
-
+	Return
 # 78 "data/maps/trickhouseFINALE/scripts.pory"
 
 # 79 "data/maps/trickhouseFINALE/scripts.pory"
 
 # 80 "data/maps/trickhouseFINALE/scripts.pory"
-trickhouseFINALE_EventScript_Button1::
+
 # 81 "data/maps/trickhouseFINALE/scripts.pory"
-	lockall
+
 # 82 "data/maps/trickhouseFINALE/scripts.pory"
-	setvar VAR_TEMP_1, 1
+trickhouseFINALE_EventScript_Button1::
 # 83 "data/maps/trickhouseFINALE/scripts.pory"
-	playse SE_PIN
+	lockall
 # 84 "data/maps/trickhouseFINALE/scripts.pory"
-	call trickhouseFINALE_EventScript_PressButton1
+	setvar VAR_TEMP_1, 1
 # 85 "data/maps/trickhouseFINALE/scripts.pory"
-	special DrawWholeMapView
+	playse SE_PIN
 # 86 "data/maps/trickhouseFINALE/scripts.pory"
-	releaseall
+	call trickhouseFINALE_EventScript_PressButton1
 # 87 "data/maps/trickhouseFINALE/scripts.pory"
-	end
+	special DrawWholeMapView
 # 88 "data/maps/trickhouseFINALE/scripts.pory"
-
+	releaseall
 # 89 "data/maps/trickhouseFINALE/scripts.pory"
-trickhouseFINALE_EventScript_Button2::
+	end
 # 90 "data/maps/trickhouseFINALE/scripts.pory"
-	lockall
+
 # 91 "data/maps/trickhouseFINALE/scripts.pory"
-	setvar VAR_TEMP_2, 1
+trickhouseFINALE_EventScript_Button2::
 # 92 "data/maps/trickhouseFINALE/scripts.pory"
-	playse SE_PIN
+	lockall
 # 93 "data/maps/trickhouseFINALE/scripts.pory"
-	call trickhouseFINALE_EventScript_PressButton2
+	setvar VAR_TEMP_2, 1
 # 94 "data/maps/trickhouseFINALE/scripts.pory"
-	special DrawWholeMapView
+	playse SE_PIN
 # 95 "data/maps/trickhouseFINALE/scripts.pory"
-	releaseall
+	call trickhouseFINALE_EventScript_PressButton2
 # 96 "data/maps/trickhouseFINALE/scripts.pory"
-	end
+	special DrawWholeMapView
 # 97 "data/maps/trickhouseFINALE/scripts.pory"
-
+	releaseall
 # 98 "data/maps/trickhouseFINALE/scripts.pory"
-trickhouseFINALE_EventScript_Button3::
+	end
 # 99 "data/maps/trickhouseFINALE/scripts.pory"
-	lockall
+
 # 100 "data/maps/trickhouseFINALE/scripts.pory"
-	setvar VAR_TEMP_3, 1
+trickhouseFINALE_EventScript_Button3::
 # 101 "data/maps/trickhouseFINALE/scripts.pory"
-	playse SE_PIN
-# 102 "data/maps/trickhouseFINALE/scripts.pory"
-	call trickhouseFINALE_EventScript_PressButton3
-# 103 "data/maps/trickhouseFINALE/scripts.pory"
-	special DrawWholeMapView
-# 104 "data/maps/trickhouseFINALE/scripts.pory"
-	releaseall
-# 105 "data/maps/trickhouseFINALE/scripts.pory"
-	end
-# 106 "data/maps/trickhouseFINALE/scripts.pory"
-
-# 107 "data/maps/trickhouseFINALE/scripts.pory"
-trickhouseFINALE_EventScript_Button4::
-# 108 "data/maps/trickhouseFINALE/scripts.pory"
 	lockall
-# 109 "data/maps/trickhouseFINALE/scripts.pory"
-	setvar VAR_TEMP_4, 1
-# 110 "data/maps/trickhouseFINALE/scripts.pory"
+# 102 "data/maps/trickhouseFINALE/scripts.pory"
+	setvar VAR_TEMP_3, 1
+# 103 "data/maps/trickhouseFINALE/scripts.pory"
 	playse SE_PIN
-# 111 "data/maps/trickhouseFINALE/scripts.pory"
-	call trickhouseFINALE_EventScript_PressButton4
-# 112 "data/maps/trickhouseFINALE/scripts.pory"
+# 104 "data/maps/trickhouseFINALE/scripts.pory"
+	call trickhouseFINALE_EventScript_PressButton3
+# 105 "data/maps/trickhouseFINALE/scripts.pory"
 	special DrawWholeMapView
-# 113 "data/maps/trickhouseFINALE/scripts.pory"
+# 106 "data/maps/trickhouseFINALE/scripts.pory"
 	releaseall
-# 114 "data/maps/trickhouseFINALE/scripts.pory"
+# 107 "data/maps/trickhouseFINALE/scripts.pory"
 	end
+# 108 "data/maps/trickhouseFINALE/scripts.pory"
+
+# 109 "data/maps/trickhouseFINALE/scripts.pory"
+trickhouseFINALE_EventScript_Button4::
+# 110 "data/maps/trickhouseFINALE/scripts.pory"
+	lockall
+# 111 "data/maps/trickhouseFINALE/scripts.pory"
+	setvar VAR_TEMP_4, 1
+# 112 "data/maps/trickhouseFINALE/scripts.pory"
+	playse SE_PIN
+# 113 "data/maps/trickhouseFINALE/scripts.pory"
+	call trickhouseFINALE_EventScript_PressButton4
+# 114 "data/maps/trickhouseFINALE/scripts.pory"
+	special DrawWholeMapView
 # 115 "data/maps/trickhouseFINALE/scripts.pory"
-
+	releaseall
 # 116 "data/maps/trickhouseFINALE/scripts.pory"
-trickhouseFINALE_EventScript_PressButton1::
+	end
 # 117 "data/maps/trickhouseFINALE/scripts.pory"
-	setmetatile 27, 37, METATILE_TrickHousePuzzle_Button_Pressed, FALSE
+
 # 118 "data/maps/trickhouseFINALE/scripts.pory"
-	setmetatile 13, 33, METATILE_TrickHousePuzzle_Door_Shuttered, FALSE
+trickhouseFINALE_EventScript_PressButton1::
 # 119 "data/maps/trickhouseFINALE/scripts.pory"
-	return
+	setmetatile 27, 37, METATILE_TrickHousePuzzle_Button_Pressed, FALSE
 # 120 "data/maps/trickhouseFINALE/scripts.pory"
-
+	setmetatile 13, 33, METATILE_TrickHousePuzzle_Door_Shuttered, FALSE
 # 121 "data/maps/trickhouseFINALE/scripts.pory"
-trickhouseFINALE_EventScript_PressButton2::
+	return
 # 122 "data/maps/trickhouseFINALE/scripts.pory"
-	setmetatile 13, 30, METATILE_TrickHousePuzzle_Button_Pressed, FALSE
+
 # 123 "data/maps/trickhouseFINALE/scripts.pory"
-	setmetatile 30, 38, METATILE_TrickHousePuzzle_Door_Shuttered, FALSE
+trickhouseFINALE_EventScript_PressButton2::
 # 124 "data/maps/trickhouseFINALE/scripts.pory"
-	return
+	setmetatile 13, 30, METATILE_TrickHousePuzzle_Button_Pressed, FALSE
 # 125 "data/maps/trickhouseFINALE/scripts.pory"
-
+	setmetatile 30, 38, METATILE_TrickHousePuzzle_Door_Shuttered, FALSE
 # 126 "data/maps/trickhouseFINALE/scripts.pory"
-trickhouseFINALE_EventScript_PressButton3::
+	return
 # 127 "data/maps/trickhouseFINALE/scripts.pory"
-	setmetatile 18, 24, METATILE_TrickHousePuzzle_Button_Pressed, FALSE
+
 # 128 "data/maps/trickhouseFINALE/scripts.pory"
-	setmetatile 23, 24, METATILE_TrickHousePuzzle_Door_Shuttered, FALSE
+trickhouseFINALE_EventScript_PressButton3::
 # 129 "data/maps/trickhouseFINALE/scripts.pory"
-	return
+	setmetatile 18, 24, METATILE_TrickHousePuzzle_Button_Pressed, FALSE
 # 130 "data/maps/trickhouseFINALE/scripts.pory"
-
+	setmetatile 23, 24, METATILE_TrickHousePuzzle_Door_Shuttered, FALSE
 # 131 "data/maps/trickhouseFINALE/scripts.pory"
-trickhouseFINALE_EventScript_PressButton4::
-# 132 "data/maps/trickhouseFINALE/scripts.pory"
-	setmetatile 18, 28, METATILE_TrickHousePuzzle_Button_Pressed, FALSE
-# 133 "data/maps/trickhouseFINALE/scripts.pory"
-	setmetatile 23, 28, METATILE_TrickHousePuzzle_Door_Shuttered, FALSE
-# 134 "data/maps/trickhouseFINALE/scripts.pory"
 	return
+# 132 "data/maps/trickhouseFINALE/scripts.pory"
+
+# 133 "data/maps/trickhouseFINALE/scripts.pory"
+trickhouseFINALE_EventScript_PressButton4::
+# 134 "data/maps/trickhouseFINALE/scripts.pory"
+	setmetatile 18, 28, METATILE_TrickHousePuzzle_Button_Pressed, FALSE
 # 135 "data/maps/trickhouseFINALE/scripts.pory"
-
+	setmetatile 23, 28, METATILE_TrickHousePuzzle_Door_Shuttered, FALSE
 # 136 "data/maps/trickhouseFINALE/scripts.pory"
-
+	return
 # 137 "data/maps/trickhouseFINALE/scripts.pory"
 
 # 138 "data/maps/trickhouseFINALE/scripts.pory"
@@ -319,317 +319,317 @@ trickhouseFINALE_EventScript_PressButton4::
 # 160 "data/maps/trickhouseFINALE/scripts.pory"
 
 # 161 "data/maps/trickhouseFINALE/scripts.pory"
-@ Puzzle Room 7 in RSE uses whatever puzzle Mossdeep Gym uses
+
 # 162 "data/maps/trickhouseFINALE/scripts.pory"
-@ Because Mossdeep Gym was redesigned for Emerald, theres a good deal of leftover script from the old R/S puzzle
+
 # 163 "data/maps/trickhouseFINALE/scripts.pory"
-
+@ Puzzle Room 7 in RSE uses whatever puzzle Mossdeep Gym uses
 # 164 "data/maps/trickhouseFINALE/scripts.pory"
-
+@ Because Mossdeep Gym was redesigned for Emerald, theres a good deal of leftover script from the old R/S puzzle
 # 165 "data/maps/trickhouseFINALE/scripts.pory"
-trickhouseFINALE_EventScript_UpdateSwitchMetatiles::
+
 # 166 "data/maps/trickhouseFINALE/scripts.pory"
-	call_if_set FLAG_TRICK_HOUSE_PUZZLE_7_SWITCH_1, trickhouseFINALE_EventScript_SetSwitch1MetatilesOn
+
 # 167 "data/maps/trickhouseFINALE/scripts.pory"
-	call_if_set FLAG_TRICK_HOUSE_PUZZLE_7_SWITCH_2, trickhouseFINALE_EventScript_SetSwitch2MetatilesOn
+trickhouseFINALE_EventScript_UpdateSwitchMetatiles::
 # 168 "data/maps/trickhouseFINALE/scripts.pory"
-	call_if_set FLAG_TRICK_HOUSE_PUZZLE_7_SWITCH_3, trickhouseFINALE_EventScript_SetSwitch3MetatilesOn
+	call_if_set FLAG_TRICK_HOUSE_PUZZLE_7_SWITCH_1, trickhouseFINALE_EventScript_SetSwitch1MetatilesOn
 # 169 "data/maps/trickhouseFINALE/scripts.pory"
-	call_if_set FLAG_TRICK_HOUSE_PUZZLE_7_SWITCH_4, trickhouseFINALE_EventScript_SetSwitch4MetatilesOn
+	call_if_set FLAG_TRICK_HOUSE_PUZZLE_7_SWITCH_2, trickhouseFINALE_EventScript_SetSwitch2MetatilesOn
 # 170 "data/maps/trickhouseFINALE/scripts.pory"
-	call_if_set FLAG_TRICK_HOUSE_PUZZLE_7_SWITCH_5, trickhouseFINALE_EventScript_SetSwitch5MetatilesOn
+	call_if_set FLAG_TRICK_HOUSE_PUZZLE_7_SWITCH_3, trickhouseFINALE_EventScript_SetSwitch3MetatilesOn
 # 171 "data/maps/trickhouseFINALE/scripts.pory"
-	return
+	call_if_set FLAG_TRICK_HOUSE_PUZZLE_7_SWITCH_4, trickhouseFINALE_EventScript_SetSwitch4MetatilesOn
 # 172 "data/maps/trickhouseFINALE/scripts.pory"
-
+	call_if_set FLAG_TRICK_HOUSE_PUZZLE_7_SWITCH_5, trickhouseFINALE_EventScript_SetSwitch5MetatilesOn
 # 173 "data/maps/trickhouseFINALE/scripts.pory"
-@ Leftover from R/S, none of the below metatile scripts are ever called
+	return
 # 174 "data/maps/trickhouseFINALE/scripts.pory"
-trickhouseFINALE_EventScript_SetSwitch1MetatilesOn::
+
 # 175 "data/maps/trickhouseFINALE/scripts.pory"
-	setmetatile 20, 37, METATILE_TrickHousePuzzle_Arrow_RedOnBlack_Up, FALSE
+@ Leftover from R/S, none of the below metatile scripts are ever called
 # 176 "data/maps/trickhouseFINALE/scripts.pory"
-	setmetatile 34, 38, METATILE_TrickHousePuzzle_Lever_On, TRUE
+trickhouseFINALE_EventScript_SetSwitch1MetatilesOn::
 # 177 "data/maps/trickhouseFINALE/scripts.pory"
-	return
+	setmetatile 20, 37, METATILE_TrickHousePuzzle_Arrow_RedOnBlack_Up, FALSE
 # 178 "data/maps/trickhouseFINALE/scripts.pory"
-
+	setmetatile 34, 38, METATILE_TrickHousePuzzle_Lever_On, TRUE
 # 179 "data/maps/trickhouseFINALE/scripts.pory"
-trickhouseFINALE_EventScript_SetSwitch2MetatilesOn::
+	return
 # 180 "data/maps/trickhouseFINALE/scripts.pory"
-	setmetatile 13, 4, METATILE_TrickHousePuzzle_Arrow_RedOnBlack_Up, FALSE
+
 # 181 "data/maps/trickhouseFINALE/scripts.pory"
-	setmetatile 18, 12, METATILE_TrickHousePuzzle_Lever_On, TRUE
+trickhouseFINALE_EventScript_SetSwitch2MetatilesOn::
 # 182 "data/maps/trickhouseFINALE/scripts.pory"
-	return
+    setvar VAR_UNUSED_0x40FD, 1
 # 183 "data/maps/trickhouseFINALE/scripts.pory"
-
+	setmetatile 13, 4, METATILE_TrickHousePuzzle_Arrow_RedOnBlack_Up, FALSE
 # 184 "data/maps/trickhouseFINALE/scripts.pory"
-trickhouseFINALE_EventScript_SetSwitch3MetatilesOn::
+	setmetatile 18, 12, METATILE_TrickHousePuzzle_Lever_On, TRUE
 # 185 "data/maps/trickhouseFINALE/scripts.pory"
-	setmetatile 22, 17, METATILE_TrickHousePuzzle_Arrow_RedOnBlack_Down, FALSE
+	return
 # 186 "data/maps/trickhouseFINALE/scripts.pory"
-	setmetatile 30, 32, METATILE_TrickHousePuzzle_Lever_On, TRUE
+
 # 187 "data/maps/trickhouseFINALE/scripts.pory"
-	return
+trickhouseFINALE_EventScript_SetSwitch3MetatilesOn::
 # 188 "data/maps/trickhouseFINALE/scripts.pory"
-
+    setvar VAR_UNUSED_0x40DC, 1
 # 189 "data/maps/trickhouseFINALE/scripts.pory"
-trickhouseFINALE_EventScript_SetSwitch4MetatilesOn::
+	setmetatile 22, 17, METATILE_TrickHousePuzzle_Arrow_RedOnBlack_Down, FALSE
 # 190 "data/maps/trickhouseFINALE/scripts.pory"
-	setmetatile 25, 22, METATILE_TrickHousePuzzle_Arrow_RedOnBlack_Right, FALSE
+	setmetatile 30, 32, METATILE_TrickHousePuzzle_Lever_On, TRUE
 # 191 "data/maps/trickhouseFINALE/scripts.pory"
-	setmetatile 28, 2, METATILE_TrickHousePuzzle_Lever_On, TRUE
-# 192 "data/maps/trickhouseFINALE/scripts.pory"
 	return
-# 193 "data/maps/trickhouseFINALE/scripts.pory"
+# 192 "data/maps/trickhouseFINALE/scripts.pory"
 
+# 193 "data/maps/trickhouseFINALE/scripts.pory"
+trickhouseFINALE_EventScript_SetSwitch4MetatilesOn::
 # 194 "data/maps/trickhouseFINALE/scripts.pory"
-trickhouseFINALE_EventScript_SetSwitch5MetatilesOn::
+    setvar VAR_UNUSED_0x40FC, 1
 # 195 "data/maps/trickhouseFINALE/scripts.pory"
-	setmetatile 37, 18, METATILE_TrickHousePuzzle_Arrow_RedOnBlack_Left, FALSE
+	setmetatile 25, 22, METATILE_TrickHousePuzzle_Arrow_RedOnBlack_Right, FALSE
 # 196 "data/maps/trickhouseFINALE/scripts.pory"
-	setmetatile 2, 10, METATILE_TrickHousePuzzle_Lever_On, TRUE
+	setmetatile 28, 2, METATILE_TrickHousePuzzle_Lever_On, TRUE
 # 197 "data/maps/trickhouseFINALE/scripts.pory"
 	return
 # 198 "data/maps/trickhouseFINALE/scripts.pory"
 
 # 199 "data/maps/trickhouseFINALE/scripts.pory"
-trickhouseFINALE_EventScript_SetSwitch1MetatilesOff::
+trickhouseFINALE_EventScript_SetSwitch5MetatilesOn::
 # 200 "data/maps/trickhouseFINALE/scripts.pory"
-	setmetatile 20, 37, METATILE_TrickHousePuzzle_Arrow_RedOnBlack_Down, FALSE
+    setvar VAR_UNUSED_0x40DB, 1
 # 201 "data/maps/trickhouseFINALE/scripts.pory"
-	setmetatile 34, 38, METATILE_TrickHousePuzzle_Lever_Off, TRUE
+	setmetatile 37, 18, METATILE_TrickHousePuzzle_Arrow_RedOnBlack_Left, FALSE
 # 202 "data/maps/trickhouseFINALE/scripts.pory"
-	return
+	setmetatile 2, 10, METATILE_TrickHousePuzzle_Lever_On, TRUE
 # 203 "data/maps/trickhouseFINALE/scripts.pory"
-
+	return
 # 204 "data/maps/trickhouseFINALE/scripts.pory"
-trickhouseFINALE_EventScript_SetSwitch2MetatilesOff::
+
 # 205 "data/maps/trickhouseFINALE/scripts.pory"
-	setmetatile 13, 4, METATILE_TrickHousePuzzle_Arrow_RedOnBlack_Down, FALSE
+trickhouseFINALE_EventScript_SetSwitch1MetatilesOff::
 # 206 "data/maps/trickhouseFINALE/scripts.pory"
-	setmetatile 18, 12, METATILE_TrickHousePuzzle_Lever_Off, TRUE
+	setmetatile 20, 37, METATILE_TrickHousePuzzle_Arrow_RedOnBlack_Down, FALSE
 # 207 "data/maps/trickhouseFINALE/scripts.pory"
-	return
+	setmetatile 34, 38, METATILE_TrickHousePuzzle_Lever_Off, TRUE
 # 208 "data/maps/trickhouseFINALE/scripts.pory"
-
+	return
 # 209 "data/maps/trickhouseFINALE/scripts.pory"
-trickhouseFINALE_EventScript_SetSwitch3MetatilesOff::
+
 # 210 "data/maps/trickhouseFINALE/scripts.pory"
-	setmetatile 22, 17, METATILE_TrickHousePuzzle_Arrow_RedOnBlack_Up, FALSE
+trickhouseFINALE_EventScript_SetSwitch2MetatilesOff::
 # 211 "data/maps/trickhouseFINALE/scripts.pory"
-	setmetatile 30, 32, METATILE_TrickHousePuzzle_Lever_Off, TRUE
+	setmetatile 13, 4, METATILE_TrickHousePuzzle_Arrow_RedOnBlack_Down, FALSE
 # 212 "data/maps/trickhouseFINALE/scripts.pory"
-	return
+	setmetatile 18, 12, METATILE_TrickHousePuzzle_Lever_Off, TRUE
 # 213 "data/maps/trickhouseFINALE/scripts.pory"
-
+	return
 # 214 "data/maps/trickhouseFINALE/scripts.pory"
-trickhouseFINALE_EventScript_SetSwitch4MetatilesOff::
+
 # 215 "data/maps/trickhouseFINALE/scripts.pory"
-	setmetatile 25, 22, METATILE_TrickHousePuzzle_Arrow_RedOnBlack_Left, FALSE
+trickhouseFINALE_EventScript_SetSwitch3MetatilesOff::
 # 216 "data/maps/trickhouseFINALE/scripts.pory"
-	setmetatile 2, 28, METATILE_TrickHousePuzzle_Lever_Off, TRUE
+	setmetatile 22, 17, METATILE_TrickHousePuzzle_Arrow_RedOnBlack_Up, FALSE
 # 217 "data/maps/trickhouseFINALE/scripts.pory"
-	return
+	setmetatile 30, 32, METATILE_TrickHousePuzzle_Lever_Off, TRUE
 # 218 "data/maps/trickhouseFINALE/scripts.pory"
-
-# 219 "data/maps/trickhouseFINALE/scripts.pory"
-trickhouseFINALE_EventScript_SetSwitch5MetatilesOff::
-# 220 "data/maps/trickhouseFINALE/scripts.pory"
-	setmetatile 27, 18, METATILE_TrickHousePuzzle_Arrow_RedOnBlack_Up, FALSE
-# 221 "data/maps/trickhouseFINALE/scripts.pory"
-	setmetatile 10, 25, METATILE_TrickHousePuzzle_Lever_Off, TRUE
-# 222 "data/maps/trickhouseFINALE/scripts.pory"
 	return
-# 223 "data/maps/trickhouseFINALE/scripts.pory"
+# 219 "data/maps/trickhouseFINALE/scripts.pory"
 
+# 220 "data/maps/trickhouseFINALE/scripts.pory"
+trickhouseFINALE_EventScript_SetSwitch4MetatilesOff::
+# 221 "data/maps/trickhouseFINALE/scripts.pory"
+	setmetatile 25, 22, METATILE_TrickHousePuzzle_Arrow_RedOnBlack_Left, FALSE
+# 222 "data/maps/trickhouseFINALE/scripts.pory"
+	setmetatile 2, 28, METATILE_TrickHousePuzzle_Lever_Off, TRUE
+# 223 "data/maps/trickhouseFINALE/scripts.pory"
+	return
 # 224 "data/maps/trickhouseFINALE/scripts.pory"
 
 # 225 "data/maps/trickhouseFINALE/scripts.pory"
-trickhouseFINALE_EventScript_TeleportedTransition::
+trickhouseFINALE_EventScript_SetSwitch5MetatilesOff::
 # 226 "data/maps/trickhouseFINALE/scripts.pory"
-	end
+	setmetatile 27, 18, METATILE_TrickHousePuzzle_Arrow_RedOnBlack_Up, FALSE
 # 227 "data/maps/trickhouseFINALE/scripts.pory"
-
+	setmetatile 10, 25, METATILE_TrickHousePuzzle_Lever_Off, TRUE
 # 228 "data/maps/trickhouseFINALE/scripts.pory"
-trickhouseFINALE_EventScript_ClearState2::
+	return
 # 229 "data/maps/trickhouseFINALE/scripts.pory"
-	setvar VAR_TRICK_HOUSE_PUZZLE_7_STATE_2, 0
+
 # 230 "data/maps/trickhouseFINALE/scripts.pory"
-	end
+
 # 231 "data/maps/trickhouseFINALE/scripts.pory"
-
+trickhouseFINALE_EventScript_TeleportedTransition::
 # 232 "data/maps/trickhouseFINALE/scripts.pory"
-
+	end
 # 233 "data/maps/trickhouseFINALE/scripts.pory"
 
 # 234 "data/maps/trickhouseFINALE/scripts.pory"
-@ Unused, leftover from R/S
+trickhouseFINALE_EventScript_ClearState2::
 # 235 "data/maps/trickhouseFINALE/scripts.pory"
-trickhouseFINALE_EventScript_TeleportPad::
+	setvar VAR_TRICK_HOUSE_PUZZLE_7_STATE_2, 0
 # 236 "data/maps/trickhouseFINALE/scripts.pory"
-	lockall
+	end
 # 237 "data/maps/trickhouseFINALE/scripts.pory"
-	setvar VAR_TRICK_HOUSE_PUZZLE_7_STATE_2, 1
+
 # 238 "data/maps/trickhouseFINALE/scripts.pory"
-	warpteleport MAP_ROUTE110_TRICK_HOUSE_PUZZLE7, 3, 19
+
 # 239 "data/maps/trickhouseFINALE/scripts.pory"
-	waitstate
+
 # 240 "data/maps/trickhouseFINALE/scripts.pory"
-	releaseall
+@ Unused, leftover from R/S
 # 241 "data/maps/trickhouseFINALE/scripts.pory"
-	end
+trickhouseFINALE_EventScript_TeleportPad::
 # 242 "data/maps/trickhouseFINALE/scripts.pory"
-
+	lockall
 # 243 "data/maps/trickhouseFINALE/scripts.pory"
-@ All the below switch scripts are unused leftover from R/S
+	setvar VAR_TRICK_HOUSE_PUZZLE_7_STATE_2, 1
 # 244 "data/maps/trickhouseFINALE/scripts.pory"
-trickhouseFINALE_EventScript_Switch1::
+	warpteleport MAP_ROUTE110_TRICK_HOUSE_PUZZLE7, 3, 19
 # 245 "data/maps/trickhouseFINALE/scripts.pory"
-	lockall
+	waitstate
 # 246 "data/maps/trickhouseFINALE/scripts.pory"
-	delay 32
-# 247 "data/maps/trickhouseFINALE/scripts.pory"
-	call_if_unset FLAG_TRICK_HOUSE_PUZZLE_7_SWITCH_1, trickhouseFINALE_EventScript_SetSwitch1MetatilesOn
-# 248 "data/maps/trickhouseFINALE/scripts.pory"
-	call_if_set FLAG_TRICK_HOUSE_PUZZLE_7_SWITCH_1, trickhouseFINALE_EventScript_SetSwitch1MetatilesOff
-# 249 "data/maps/trickhouseFINALE/scripts.pory"
-	special DrawWholeMapView
-# 250 "data/maps/trickhouseFINALE/scripts.pory"
-	playse SE_CLICK
-# 251 "data/maps/trickhouseFINALE/scripts.pory"
-	goto_if_unset FLAG_TRICK_HOUSE_PUZZLE_7_SWITCH_1, trickhouseFINALE_EventScript_SetSwitch1On
-# 252 "data/maps/trickhouseFINALE/scripts.pory"
-	goto_if_set FLAG_TRICK_HOUSE_PUZZLE_7_SWITCH_1, trickhouseFINALE_EventScript_SetSwitch1Off
-# 253 "data/maps/trickhouseFINALE/scripts.pory"
-	end
-# 254 "data/maps/trickhouseFINALE/scripts.pory"
-
-# 255 "data/maps/trickhouseFINALE/scripts.pory"
-trickhouseFINALE_EventScript_Switch2::
-# 256 "data/maps/trickhouseFINALE/scripts.pory"
-	lockall
-# 257 "data/maps/trickhouseFINALE/scripts.pory"
-	delay 32
-# 258 "data/maps/trickhouseFINALE/scripts.pory"
-    setvar VAR_UNUSED_0x40FD, 1
-# 259 "data/maps/trickhouseFINALE/scripts.pory"
-	call_if_unset FLAG_TRICK_HOUSE_PUZZLE_7_SWITCH_2, trickhouseFINALE_EventScript_SetSwitch2MetatilesOn
-# 260 "data/maps/trickhouseFINALE/scripts.pory"
-	call_if_set FLAG_TRICK_HOUSE_PUZZLE_7_SWITCH_2, trickhouseFINALE_EventScript_SetSwitch2MetatilesOff
-# 261 "data/maps/trickhouseFINALE/scripts.pory"
-	special DrawWholeMapView
-# 262 "data/maps/trickhouseFINALE/scripts.pory"
-	playse SE_CLICK
-# 263 "data/maps/trickhouseFINALE/scripts.pory"
-	goto_if_unset FLAG_TRICK_HOUSE_PUZZLE_7_SWITCH_2, trickhouseFINALE_EventScript_SetSwitch2On
-# 264 "data/maps/trickhouseFINALE/scripts.pory"
-	goto_if_set FLAG_TRICK_HOUSE_PUZZLE_7_SWITCH_2, trickhouseFINALE_EventScript_SetSwitch2Off
-# 265 "data/maps/trickhouseFINALE/scripts.pory"
-	end
-# 266 "data/maps/trickhouseFINALE/scripts.pory"
-
-# 267 "data/maps/trickhouseFINALE/scripts.pory"
-trickhouseFINALE_EventScript_Switch3::
-# 268 "data/maps/trickhouseFINALE/scripts.pory"
-	lockall
-# 269 "data/maps/trickhouseFINALE/scripts.pory"
-	delay 32
-# 270 "data/maps/trickhouseFINALE/scripts.pory"
-    setvar VAR_UNUSED_0x40DC, 1
-# 271 "data/maps/trickhouseFINALE/scripts.pory"
-	call_if_unset FLAG_TRICK_HOUSE_PUZZLE_7_SWITCH_3, trickhouseFINALE_EventScript_SetSwitch3MetatilesOn
-# 272 "data/maps/trickhouseFINALE/scripts.pory"
-	call_if_set FLAG_TRICK_HOUSE_PUZZLE_7_SWITCH_3, trickhouseFINALE_EventScript_SetSwitch3MetatilesOff
-# 273 "data/maps/trickhouseFINALE/scripts.pory"
-	special DrawWholeMapView
-# 274 "data/maps/trickhouseFINALE/scripts.pory"
-	playse SE_CLICK
-# 275 "data/maps/trickhouseFINALE/scripts.pory"
-	goto_if_unset FLAG_TRICK_HOUSE_PUZZLE_7_SWITCH_3, trickhouseFINALE_EventScript_SetSwitch3On
-# 276 "data/maps/trickhouseFINALE/scripts.pory"
-	goto_if_set FLAG_TRICK_HOUSE_PUZZLE_7_SWITCH_3, trickhouseFINALE_EventScript_SetSwitch3Off
-# 277 "data/maps/trickhouseFINALE/scripts.pory"
-	end
-# 278 "data/maps/trickhouseFINALE/scripts.pory"
-
-# 279 "data/maps/trickhouseFINALE/scripts.pory"
-trickhouseFINALE_EventScript_Switch4::
-# 280 "data/maps/trickhouseFINALE/scripts.pory"
-	lockall
-# 281 "data/maps/trickhouseFINALE/scripts.pory"
-	delay 32
-# 282 "data/maps/trickhouseFINALE/scripts.pory"
-    setvar VAR_UNUSED_0x40FC, 1
-# 283 "data/maps/trickhouseFINALE/scripts.pory"
-	call_if_unset FLAG_TRICK_HOUSE_PUZZLE_7_SWITCH_4, trickhouseFINALE_EventScript_SetSwitch4MetatilesOn
-# 284 "data/maps/trickhouseFINALE/scripts.pory"
-	call_if_set FLAG_TRICK_HOUSE_PUZZLE_7_SWITCH_4, trickhouseFINALE_EventScript_SetSwitch4MetatilesOff
-# 285 "data/maps/trickhouseFINALE/scripts.pory"
-	special DrawWholeMapView
-# 286 "data/maps/trickhouseFINALE/scripts.pory"
-	playse SE_CLICK
-# 287 "data/maps/trickhouseFINALE/scripts.pory"
-	goto_if_unset FLAG_TRICK_HOUSE_PUZZLE_7_SWITCH_4, trickhouseFINALE_EventScript_SetSwitch4On
-# 288 "data/maps/trickhouseFINALE/scripts.pory"
-	goto_if_set FLAG_TRICK_HOUSE_PUZZLE_7_SWITCH_4, trickhouseFINALE_EventScript_SetSwitch4Off
-# 289 "data/maps/trickhouseFINALE/scripts.pory"
-	end
-# 290 "data/maps/trickhouseFINALE/scripts.pory"
-
-# 291 "data/maps/trickhouseFINALE/scripts.pory"
-trickhouseFINALE_EventScript_Switch5::
-# 292 "data/maps/trickhouseFINALE/scripts.pory"
-	lockall
-# 293 "data/maps/trickhouseFINALE/scripts.pory"
-	delay 32
-# 294 "data/maps/trickhouseFINALE/scripts.pory"
-    setvar VAR_UNUSED_0x40DB, 1
-# 295 "data/maps/trickhouseFINALE/scripts.pory"
-	call_if_unset FLAG_TRICK_HOUSE_PUZZLE_7_SWITCH_5, trickhouseFINALE_EventScript_SetSwitch5MetatilesOn
-# 296 "data/maps/trickhouseFINALE/scripts.pory"
-	call_if_set FLAG_TRICK_HOUSE_PUZZLE_7_SWITCH_5, trickhouseFINALE_EventScript_SetSwitch5MetatilesOff
-# 297 "data/maps/trickhouseFINALE/scripts.pory"
-	special DrawWholeMapView
-# 298 "data/maps/trickhouseFINALE/scripts.pory"
-	playse SE_CLICK
-# 299 "data/maps/trickhouseFINALE/scripts.pory"
-	goto_if_unset FLAG_TRICK_HOUSE_PUZZLE_7_SWITCH_5, trickhouseFINALE_EventScript_SetSwitch5On
-# 300 "data/maps/trickhouseFINALE/scripts.pory"
-	goto_if_set FLAG_TRICK_HOUSE_PUZZLE_7_SWITCH_5, trickhouseFINALE_EventScript_SetSwitch5Off
-# 301 "data/maps/trickhouseFINALE/scripts.pory"
-	end
-# 302 "data/maps/trickhouseFINALE/scripts.pory"
-
-# 303 "data/maps/trickhouseFINALE/scripts.pory"
-@ All the below switch scripts are unused leftover from R/S
-# 304 "data/maps/trickhouseFINALE/scripts.pory"
-trickhouseFINALE_EventScript_SetSwitch1On::
-# 305 "data/maps/trickhouseFINALE/scripts.pory"
-	setflag FLAG_TRICK_HOUSE_PUZZLE_7_SWITCH_1
-# 306 "data/maps/trickhouseFINALE/scripts.pory"
 	releaseall
+# 247 "data/maps/trickhouseFINALE/scripts.pory"
+	end
+# 248 "data/maps/trickhouseFINALE/scripts.pory"
+
+# 249 "data/maps/trickhouseFINALE/scripts.pory"
+@ All the below switch scripts are unused leftover from R/S
+# 250 "data/maps/trickhouseFINALE/scripts.pory"
+trickhouseFINALE_EventScript_Switch1::
+# 251 "data/maps/trickhouseFINALE/scripts.pory"
+	lockall
+# 252 "data/maps/trickhouseFINALE/scripts.pory"
+	delay 32
+# 253 "data/maps/trickhouseFINALE/scripts.pory"
+	call_if_unset FLAG_TRICK_HOUSE_PUZZLE_7_SWITCH_1, trickhouseFINALE_EventScript_SetSwitch1MetatilesOn
+# 254 "data/maps/trickhouseFINALE/scripts.pory"
+	call_if_set FLAG_TRICK_HOUSE_PUZZLE_7_SWITCH_1, trickhouseFINALE_EventScript_SetSwitch1MetatilesOff
+# 255 "data/maps/trickhouseFINALE/scripts.pory"
+	special DrawWholeMapView
+# 256 "data/maps/trickhouseFINALE/scripts.pory"
+	playse SE_CLICK
+# 257 "data/maps/trickhouseFINALE/scripts.pory"
+	goto_if_unset FLAG_TRICK_HOUSE_PUZZLE_7_SWITCH_1, trickhouseFINALE_EventScript_SetSwitch1On
+# 258 "data/maps/trickhouseFINALE/scripts.pory"
+	goto_if_set FLAG_TRICK_HOUSE_PUZZLE_7_SWITCH_1, trickhouseFINALE_EventScript_SetSwitch1Off
+# 259 "data/maps/trickhouseFINALE/scripts.pory"
+	end
+# 260 "data/maps/trickhouseFINALE/scripts.pory"
+
+# 261 "data/maps/trickhouseFINALE/scripts.pory"
+trickhouseFINALE_EventScript_Switch2::
+# 262 "data/maps/trickhouseFINALE/scripts.pory"
+	lockall
+# 263 "data/maps/trickhouseFINALE/scripts.pory"
+	delay 32
+# 264 "data/maps/trickhouseFINALE/scripts.pory"
+    setvar VAR_UNUSED_0x40FD, 1
+# 265 "data/maps/trickhouseFINALE/scripts.pory"
+	call_if_unset FLAG_TRICK_HOUSE_PUZZLE_7_SWITCH_2, trickhouseFINALE_EventScript_SetSwitch2MetatilesOn
+# 266 "data/maps/trickhouseFINALE/scripts.pory"
+	call_if_set FLAG_TRICK_HOUSE_PUZZLE_7_SWITCH_2, trickhouseFINALE_EventScript_SetSwitch2MetatilesOff
+# 267 "data/maps/trickhouseFINALE/scripts.pory"
+	special DrawWholeMapView
+# 268 "data/maps/trickhouseFINALE/scripts.pory"
+	playse SE_CLICK
+# 269 "data/maps/trickhouseFINALE/scripts.pory"
+	goto_if_unset FLAG_TRICK_HOUSE_PUZZLE_7_SWITCH_2, trickhouseFINALE_EventScript_SetSwitch2On
+# 270 "data/maps/trickhouseFINALE/scripts.pory"
+	goto_if_set FLAG_TRICK_HOUSE_PUZZLE_7_SWITCH_2, trickhouseFINALE_EventScript_SetSwitch2Off
+# 271 "data/maps/trickhouseFINALE/scripts.pory"
+	end
+# 272 "data/maps/trickhouseFINALE/scripts.pory"
+
+# 273 "data/maps/trickhouseFINALE/scripts.pory"
+trickhouseFINALE_EventScript_Switch3::
+# 274 "data/maps/trickhouseFINALE/scripts.pory"
+	lockall
+# 275 "data/maps/trickhouseFINALE/scripts.pory"
+	delay 32
+# 276 "data/maps/trickhouseFINALE/scripts.pory"
+    setvar VAR_UNUSED_0x40DC, 1
+# 277 "data/maps/trickhouseFINALE/scripts.pory"
+	call_if_unset FLAG_TRICK_HOUSE_PUZZLE_7_SWITCH_3, trickhouseFINALE_EventScript_SetSwitch3MetatilesOn
+# 278 "data/maps/trickhouseFINALE/scripts.pory"
+	call_if_set FLAG_TRICK_HOUSE_PUZZLE_7_SWITCH_3, trickhouseFINALE_EventScript_SetSwitch3MetatilesOff
+# 279 "data/maps/trickhouseFINALE/scripts.pory"
+	special DrawWholeMapView
+# 280 "data/maps/trickhouseFINALE/scripts.pory"
+	playse SE_CLICK
+# 281 "data/maps/trickhouseFINALE/scripts.pory"
+	goto_if_unset FLAG_TRICK_HOUSE_PUZZLE_7_SWITCH_3, trickhouseFINALE_EventScript_SetSwitch3On
+# 282 "data/maps/trickhouseFINALE/scripts.pory"
+	goto_if_set FLAG_TRICK_HOUSE_PUZZLE_7_SWITCH_3, trickhouseFINALE_EventScript_SetSwitch3Off
+# 283 "data/maps/trickhouseFINALE/scripts.pory"
+	end
+# 284 "data/maps/trickhouseFINALE/scripts.pory"
+
+# 285 "data/maps/trickhouseFINALE/scripts.pory"
+trickhouseFINALE_EventScript_Switch4::
+# 286 "data/maps/trickhouseFINALE/scripts.pory"
+	lockall
+# 287 "data/maps/trickhouseFINALE/scripts.pory"
+	delay 32
+# 288 "data/maps/trickhouseFINALE/scripts.pory"
+    setvar VAR_UNUSED_0x40FC, 1
+# 289 "data/maps/trickhouseFINALE/scripts.pory"
+	call_if_unset FLAG_TRICK_HOUSE_PUZZLE_7_SWITCH_4, trickhouseFINALE_EventScript_SetSwitch4MetatilesOn
+# 290 "data/maps/trickhouseFINALE/scripts.pory"
+	call_if_set FLAG_TRICK_HOUSE_PUZZLE_7_SWITCH_4, trickhouseFINALE_EventScript_SetSwitch4MetatilesOff
+# 291 "data/maps/trickhouseFINALE/scripts.pory"
+	special DrawWholeMapView
+# 292 "data/maps/trickhouseFINALE/scripts.pory"
+	playse SE_CLICK
+# 293 "data/maps/trickhouseFINALE/scripts.pory"
+	goto_if_unset FLAG_TRICK_HOUSE_PUZZLE_7_SWITCH_4, trickhouseFINALE_EventScript_SetSwitch4On
+# 294 "data/maps/trickhouseFINALE/scripts.pory"
+	goto_if_set FLAG_TRICK_HOUSE_PUZZLE_7_SWITCH_4, trickhouseFINALE_EventScript_SetSwitch4Off
+# 295 "data/maps/trickhouseFINALE/scripts.pory"
+	end
+# 296 "data/maps/trickhouseFINALE/scripts.pory"
+
+# 297 "data/maps/trickhouseFINALE/scripts.pory"
+trickhouseFINALE_EventScript_Switch5::
+# 298 "data/maps/trickhouseFINALE/scripts.pory"
+	lockall
+# 299 "data/maps/trickhouseFINALE/scripts.pory"
+	delay 32
+# 300 "data/maps/trickhouseFINALE/scripts.pory"
+    setvar VAR_UNUSED_0x40DB, 1
+# 301 "data/maps/trickhouseFINALE/scripts.pory"
+	call_if_unset FLAG_TRICK_HOUSE_PUZZLE_7_SWITCH_5, trickhouseFINALE_EventScript_SetSwitch5MetatilesOn
+# 302 "data/maps/trickhouseFINALE/scripts.pory"
+	call_if_set FLAG_TRICK_HOUSE_PUZZLE_7_SWITCH_5, trickhouseFINALE_EventScript_SetSwitch5MetatilesOff
+# 303 "data/maps/trickhouseFINALE/scripts.pory"
+	special DrawWholeMapView
+# 304 "data/maps/trickhouseFINALE/scripts.pory"
+	playse SE_CLICK
+# 305 "data/maps/trickhouseFINALE/scripts.pory"
+	goto_if_unset FLAG_TRICK_HOUSE_PUZZLE_7_SWITCH_5, trickhouseFINALE_EventScript_SetSwitch5On
+# 306 "data/maps/trickhouseFINALE/scripts.pory"
+	goto_if_set FLAG_TRICK_HOUSE_PUZZLE_7_SWITCH_5, trickhouseFINALE_EventScript_SetSwitch5Off
 # 307 "data/maps/trickhouseFINALE/scripts.pory"
 	end
 # 308 "data/maps/trickhouseFINALE/scripts.pory"
 
 # 309 "data/maps/trickhouseFINALE/scripts.pory"
-trickhouseFINALE_EventScript_SetSwitch1Off::
+@ All the below switch scripts are unused leftover from R/S
 # 310 "data/maps/trickhouseFINALE/scripts.pory"
-	clearflag FLAG_TRICK_HOUSE_PUZZLE_7_SWITCH_1
+trickhouseFINALE_EventScript_SetSwitch1On::
 # 311 "data/maps/trickhouseFINALE/scripts.pory"
-	releaseall
+	setflag FLAG_TRICK_HOUSE_PUZZLE_7_SWITCH_1
 # 312 "data/maps/trickhouseFINALE/scripts.pory"
-	end
+	releaseall
 # 313 "data/maps/trickhouseFINALE/scripts.pory"
-
+	end
 # 314 "data/maps/trickhouseFINALE/scripts.pory"
-trickhouseFINALE_EventScript_SetSwitch2On::
+
 # 315 "data/maps/trickhouseFINALE/scripts.pory"
-	setflag FLAG_TRICK_HOUSE_PUZZLE_7_SWITCH_2
+trickhouseFINALE_EventScript_SetSwitch1Off::
 # 316 "data/maps/trickhouseFINALE/scripts.pory"
-    setvar VAR_UNUSED_0x40FD, 1
+	clearflag FLAG_TRICK_HOUSE_PUZZLE_7_SWITCH_1
 # 317 "data/maps/trickhouseFINALE/scripts.pory"
 	releaseall
 # 318 "data/maps/trickhouseFINALE/scripts.pory"
@@ -637,11 +637,11 @@ trickhouseFINALE_EventScript_SetSwitch2On::
 # 319 "data/maps/trickhouseFINALE/scripts.pory"
 
 # 320 "data/maps/trickhouseFINALE/scripts.pory"
-trickhouseFINALE_EventScript_SetSwitch2Off::
+trickhouseFINALE_EventScript_SetSwitch2On::
 # 321 "data/maps/trickhouseFINALE/scripts.pory"
-	clearflag FLAG_TRICK_HOUSE_PUZZLE_7_SWITCH_2
+	setflag FLAG_TRICK_HOUSE_PUZZLE_7_SWITCH_2
 # 322 "data/maps/trickhouseFINALE/scripts.pory"
-    setvar VAR_UNUSED_0x40FD, 0
+    setvar VAR_UNUSED_0x40FD, 1
 # 323 "data/maps/trickhouseFINALE/scripts.pory"
 	releaseall
 # 324 "data/maps/trickhouseFINALE/scripts.pory"
@@ -649,11 +649,11 @@ trickhouseFINALE_EventScript_SetSwitch2Off::
 # 325 "data/maps/trickhouseFINALE/scripts.pory"
 
 # 326 "data/maps/trickhouseFINALE/scripts.pory"
-trickhouseFINALE_EventScript_SetSwitch3On::
+trickhouseFINALE_EventScript_SetSwitch2Off::
 # 327 "data/maps/trickhouseFINALE/scripts.pory"
-	setflag FLAG_TRICK_HOUSE_PUZZLE_7_SWITCH_3
+	clearflag FLAG_TRICK_HOUSE_PUZZLE_7_SWITCH_2
 # 328 "data/maps/trickhouseFINALE/scripts.pory"
-    setvar VAR_UNUSED_0x40DC, 1
+    setvar VAR_UNUSED_0x40FD, 0
 # 329 "data/maps/trickhouseFINALE/scripts.pory"
 	releaseall
 # 330 "data/maps/trickhouseFINALE/scripts.pory"
@@ -661,11 +661,11 @@ trickhouseFINALE_EventScript_SetSwitch3On::
 # 331 "data/maps/trickhouseFINALE/scripts.pory"
 
 # 332 "data/maps/trickhouseFINALE/scripts.pory"
-trickhouseFINALE_EventScript_SetSwitch3Off::
+trickhouseFINALE_EventScript_SetSwitch3On::
 # 333 "data/maps/trickhouseFINALE/scripts.pory"
-	clearflag FLAG_TRICK_HOUSE_PUZZLE_7_SWITCH_3
+	setflag FLAG_TRICK_HOUSE_PUZZLE_7_SWITCH_3
 # 334 "data/maps/trickhouseFINALE/scripts.pory"
-    setvar VAR_UNUSED_0x40DC, 0
+    setvar VAR_UNUSED_0x40DC, 1
 # 335 "data/maps/trickhouseFINALE/scripts.pory"
 	releaseall
 # 336 "data/maps/trickhouseFINALE/scripts.pory"
@@ -673,11 +673,11 @@ trickhouseFINALE_EventScript_SetSwitch3Off::
 # 337 "data/maps/trickhouseFINALE/scripts.pory"
 
 # 338 "data/maps/trickhouseFINALE/scripts.pory"
-trickhouseFINALE_EventScript_SetSwitch4On::
+trickhouseFINALE_EventScript_SetSwitch3Off::
 # 339 "data/maps/trickhouseFINALE/scripts.pory"
-	setflag FLAG_TRICK_HOUSE_PUZZLE_7_SWITCH_4
+	clearflag FLAG_TRICK_HOUSE_PUZZLE_7_SWITCH_3
 # 340 "data/maps/trickhouseFINALE/scripts.pory"
-    setvar VAR_UNUSED_0x40FC, 1
+    setvar VAR_UNUSED_0x40DC, 0
 # 341 "data/maps/trickhouseFINALE/scripts.pory"
 	releaseall
 # 342 "data/maps/trickhouseFINALE/scripts.pory"
@@ -685,11 +685,11 @@ trickhouseFINALE_EventScript_SetSwitch4On::
 # 343 "data/maps/trickhouseFINALE/scripts.pory"
 
 # 344 "data/maps/trickhouseFINALE/scripts.pory"
-trickhouseFINALE_EventScript_SetSwitch4Off::
+trickhouseFINALE_EventScript_SetSwitch4On::
 # 345 "data/maps/trickhouseFINALE/scripts.pory"
-	clearflag FLAG_TRICK_HOUSE_PUZZLE_7_SWITCH_4
+	setflag FLAG_TRICK_HOUSE_PUZZLE_7_SWITCH_4
 # 346 "data/maps/trickhouseFINALE/scripts.pory"
-    setvar VAR_UNUSED_0x40FC, 0
+    setvar VAR_UNUSED_0x40FC, 1
 # 347 "data/maps/trickhouseFINALE/scripts.pory"
 	releaseall
 # 348 "data/maps/trickhouseFINALE/scripts.pory"
@@ -697,11 +697,11 @@ trickhouseFINALE_EventScript_SetSwitch4Off::
 # 349 "data/maps/trickhouseFINALE/scripts.pory"
 
 # 350 "data/maps/trickhouseFINALE/scripts.pory"
-trickhouseFINALE_EventScript_SetSwitch5On::
+trickhouseFINALE_EventScript_SetSwitch4Off::
 # 351 "data/maps/trickhouseFINALE/scripts.pory"
-	setflag FLAG_TRICK_HOUSE_PUZZLE_7_SWITCH_5
+	clearflag FLAG_TRICK_HOUSE_PUZZLE_7_SWITCH_4
 # 352 "data/maps/trickhouseFINALE/scripts.pory"
-    setvar VAR_UNUSED_0x40DB, 1
+    setvar VAR_UNUSED_0x40FC, 0
 # 353 "data/maps/trickhouseFINALE/scripts.pory"
 	releaseall
 # 354 "data/maps/trickhouseFINALE/scripts.pory"
@@ -709,200 +709,212 @@ trickhouseFINALE_EventScript_SetSwitch5On::
 # 355 "data/maps/trickhouseFINALE/scripts.pory"
 
 # 356 "data/maps/trickhouseFINALE/scripts.pory"
-trickhouseFINALE_EventScript_SetSwitch5Off::
+trickhouseFINALE_EventScript_SetSwitch5On::
 # 357 "data/maps/trickhouseFINALE/scripts.pory"
-	clearflag FLAG_TRICK_HOUSE_PUZZLE_7_SWITCH_5
+	setflag FLAG_TRICK_HOUSE_PUZZLE_7_SWITCH_5
 # 358 "data/maps/trickhouseFINALE/scripts.pory"
-    setvar VAR_UNUSED_0x40DB, 0
+    setvar VAR_UNUSED_0x40DB, 1
 # 359 "data/maps/trickhouseFINALE/scripts.pory"
 	releaseall
 # 360 "data/maps/trickhouseFINALE/scripts.pory"
 	end
+# 361 "data/maps/trickhouseFINALE/scripts.pory"
+
+# 362 "data/maps/trickhouseFINALE/scripts.pory"
+trickhouseFINALE_EventScript_SetSwitch5Off::
+# 363 "data/maps/trickhouseFINALE/scripts.pory"
+	clearflag FLAG_TRICK_HOUSE_PUZZLE_7_SWITCH_5
+# 364 "data/maps/trickhouseFINALE/scripts.pory"
+    setvar VAR_UNUSED_0x40DB, 0
+# 365 "data/maps/trickhouseFINALE/scripts.pory"
+	releaseall
+# 366 "data/maps/trickhouseFINALE/scripts.pory"
+	end
 
 trickhouseFINALE_EventScript_Duditem::
-# 366 "data/maps/trickhouseFINALE/scripts.pory"
+# 372 "data/maps/trickhouseFINALE/scripts.pory"
 	lockall
-# 367 "data/maps/trickhouseFINALE/scripts.pory"
+# 373 "data/maps/trickhouseFINALE/scripts.pory"
 	MSGBOX trickhouseFINALE_EventScript_Duditem_Text_0
-# 368 "data/maps/trickhouseFINALE/scripts.pory"
+# 374 "data/maps/trickhouseFINALE/scripts.pory"
 	closemessage
-# 369 "data/maps/trickhouseFINALE/scripts.pory"
+# 375 "data/maps/trickhouseFINALE/scripts.pory"
 	releaseall
 	return
 
 
 trickhouseFINALE_EventScript_realitem::
-# 373 "data/maps/trickhouseFINALE/scripts.pory"
+# 379 "data/maps/trickhouseFINALE/scripts.pory"
 	lockall
-# 374 "data/maps/trickhouseFINALE/scripts.pory"
+# 380 "data/maps/trickhouseFINALE/scripts.pory"
 	MSGBOX trickhouseFINALE_EventScript_realitem_Text_0
-# 375 "data/maps/trickhouseFINALE/scripts.pory"
+# 381 "data/maps/trickhouseFINALE/scripts.pory"
 	setflag FLAG_realitempicked
-# 376 "data/maps/trickhouseFINALE/scripts.pory"
+# 382 "data/maps/trickhouseFINALE/scripts.pory"
 	setmetatile 3, 15, METATILE_TrickHousePuzzle_Door_Shuttered, FALSE
-# 377 "data/maps/trickhouseFINALE/scripts.pory"
+# 383 "data/maps/trickhouseFINALE/scripts.pory"
 	closemessage
-# 378 "data/maps/trickhouseFINALE/scripts.pory"
+# 384 "data/maps/trickhouseFINALE/scripts.pory"
 	releaseall
 	return
 
 
 trickhouseFINALE_EventScript_finalriddle::
-# 382 "data/maps/trickhouseFINALE/scripts.pory"
+# 388 "data/maps/trickhouseFINALE/scripts.pory"
 	MSGBOX trickhouseFINALE_EventScript_finalriddle_Text_0
-# 383 "data/maps/trickhouseFINALE/scripts.pory"
+# 389 "data/maps/trickhouseFINALE/scripts.pory"
 	MSGBOX trickhouseFINALE_EventScript_finalriddle_Text_1, MSGBOX_YESNO
-# 384 "data/maps/trickhouseFINALE/scripts.pory"
+# 390 "data/maps/trickhouseFINALE/scripts.pory"
 	compare VAR_RESULT, YES
 	goto_if_eq trickhouseFINALE_EventScript_finalriddle_1
-# 398 "data/maps/trickhouseFINALE/scripts.pory"
+# 404 "data/maps/trickhouseFINALE/scripts.pory"
 	MSGBOX trickhouseFINALE_EventScript_finalriddle_Text_3
-# 399 "data/maps/trickhouseFINALE/scripts.pory"
+# 405 "data/maps/trickhouseFINALE/scripts.pory"
 	closemessage
 	return
 
 trickhouseFINALE_EventScript_finalriddle_1:
-# 385 "data/maps/trickhouseFINALE/scripts.pory"
+# 391 "data/maps/trickhouseFINALE/scripts.pory"
 	message trickhouseFINALE_EventScript_finalriddle_Text_2
-# 386 "data/maps/trickhouseFINALE/scripts.pory"
+# 392 "data/maps/trickhouseFINALE/scripts.pory"
 	multichoice 25, 5, MULTI_RIDDLE_FINAL, 0
-# 387 "data/maps/trickhouseFINALE/scripts.pory"
+# 393 "data/maps/trickhouseFINALE/scripts.pory"
 	closemessage
-# 388 "data/maps/trickhouseFINALE/scripts.pory"
+# 394 "data/maps/trickhouseFINALE/scripts.pory"
 	compare VAR_RESULT, 0
 	goto_if_eq trickhouseFINALE_EventScript_finalriddle_4
-# 391 "data/maps/trickhouseFINALE/scripts.pory"
+# 397 "data/maps/trickhouseFINALE/scripts.pory"
 	compare VAR_RESULT, 1
 	goto_if_eq trickhouseFINALE_EventScript_finalriddle_5
-# 394 "data/maps/trickhouseFINALE/scripts.pory"
+# 400 "data/maps/trickhouseFINALE/scripts.pory"
 	compare VAR_RESULT, 2
 	goto_if_eq trickhouseFINALE_EventScript_finalriddle_6
 	return
 
 trickhouseFINALE_EventScript_finalriddle_4:
-# 389 "data/maps/trickhouseFINALE/scripts.pory"
+# 395 "data/maps/trickhouseFINALE/scripts.pory"
 	call RFFailed
 	return
 
 trickhouseFINALE_EventScript_finalriddle_5:
-# 392 "data/maps/trickhouseFINALE/scripts.pory"
+# 398 "data/maps/trickhouseFINALE/scripts.pory"
 	call RFFailed
 	return
 
 trickhouseFINALE_EventScript_finalriddle_6:
-# 395 "data/maps/trickhouseFINALE/scripts.pory"
+# 401 "data/maps/trickhouseFINALE/scripts.pory"
 	call RFCorrect
 	return
 
 
 RFFailed::
-# 407 "data/maps/trickhouseFINALE/scripts.pory"
-	lockall
-# 408 "data/maps/trickhouseFINALE/scripts.pory"
-	MSGBOX RFFailed_Text_0
-# 409 "data/maps/trickhouseFINALE/scripts.pory"
-	waitmessage
-# 410 "data/maps/trickhouseFINALE/scripts.pory"
-	clearflag FLAG_realitempicked
-# 411 "data/maps/trickhouseFINALE/scripts.pory"
-	setvar VAR_UNUSED_0x40FD, 0
-# 412 "data/maps/trickhouseFINALE/scripts.pory"
-	setvar VAR_UNUSED_0x40DC, 0
 # 413 "data/maps/trickhouseFINALE/scripts.pory"
-	setvar VAR_UNUSED_0x40FC, 0
+	lockall
 # 414 "data/maps/trickhouseFINALE/scripts.pory"
-	setvar VAR_UNUSED_0x40DB, 0
+	MSGBOX RFFailed_Text_0
 # 415 "data/maps/trickhouseFINALE/scripts.pory"
-	fadescreen FADE_TO_BLACK
+	waitmessage
 # 416 "data/maps/trickhouseFINALE/scripts.pory"
-	warpsilent MAP_TRICKHOUSE_FINALE, 20, 39
+	clearflag FLAG_realitempicked
 # 417 "data/maps/trickhouseFINALE/scripts.pory"
+	setvar VAR_UNUSED_0x40FD, 0
+# 418 "data/maps/trickhouseFINALE/scripts.pory"
+	setvar VAR_UNUSED_0x40DC, 0
+# 419 "data/maps/trickhouseFINALE/scripts.pory"
+	setvar VAR_UNUSED_0x40FC, 0
+# 420 "data/maps/trickhouseFINALE/scripts.pory"
+	setvar VAR_UNUSED_0x40DB, 0
+# 421 "data/maps/trickhouseFINALE/scripts.pory"
+	fadescreen FADE_TO_BLACK
+# 422 "data/maps/trickhouseFINALE/scripts.pory"
+	warpsilent MAP_TRICKHOUSE_FINALE, 20, 39
+# 423 "data/maps/trickhouseFINALE/scripts.pory"
 	waitstate
 	return
 
 
 RFCorrect::
-# 421 "data/maps/trickhouseFINALE/scripts.pory"
-	lockall
-# 422 "data/maps/trickhouseFINALE/scripts.pory"
-	MSGBOX RFCorrect_Text_0
-# 423 "data/maps/trickhouseFINALE/scripts.pory"
-	delay 20
-# 424 "data/maps/trickhouseFINALE/scripts.pory"
-	MSGBOX RFCorrect_Text_0
-# 425 "data/maps/trickhouseFINALE/scripts.pory"
-	delay 20
-# 426 "data/maps/trickhouseFINALE/scripts.pory"
-	MSGBOX RFCorrect_Text_1
 # 427 "data/maps/trickhouseFINALE/scripts.pory"
-	waitmessage
+	lockall
 # 428 "data/maps/trickhouseFINALE/scripts.pory"
-	closemessage
+	MSGBOX RFCorrect_Text_0
 # 429 "data/maps/trickhouseFINALE/scripts.pory"
-	applymovement 6, ominouswalkfr
+	delay 20
 # 430 "data/maps/trickhouseFINALE/scripts.pory"
-	waitmovement 0
+	MSGBOX RFCorrect_Text_0
 # 431 "data/maps/trickhouseFINALE/scripts.pory"
-	removeobject 6
+	delay 20
 # 432 "data/maps/trickhouseFINALE/scripts.pory"
+	MSGBOX RFCorrect_Text_1
+# 433 "data/maps/trickhouseFINALE/scripts.pory"
+	waitmessage
+# 434 "data/maps/trickhouseFINALE/scripts.pory"
+	closemessage
+# 435 "data/maps/trickhouseFINALE/scripts.pory"
+	applymovement 6, ominouswalkfr
+# 436 "data/maps/trickhouseFINALE/scripts.pory"
+	waitmovement 0
+# 437 "data/maps/trickhouseFINALE/scripts.pory"
+	removeobject 6
+# 438 "data/maps/trickhouseFINALE/scripts.pory"
 	releaseall
 	return
 
 
-# 436 "data/maps/trickhouseFINALE/scripts.pory"
+# 442 "data/maps/trickhouseFINALE/scripts.pory"
 ominouswalkfr:
-# 437 "data/maps/trickhouseFINALE/scripts.pory"
+# 443 "data/maps/trickhouseFINALE/scripts.pory"
 	walk_up
-# 437 "data/maps/trickhouseFINALE/scripts.pory"
+# 443 "data/maps/trickhouseFINALE/scripts.pory"
 	walk_up
-# 437 "data/maps/trickhouseFINALE/scripts.pory"
+# 443 "data/maps/trickhouseFINALE/scripts.pory"
 	walk_up
-# 437 "data/maps/trickhouseFINALE/scripts.pory"
+# 443 "data/maps/trickhouseFINALE/scripts.pory"
 	walk_up
-# 437 "data/maps/trickhouseFINALE/scripts.pory"
+# 443 "data/maps/trickhouseFINALE/scripts.pory"
 	walk_up
-# 437 "data/maps/trickhouseFINALE/scripts.pory"
+# 443 "data/maps/trickhouseFINALE/scripts.pory"
 	walk_up
-# 437 "data/maps/trickhouseFINALE/scripts.pory"
+# 443 "data/maps/trickhouseFINALE/scripts.pory"
 	walk_up
 	step_end
 
 trickhouseFINALE_EventScript_Duditem_Text_0:
-# 367 "data/maps/trickhouseFINALE/scripts.pory"
+# 373 "data/maps/trickhouseFINALE/scripts.pory"
 	.string "It's a Dud!$"
 
 trickhouseFINALE_EventScript_realitem_Text_0:
-# 374 "data/maps/trickhouseFINALE/scripts.pory"
+# 380 "data/maps/trickhouseFINALE/scripts.pory"
 	.string "A gear clicked somewhere in the floor$"
 
 trickhouseFINALE_EventScript_finalriddle_Text_0:
-# 382 "data/maps/trickhouseFINALE/scripts.pory"
+# 388 "data/maps/trickhouseFINALE/scripts.pory"
 	.string "This is it... one final riddle!$"
 
 trickhouseFINALE_EventScript_finalriddle_Text_1:
-# 383 "data/maps/trickhouseFINALE/scripts.pory"
+# 389 "data/maps/trickhouseFINALE/scripts.pory"
 	.string "Begin the Final riddle?$"
 
 trickhouseFINALE_EventScript_finalriddle_Text_2:
-# 385 "data/maps/trickhouseFINALE/scripts.pory"
+# 391 "data/maps/trickhouseFINALE/scripts.pory"
 	.string "Ha! lets see how attentive you've been!\n"
 	.string "How many children have appeared\l"
 	.string "through this hack?$"
 
 trickhouseFINALE_EventScript_finalriddle_Text_3:
-# 398 "data/maps/trickhouseFINALE/scripts.pory"
+# 404 "data/maps/trickhouseFINALE/scripts.pory"
 	.string ".... wut-$"
 
 RFFailed_Text_0:
-# 408 "data/maps/trickhouseFINALE/scripts.pory"
+# 414 "data/maps/trickhouseFINALE/scripts.pory"
 	.string "HAH! you players these days never pay\n"
 	.string "attention!$"
 
 RFCorrect_Text_0:
-# 422 "data/maps/trickhouseFINALE/scripts.pory"
+# 428 "data/maps/trickhouseFINALE/scripts.pory"
 	.string ".....$"
 
 RFCorrect_Text_1:
-# 426 "data/maps/trickhouseFINALE/scripts.pory"
+# 432 "data/maps/trickhouseFINALE/scripts.pory"
 	.string "very well. meet me in the room ahead for\n"
 	.string "our final showdown!$"

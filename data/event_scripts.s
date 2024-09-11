@@ -1174,3 +1174,5 @@ EventScript_VsSeekerChargingDone::
 	.include "data/maps/trickhouseFINALE/scripts.inc"
 
 	.include "data/maps/NewMap10/scripts.inc"
+
+	.include "data/maps/NewMap11/scripts.inc"

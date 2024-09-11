@@ -443,6 +443,13 @@
       "elevation": 0,
       "dest_map": "MAP_TRICKHOUSE_FINALE",
       "dest_warp_id": "33"
+    },
+    {
+      "x": 37,
+      "y": 1,
+      "elevation": 0,
+      "dest_map": "MAP_NEW_MAP10",
+      "dest_warp_id": "0"
     }
   ],
   "coord_events": [

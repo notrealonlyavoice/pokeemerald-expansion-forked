@@ -1,0 +1,30 @@
+raw `
+NewMap10_MapScripts::
+.byte 0
+`
+
+script NewMap10_Eventscript_finalbattlelesgo {
+    MSGBOX(format("You have arrived at the finale.. im impressed youve made it this far... beat me and you'll be free to go home..... "))
+    waitmessage
+    trainerbattle_double(TRAINER_LEROY, cleveman_Intro, cleverman_Outro, Postclevermanbattle)
+}
+
+
+text cleveman_Intro {
+    "FIGHT WITH ALL YOU GOT"
+}
+
+text cleverman_Outro {
+    "you are truly clever...."
+}
+
+script Postclevermanbattle {
+    lockall
+    MSGBOX("I have no reason to keep you here any longer")
+    delay(40)
+    fadescreen(FADE_TO_BLACK)
+    setvar(VAR_UNUSED_0x409B, 1)
+    delay(40)
+    warpsilent(MAP_ISLANDNEW, 32, 4)
+    waitstate
+}

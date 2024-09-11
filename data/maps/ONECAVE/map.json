@@ -83,6 +83,13 @@
       "elevation": 0,
       "dest_map": "MAP_NDCAVE",
       "dest_warp_id": "1"
+    },
+    {
+      "x": 7,
+      "y": 29,
+      "elevation": 0,
+      "dest_map": "MAP_NDCAVE",
+      "dest_warp_id": "2"
     }
   ],
   "coord_events": [

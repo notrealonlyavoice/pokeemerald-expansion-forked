@@ -64,3 +64,4 @@ script SHIPPP_EventScript_scientisttest {
     waitmessage
     closemessage
 }
+

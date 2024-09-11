@@ -164,7 +164,7 @@ script R3Correct {
     MSGBOX(format("impressive, you're spot on. take your reward and shoo"))
     setvar(VAR_0x8006, 10)
     waitmessage
-    givemon(SPECIES_BONSLY, 5, ITEM_BERRY_JUICE, abilityNum=0, move1=MOVE_SWITCHEROO, move2=MOVE_STEALTH_ROCK, move3=MOVE_COPYCAT, move4=MOVE_ENDEAVOR)
+    givemon(SPECIES_BONSLY, 5, ITEM_BERRY_JUICE, abilityNum=0, move1=MOVE_SWITCHEROO, move2=MOVE_STEALTH_ROCK, move3=MOVE_TORMENT, move4=MOVE_ENDEAVOR)
     if(var(VAR_RESULT) == MON_GIVEN_TO_PARTY){
         playfanfare(MUS_OBTAIN_ITEM)
         msgbox("Recieved Bonsly")

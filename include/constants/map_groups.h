@@ -450,6 +450,7 @@
 #define MAP_ICECAVES2                                (122 | (24 << 8))
 #define MAP_NEW_MAP9                                 (123 | (24 << 8))
 #define MAP_FINALICECAVE                             (124 | (24 << 8))
+#define MAP_NEW_MAP11                                (125 | (24 << 8))
 
 // gMapGroup_IndoorDynamic
 #define MAP_SECRET_BASE_RED_CAVE1    (0 | (25 << 8))

@@ -4910,6 +4910,16 @@
       "secondary_tileset": "gTileset_TrickHousePuzzle",
       "border_filepath": "data/layouts/NewMap10/border.bin",
       "blockdata_filepath": "data/layouts/NewMap10/map.bin"
+    },
+    {
+      "id": "LAYOUT_NEW_MAP11",
+      "name": "NewMap11_Layout",
+      "width": 25,
+      "height": 25,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Cave",
+      "border_filepath": "data/layouts/NewMap11/border.bin",
+      "blockdata_filepath": "data/layouts/NewMap11/map.bin"
     }
   ]
 }

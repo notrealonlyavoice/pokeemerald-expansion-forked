@@ -365,5 +365,132 @@ script ISLANDNEW_EventScript_wanderingdude2 {
 	releaseall
 }
 
+script ISLANDNEW_Trigger_triggerendscene1 {
+	lockall
+	applymovement(4, checkonplayerlastime)
+	waitmovement(0)
+	applymovement(OBJ_EVENT_ID_PLAYER, checkonplayerlookatlady)
+	waitmovement(0)
+	MSGBOX(format("You've done it....... I must come clean to you I am the leader of this island, and cleverman is the lockal trainer expert. I kinda wanted to have a little fun with some strangers so I picked you to do the ISLAND CHALLENGE... in all honesty I you Couldve left the island at any time... well its been nice knowing you. this boat will take you to to your destination... Hope you visit us again on better terms! Goodbye!"))
+	waitmessage
+	applymovement(4, byemartlady)
+	waitmovement(0)
+	fadescreenspeed(FADE_TO_BLACK, 24)
+	special(GameClear)
+}
+
+script ISLANDNEW_Trigger_triggerendscene2 {
+	lockall
+	applymovement(4, checkonplayerlastime)
+	waitmovement(0)
+	applymovement(OBJ_EVENT_ID_PLAYER, checkonplayerlookatlady)
+	waitmovement(0)
+	MSGBOX(format("You've done it....... I must come clean to you I am the leader of this island, and cleverman is the lockal trainer expert. I kinda wanted to have a little fun with some strangers so I picked you to do the ISLAND CHALLENGE... in all honesty I you Couldve left the island at any time... well its been nice knowing you. this boat will take you to to your destination... Hope you visit us again on better terms! Goodbye!"))
+	waitmessage
+	applymovement(4, byemartlady)
+	waitmovement(0)
+	fadescreenspeed(FADE_TO_BLACK, 24)
+	special(GameClear)
+}
+
+script ISLANDNEW_Trigger_triggerendscene3 {
+	lockall
+	applymovement(4, checkonplayerlastime)
+	waitmovement(0)
+	applymovement(OBJ_EVENT_ID_PLAYER, checkonplayerlookatlady)
+	waitmovement(0)
+	MSGBOX(format("You've done it....... I must come clean to you I am the leader of this island, and cleverman is the lockal trainer expert. I kinda wanted to have a little fun with some strangers so I picked you to do the ISLAND CHALLENGE... in all honesty I you Couldve left the island at any time... well its been nice knowing you. this boat will take you to to your destination... Hope you visit us again on better terms! Goodbye!"))
+	waitmessage
+	applymovement(4, byemartlady)
+	waitmovement(0)
+	fadescreenspeed(FADE_TO_BLACK, 24)
+	special(GameClear)
+}
+
+script ISLANDNEW_Trigger_triggerendscene4 {
+	lockall
+	applymovement(4, checkonplayerlastime)
+	waitmovement(0)
+	applymovement(OBJ_EVENT_ID_PLAYER, checkonplayerlookatlady)
+	waitmovement(0)
+	MSGBOX(format("You've done it....... I must come clean to you I am the leader of this island, and cleverman is the lockal trainer expert. I kinda wanted to have a little fun with some strangers so I picked you to do the ISLAND CHALLENGE... in all honesty I you Couldve left the island at any time... well its been nice knowing you. this boat will take you to to your destination... Hope you visit us again on better terms! Goodbye!"))
+	waitmessage
+	applymovement(4, byemartlady)
+	waitmovement(0)
+	fadescreenspeed(FADE_TO_BLACK, 24)
+	special(GameClear)
+}
+
+script ISLANDNEW_Trigger_triggerendscene5 {
+	lockall
+	applymovement(4, checkonplayerlastime)
+	waitmovement(0)
+	applymovement(OBJ_EVENT_ID_PLAYER, checkonplayerlookatlady)
+	waitmovement(0)
+	MSGBOX(format("You've done it....... I must come clean to you I am the leader of this island, and cleverman is the lockal trainer expert. I kinda wanted to have a little fun with some strangers so I picked you to do the ISLAND CHALLENGE... in all honesty I you Couldve left the island at any time... well its been nice knowing you. this boat will take you to to your destination... Hope you visit us again on better terms! Goodbye!"))
+	waitmessage
+	applymovement(4, byemartlady)
+	waitmovement(0)
+	fadescreenspeed(FADE_TO_BLACK, 24)
+	special(GameClear)
+}
+
+script ISLANDNEW_Trigger_triggerendscene6 {
+	lockall
+	applymovement(4, checkonplayerlastime)
+	waitmovement(0)
+	applymovement(OBJ_EVENT_ID_PLAYER, checkonplayerlookatlady)
+	waitmovement(0)
+	MSGBOX(format("You've done it....... I must come clean to you I am the leader of this island, and cleverman is the lockal trainer expert. I kinda wanted to have a little fun with some strangers so I picked you to do the ISLAND CHALLENGE... in all honesty I you Couldve left the island at any time... well its been nice knowing you. this boat will take you to to your destination... Hope you visit us again on better terms! Goodbye!"))
+	waitmessage
+	applymovement(4, byemartlady)
+	waitmovement(0)
+	fadescreenspeed(FADE_TO_BLACK, 24)
+	special(GameClear)
+}	
 
 
+script ISLANDNEW_Trigger_triggerendscene7 {
+	lockall
+	applymovement(4, checkonplayerlastime)
+	waitmovement(0)
+	applymovement(OBJ_EVENT_ID_PLAYER, checkonplayerlookatlady)
+	waitmovement(0)
+	MSGBOX(format("You've done it....... I must come clean to you I am the leader of this island, and cleverman is the lockal trainer expert. I kinda wanted to have a little fun with some strangers so I picked you to do the ISLAND CHALLENGE... in all honesty I you Couldve left the island at any time... well its been nice knowing you. this boat will take you to to your destination... Hope you visit us again on better terms! Goodbye!"))
+	waitmessage
+	applymovement(4, byemartlady)
+	waitmovement(0)
+	fadescreenspeed(FADE_TO_BLACK, 24)
+	special(GameClear)
+}
+
+script ISLANDNEW_Trigger_triggerendscene8 {
+	lockall
+	applymovement(4, checkonplayerlastime)
+	waitmovement(0)
+	applymovement(OBJ_EVENT_ID_PLAYER, checkonplayerlookatlady)
+	waitmovement(0)
+	MSGBOX(format("You've done it....... I must come clean to you I am the leader of this island, and cleverman is the lockal trainer expert. I kinda wanted to have a little fun with some strangers so I picked you to do the ISLAND CHALLENGE... in all honesty I you Couldve left the island at any time... well its been nice knowing you. this boat will take you to to your destination... Hope you visit us again on better terms! Goodbye!"))
+	waitmessage
+	applymovement(4, byemartlady)
+	waitmovement(0)
+	fadescreenspeed(FADE_TO_BLACK, 24)
+	special(GameClear)
+	waitstate
+}	
+
+
+
+
+movement checkonplayerlastime {
+	walk_left * 7
+	walk_up * 4
+}
+
+movement checkonplayerlookatlady {
+	face_down
+}
+
+movement byemartlady {
+	walk_down * 7
+}
