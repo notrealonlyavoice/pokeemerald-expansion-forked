@@ -22,6 +22,7 @@ script ISLANDNEW_EventScript_randomguy1 {
 
 
 script ISLANDNEW_EventScript_sameladyasbefore {
+	faceplayer
     if(var(VAR_0x8006) == 4 ){
         MSGBOX(format("I belive in you!"))
 		closemessage
@@ -49,7 +50,7 @@ script ISLANDNEW_EventScript_sameladyasbefore {
 		warpsilent(MAP_NEW_MAP6, 5, 7)
 		waitstate
 	}elif(var(VAR_0x8006) == 10 ){
-		MSGBOX(format("OK! The third challenge leader is very young and spends most of his time playing in the ice caves. navigating the caves are treacherous and maybe HM STRENGTH would help..... hmmm....."))
+		MSGBOX(format("OK! The third challenge leader is very young and spends most of his time playing in the ice caves. navigating the caves are treacherous..... you'll need to be careful ....."))
 		setvar(VAR_0x8006, 11)
 		closemessage
 	} elif(var(VAR_0x8006) == 6 ){

@@ -2,7 +2,7 @@
   "id": "MAP_SURFROOM_HM",
   "name": "SurfroomHM",
   "layout": "LAYOUT_SURFROOM_HM",
-  "music": "MUS_DUMMY",
+  "music": "MUS_ABANDONED_SHIP",
   "region_map_section": "MAPSEC_ABANDONED_SHIP",
   "requires_flash": false,
   "weather": "WEATHER_NONE",

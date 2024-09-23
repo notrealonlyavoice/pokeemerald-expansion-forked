@@ -2,7 +2,7 @@
   "id": "MAP_CAPTIANROOM",
   "name": "captianroom",
   "layout": "LAYOUT_CAPTIANROOM",
-  "music": "MUS_DUMMY",
+  "music": "MUS_ABANDONED_SHIP",
   "region_map_section": "MAPSEC_ABANDONED_SHIP",
   "requires_flash": false,
   "weather": "WEATHER_NONE",

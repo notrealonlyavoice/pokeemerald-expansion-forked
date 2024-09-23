@@ -2,7 +2,7 @@
   "id": "MAP_POKEMONTUNNEL6",
   "name": "pokemontunnel6",
   "layout": "LAYOUT_POKEMONTUNNEL6",
-  "music": "MUS_DUMMY",
+  "music": "MUS_CAVE_OF_ORIGIN",
   "region_map_section": "MAPSEC_ABANDONED_SHIP",
   "requires_flash": false,
   "weather": "WEATHER_NONE",

@@ -2,7 +2,7 @@
   "id": "MAP_NEW_MAP10",
   "name": "NewMap10",
   "layout": "LAYOUT_NEW_MAP10",
-  "music": "MUS_DUMMY",
+  "music": "MUS_GYM",
   "region_map_section": "MAPSEC_ABANDONED_SHIP",
   "requires_flash": false,
   "weather": "WEATHER_NONE",

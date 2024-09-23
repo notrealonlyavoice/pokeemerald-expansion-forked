@@ -1,6 +1,6 @@
 gText_Birch_Welcome::
 	.string "Hi! Sorry to keep you waiting!\p"
-	.string "Welcome to CHALLENGE ISLAND!\p"
+	.string "Welcome to Pokemon Puzzle.ver!\p"
 	.string "This hack is associated with.\p"
 	.string "TEAM AQUA HIDEOUT and \n"
 	.string "OUR GLORIOUS LEADER ARCHIE.\p"

@@ -1,7 +1,22 @@
-raw`
-ISLANDNEW_MapScripts::
-	.byte 0
-`
+mapscripts ISLANDNEW_MapScripts {
+	MAP_SCRIPT_ON_TRANSITION: ISLANDNEW_MapScripts_OnTransition
+	MAP_SCRIPT_ON_RESUME: CableClub_OnResume
+}
+
+script ISLANDNEW_MapScripts_OnTransition {
+	call(respawnendingnpc)
+	end
+}
+
+
+script respawnendingnpc {
+	if(flag(FLAG_respawnnpc)){
+		showobjectat(4, MAP_ISLANDNEW)
+	} else {
+		hideobjectat(4, MAP_ISLANDNEW)
+	}
+	end
+}
 
 script ISLANDNEW_Trigger_triggeroneforcutscene{
 	applymovement(OBJ_EVENT_ID_PLAYER, correctfaceingdirection2)
@@ -316,6 +331,18 @@ script ISLANDNEW_Trigger_gocatchmondummy3 {
 	releaseall
 }
 
+script ISLANDNEW_EventScript_restuppls {
+	lockall
+	MSGBOX(format("I suppose I can heal your pokemon"))
+	waitmessage
+	playfanfare(MUS_HEAL)
+	special(HealPlayerParty)
+	MSGBOX(format("All better now"))
+	waitmessage
+	closemessage
+	releaseall
+}
+
 
 movement gocatchmon {
 	walk_up
@@ -371,7 +398,7 @@ script ISLANDNEW_Trigger_triggerendscene1 {
 	waitmovement(0)
 	applymovement(OBJ_EVENT_ID_PLAYER, checkonplayerlookatlady)
 	waitmovement(0)
-	MSGBOX(format("You've done it....... I must come clean to you I am the leader of this island, and cleverman is the lockal trainer expert. I kinda wanted to have a little fun with some strangers so I picked you to do the ISLAND CHALLENGE... in all honesty I you Couldve left the island at any time... well its been nice knowing you. this boat will take you to to your destination... Hope you visit us again on better terms! Goodbye!"))
+	MSGBOX(format("congrats on finishing this madness. Huge thanks to my two bugtesters. Boringperson and Matthew. also massive thanks to TEAM AQUA HIDEOUT (kyogre praise be!) and Ghoulsash for trainer see scripts. hopefully some updates in the future to make this less scruffy"))
 	waitmessage
 	applymovement(4, byemartlady)
 	waitmovement(0)
@@ -385,7 +412,7 @@ script ISLANDNEW_Trigger_triggerendscene2 {
 	waitmovement(0)
 	applymovement(OBJ_EVENT_ID_PLAYER, checkonplayerlookatlady)
 	waitmovement(0)
-	MSGBOX(format("You've done it....... I must come clean to you I am the leader of this island, and cleverman is the lockal trainer expert. I kinda wanted to have a little fun with some strangers so I picked you to do the ISLAND CHALLENGE... in all honesty I you Couldve left the island at any time... well its been nice knowing you. this boat will take you to to your destination... Hope you visit us again on better terms! Goodbye!"))
+	MSGBOX(format("congrats on finishing this madness. Huge thanks to my two bugtesters. Boringperson and Matthew. also massive thanks to TEAM AQUA HIDEOUT (kyogre praise be!) and Ghoulsash for trainer see scripts. hopefully some updates in the future to make this less scruffy"))
 	waitmessage
 	applymovement(4, byemartlady)
 	waitmovement(0)
@@ -399,7 +426,7 @@ script ISLANDNEW_Trigger_triggerendscene3 {
 	waitmovement(0)
 	applymovement(OBJ_EVENT_ID_PLAYER, checkonplayerlookatlady)
 	waitmovement(0)
-	MSGBOX(format("You've done it....... I must come clean to you I am the leader of this island, and cleverman is the lockal trainer expert. I kinda wanted to have a little fun with some strangers so I picked you to do the ISLAND CHALLENGE... in all honesty I you Couldve left the island at any time... well its been nice knowing you. this boat will take you to to your destination... Hope you visit us again on better terms! Goodbye!"))
+	MSGBOX(format("congrats on finishing this madness. Huge thanks to my two bugtesters. Boringperson and Matthew. also massive thanks to TEAM AQUA HIDEOUT (kyogre praise be!) and Ghoulsash for trainer see scripts. hopefully some updates in the future to make this less scruffy"))
 	waitmessage
 	applymovement(4, byemartlady)
 	waitmovement(0)
@@ -413,7 +440,7 @@ script ISLANDNEW_Trigger_triggerendscene4 {
 	waitmovement(0)
 	applymovement(OBJ_EVENT_ID_PLAYER, checkonplayerlookatlady)
 	waitmovement(0)
-	MSGBOX(format("You've done it....... I must come clean to you I am the leader of this island, and cleverman is the lockal trainer expert. I kinda wanted to have a little fun with some strangers so I picked you to do the ISLAND CHALLENGE... in all honesty I you Couldve left the island at any time... well its been nice knowing you. this boat will take you to to your destination... Hope you visit us again on better terms! Goodbye!"))
+	MSGBOX(format("congrats on finishing this madness. Huge thanks to my two bugtesters. Boringperson and Matthew. also massive thanks to TEAM AQUA HIDEOUT (kyogre praise be!) and Ghoulsash for trainer see scripts. hopefully some updates in the future to make this less scruffy"))
 	waitmessage
 	applymovement(4, byemartlady)
 	waitmovement(0)
@@ -456,7 +483,7 @@ script ISLANDNEW_Trigger_triggerendscene7 {
 	waitmovement(0)
 	applymovement(OBJ_EVENT_ID_PLAYER, checkonplayerlookatlady)
 	waitmovement(0)
-	MSGBOX(format("You've done it....... I must come clean to you I am the leader of this island, and cleverman is the lockal trainer expert. I kinda wanted to have a little fun with some strangers so I picked you to do the ISLAND CHALLENGE... in all honesty I you Couldve left the island at any time... well its been nice knowing you. this boat will take you to to your destination... Hope you visit us again on better terms! Goodbye!"))
+	MSGBOX(format("congrats on finishing this madness. Huge thanks to my two bugtesters. Boringperson and Matthew. also massive thanks to TEAM AQUA HIDEOUT (kyogre praise be!) and Ghoulsash for trainer see scripts. hopefully some updates in the future to make this less scruffy"))
 	waitmessage
 	applymovement(4, byemartlady)
 	waitmovement(0)
@@ -470,11 +497,13 @@ script ISLANDNEW_Trigger_triggerendscene8 {
 	waitmovement(0)
 	applymovement(OBJ_EVENT_ID_PLAYER, checkonplayerlookatlady)
 	waitmovement(0)
-	MSGBOX(format("You've done it....... I must come clean to you I am the leader of this island, and cleverman is the lockal trainer expert. I kinda wanted to have a little fun with some strangers so I picked you to do the ISLAND CHALLENGE... in all honesty I you Couldve left the island at any time... well its been nice knowing you. this boat will take you to to your destination... Hope you visit us again on better terms! Goodbye!"))
+	MSGBOX(format("congrats on finishing this madness. Huge thanks to my two bugtesters. Boringperson and Matthew. also massive thanks to TEAM AQUA HIDEOUT (kyogre praise be!) and Ghoulsash for trainer see scripts. hopefully some updates in the future to make this less scruffy"))
 	waitmessage
 	applymovement(4, byemartlady)
 	waitmovement(0)
 	fadescreenspeed(FADE_TO_BLACK, 24)
+	MSGBOX(format("congrats on finishing this madness. Huge thanks to my two bugtesters. Boringperson and Matthew. also massive thanks to TEAM AQUA HIDEOUT (kyogre praise be!) and Ghoulsash for trainer see scripts. hopefully some updates in the future to make this less scruffy"))
+	waitmessage
 	special(GameClear)
 	waitstate
 }	
@@ -484,7 +513,7 @@ script ISLANDNEW_Trigger_triggerendscene8 {
 
 movement checkonplayerlastime {
 	walk_left * 7
-	walk_up * 4
+	walk_up * 3
 }
 
 movement checkonplayerlookatlady {

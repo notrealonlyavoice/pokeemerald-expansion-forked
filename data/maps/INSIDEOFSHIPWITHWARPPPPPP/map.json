@@ -2,7 +2,7 @@
   "id": "MAP_INSIDEOFSHIPWITHWARPPPPPP",
   "name": "INSIDEOFSHIPWITHWARPPPPPP",
   "layout": "LAYOUT_INSIDEOFSHIPWITHWARPPPPPP",
-  "music": "MUS_DUMMY",
+  "music": "MUS_ABANDONED_SHIP",
   "region_map_section": "MAPSEC_ABANDONED_SHIP",
   "requires_flash": false,
   "weather": "WEATHER_NONE",

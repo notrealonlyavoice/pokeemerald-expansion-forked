@@ -35,152 +35,154 @@ ISLANDNEW_EventScript_randomguy1::
 
 ISLANDNEW_EventScript_sameladyasbefore::
 # 25 "data/maps/seashorehousenew/scripts.pory"
+	faceplayer
+# 26 "data/maps/seashorehousenew/scripts.pory"
 	compare VAR_0x8006, 4
 	goto_if_eq ISLANDNEW_EventScript_sameladyasbefore_1
-# 28 "data/maps/seashorehousenew/scripts.pory"
+# 29 "data/maps/seashorehousenew/scripts.pory"
 	compare VAR_0x8006, 3
 	goto_if_eq ISLANDNEW_EventScript_sameladyasbefore_2
-# 31 "data/maps/seashorehousenew/scripts.pory"
+# 32 "data/maps/seashorehousenew/scripts.pory"
 	compare VAR_0x8006, 5
 	goto_if_eq ISLANDNEW_EventScript_sameladyasbefore_3
-# 35 "data/maps/seashorehousenew/scripts.pory"
+# 36 "data/maps/seashorehousenew/scripts.pory"
 	compare VAR_0x8006, 8
 	goto_if_eq ISLANDNEW_EventScript_sameladyasbefore_4
-# 39 "data/maps/seashorehousenew/scripts.pory"
+# 40 "data/maps/seashorehousenew/scripts.pory"
 	compare VAR_0x8006, 7
 	goto_if_eq ISLANDNEW_EventScript_sameladyasbefore_5
-# 51 "data/maps/seashorehousenew/scripts.pory"
+# 52 "data/maps/seashorehousenew/scripts.pory"
 	compare VAR_0x8006, 10
 	goto_if_eq ISLANDNEW_EventScript_sameladyasbefore_6
-# 55 "data/maps/seashorehousenew/scripts.pory"
+# 56 "data/maps/seashorehousenew/scripts.pory"
 	compare VAR_0x8006, 6
 	goto_if_eq ISLANDNEW_EventScript_sameladyasbefore_7
-# 58 "data/maps/seashorehousenew/scripts.pory"
+# 59 "data/maps/seashorehousenew/scripts.pory"
 	compare VAR_0x8006, 11
 	goto_if_eq ISLANDNEW_EventScript_sameladyasbefore_8
-# 61 "data/maps/seashorehousenew/scripts.pory"
+# 62 "data/maps/seashorehousenew/scripts.pory"
 	compare VAR_0x8006, 9
 	goto_if_eq ISLANDNEW_EventScript_sameladyasbefore_9
-# 64 "data/maps/seashorehousenew/scripts.pory"
+# 65 "data/maps/seashorehousenew/scripts.pory"
 	compare VAR_0x8006, 12
 	goto_if_eq ISLANDNEW_EventScript_sameladyasbefore_10
-# 68 "data/maps/seashorehousenew/scripts.pory"
-	lockall
 # 69 "data/maps/seashorehousenew/scripts.pory"
-	MSGBOX ISLANDNEW_EventScript_sameladyasbefore_Text_11
+	lockall
 # 70 "data/maps/seashorehousenew/scripts.pory"
-	waitmessage
+	MSGBOX ISLANDNEW_EventScript_sameladyasbefore_Text_11
 # 71 "data/maps/seashorehousenew/scripts.pory"
-	MSGBOX ISLANDNEW_EventScript_sameladyasbefore_Text_12, MSGBOX_YESNO
+	waitmessage
 # 72 "data/maps/seashorehousenew/scripts.pory"
+	MSGBOX ISLANDNEW_EventScript_sameladyasbefore_Text_12, MSGBOX_YESNO
+# 73 "data/maps/seashorehousenew/scripts.pory"
 	compare VAR_RESULT, YES
 	goto_if_eq ISLANDNEW_EventScript_sameladyasbefore_22
-# 78 "data/maps/seashorehousenew/scripts.pory"
-	MSGBOX ISLANDNEW_EventScript_sameladyasbefore_Text_14
 # 79 "data/maps/seashorehousenew/scripts.pory"
+	MSGBOX ISLANDNEW_EventScript_sameladyasbefore_Text_14
+# 80 "data/maps/seashorehousenew/scripts.pory"
 	closemessage
 	return
 
 ISLANDNEW_EventScript_sameladyasbefore_1:
-# 26 "data/maps/seashorehousenew/scripts.pory"
-	MSGBOX ISLANDNEW_EventScript_sameladyasbefore_Text_0
 # 27 "data/maps/seashorehousenew/scripts.pory"
+	MSGBOX ISLANDNEW_EventScript_sameladyasbefore_Text_0
+# 28 "data/maps/seashorehousenew/scripts.pory"
 	closemessage
 	return
 
 ISLANDNEW_EventScript_sameladyasbefore_2:
-# 29 "data/maps/seashorehousenew/scripts.pory"
-	MSGBOX ISLANDNEW_EventScript_sameladyasbefore_Text_1
 # 30 "data/maps/seashorehousenew/scripts.pory"
+	MSGBOX ISLANDNEW_EventScript_sameladyasbefore_Text_1
+# 31 "data/maps/seashorehousenew/scripts.pory"
 	closemessage
 	return
 
 ISLANDNEW_EventScript_sameladyasbefore_3:
-# 32 "data/maps/seashorehousenew/scripts.pory"
-	MSGBOX ISLANDNEW_EventScript_sameladyasbefore_Text_2
 # 33 "data/maps/seashorehousenew/scripts.pory"
-	setvar VAR_0x8006, 6
+	MSGBOX ISLANDNEW_EventScript_sameladyasbefore_Text_2
 # 34 "data/maps/seashorehousenew/scripts.pory"
+	setvar VAR_0x8006, 6
+# 35 "data/maps/seashorehousenew/scripts.pory"
 	closemessage
 	return
 
 ISLANDNEW_EventScript_sameladyasbefore_4:
-# 36 "data/maps/seashorehousenew/scripts.pory"
-	MSGBOX ISLANDNEW_EventScript_sameladyasbefore_Text_3
 # 37 "data/maps/seashorehousenew/scripts.pory"
-	setvar VAR_0x8006, 9
+	MSGBOX ISLANDNEW_EventScript_sameladyasbefore_Text_3
 # 38 "data/maps/seashorehousenew/scripts.pory"
+	setvar VAR_0x8006, 9
+# 39 "data/maps/seashorehousenew/scripts.pory"
 	closemessage
 	return
 
 ISLANDNEW_EventScript_sameladyasbefore_5:
-# 40 "data/maps/seashorehousenew/scripts.pory"
-	MSGBOX ISLANDNEW_EventScript_sameladyasbefore_Text_4
 # 41 "data/maps/seashorehousenew/scripts.pory"
-	delay 20
+	MSGBOX ISLANDNEW_EventScript_sameladyasbefore_Text_4
 # 42 "data/maps/seashorehousenew/scripts.pory"
-	MSGBOX ISLANDNEW_EventScript_sameladyasbefore_Text_5
+	delay 20
 # 43 "data/maps/seashorehousenew/scripts.pory"
-	delay 20
-# 44 "data/maps/seashorehousenew/scripts.pory"
 	MSGBOX ISLANDNEW_EventScript_sameladyasbefore_Text_5
-# 45 "data/maps/seashorehousenew/scripts.pory"
+# 44 "data/maps/seashorehousenew/scripts.pory"
 	delay 20
+# 45 "data/maps/seashorehousenew/scripts.pory"
+	MSGBOX ISLANDNEW_EventScript_sameladyasbefore_Text_5
 # 46 "data/maps/seashorehousenew/scripts.pory"
-	MSGBOX ISLANDNEW_EventScript_sameladyasbefore_Text_6
+	delay 20
 # 47 "data/maps/seashorehousenew/scripts.pory"
-	fadescreen FADE_TO_BLACK
+	MSGBOX ISLANDNEW_EventScript_sameladyasbefore_Text_6
 # 48 "data/maps/seashorehousenew/scripts.pory"
-	delay 40
+	fadescreen FADE_TO_BLACK
 # 49 "data/maps/seashorehousenew/scripts.pory"
-	warpsilent MAP_NEW_MAP6, 5, 7
+	delay 40
 # 50 "data/maps/seashorehousenew/scripts.pory"
+	warpsilent MAP_NEW_MAP6, 5, 7
+# 51 "data/maps/seashorehousenew/scripts.pory"
 	waitstate
 	return
 
 ISLANDNEW_EventScript_sameladyasbefore_6:
-# 52 "data/maps/seashorehousenew/scripts.pory"
-	MSGBOX ISLANDNEW_EventScript_sameladyasbefore_Text_7
 # 53 "data/maps/seashorehousenew/scripts.pory"
-	setvar VAR_0x8006, 11
+	MSGBOX ISLANDNEW_EventScript_sameladyasbefore_Text_7
 # 54 "data/maps/seashorehousenew/scripts.pory"
+	setvar VAR_0x8006, 11
+# 55 "data/maps/seashorehousenew/scripts.pory"
 	closemessage
 	return
 
 ISLANDNEW_EventScript_sameladyasbefore_7:
-# 56 "data/maps/seashorehousenew/scripts.pory"
-	MSGBOX ISLANDNEW_EventScript_sameladyasbefore_Text_8
 # 57 "data/maps/seashorehousenew/scripts.pory"
+	MSGBOX ISLANDNEW_EventScript_sameladyasbefore_Text_8
+# 58 "data/maps/seashorehousenew/scripts.pory"
 	closemessage
 	return
 
 ISLANDNEW_EventScript_sameladyasbefore_8:
-# 59 "data/maps/seashorehousenew/scripts.pory"
-	MSGBOX ISLANDNEW_EventScript_sameladyasbefore_Text_1
 # 60 "data/maps/seashorehousenew/scripts.pory"
+	MSGBOX ISLANDNEW_EventScript_sameladyasbefore_Text_1
+# 61 "data/maps/seashorehousenew/scripts.pory"
 	closemessage
 	return
 
 ISLANDNEW_EventScript_sameladyasbefore_9:
-# 62 "data/maps/seashorehousenew/scripts.pory"
-	MSGBOX ISLANDNEW_EventScript_sameladyasbefore_Text_9
 # 63 "data/maps/seashorehousenew/scripts.pory"
+	MSGBOX ISLANDNEW_EventScript_sameladyasbefore_Text_9
+# 64 "data/maps/seashorehousenew/scripts.pory"
 	closemessage
 	return
 
 ISLANDNEW_EventScript_sameladyasbefore_10:
-# 65 "data/maps/seashorehousenew/scripts.pory"
-	MSGBOX ISLANDNEW_EventScript_sameladyasbefore_Text_10
 # 66 "data/maps/seashorehousenew/scripts.pory"
+	MSGBOX ISLANDNEW_EventScript_sameladyasbefore_Text_10
+# 67 "data/maps/seashorehousenew/scripts.pory"
 	closemessage
 	return
 
 ISLANDNEW_EventScript_sameladyasbefore_22:
-# 73 "data/maps/seashorehousenew/scripts.pory"
-	MSGBOX ISLANDNEW_EventScript_sameladyasbefore_Text_13
 # 74 "data/maps/seashorehousenew/scripts.pory"
-	setvar ( VAR_0x8006 ), 3
+	MSGBOX ISLANDNEW_EventScript_sameladyasbefore_Text_13
 # 75 "data/maps/seashorehousenew/scripts.pory"
+	setvar ( VAR_0x8006 ), 3
+# 76 "data/maps/seashorehousenew/scripts.pory"
 	closemessage
 	return
 
@@ -196,26 +198,26 @@ ISLANDNEW_EventScript_randomguy1_Text_0:
 	.string "TURNS AGO. I LIVE THE DARK PULSE$"
 
 ISLANDNEW_EventScript_sameladyasbefore_Text_0:
-# 26 "data/maps/seashorehousenew/scripts.pory"
+# 27 "data/maps/seashorehousenew/scripts.pory"
 	.string "I belive in you!$"
 
 ISLANDNEW_EventScript_sameladyasbefore_Text_1:
-# 29 "data/maps/seashorehousenew/scripts.pory"
+# 30 "data/maps/seashorehousenew/scripts.pory"
 	.string "Good luck!$"
 
 ISLANDNEW_EventScript_sameladyasbefore_Text_2:
-# 32 "data/maps/seashorehousenew/scripts.pory"
+# 33 "data/maps/seashorehousenew/scripts.pory"
 	.string "Congrats on Beating the first of 4\n"
 	.string "ISLAND CHALLENGES$"
 
 ISLANDNEW_EventScript_sameladyasbefore_Text_3:
-# 36 "data/maps/seashorehousenew/scripts.pory"
+# 37 "data/maps/seashorehousenew/scripts.pory"
 	.string "Congrats on Being HALFWAY DONE with\n"
 	.string "the ISLAND CHALLENGES, at this rate\l"
 	.string "you'll be home in no time$"
 
 ISLANDNEW_EventScript_sameladyasbefore_Text_4:
-# 40 "data/maps/seashorehousenew/scripts.pory"
+# 41 "data/maps/seashorehousenew/scripts.pory"
 	.string "OK! Now that you are ready let me give\n"
 	.string "you a brief overview of the second\l"
 	.string "challenge. SPINCLOPS FOREST is a\l"
@@ -224,54 +226,54 @@ ISLANDNEW_EventScript_sameladyasbefore_Text_4:
 	.string "skill to navigate towards it...$"
 
 ISLANDNEW_EventScript_sameladyasbefore_Text_5:
-# 42 "data/maps/seashorehousenew/scripts.pory"
+# 43 "data/maps/seashorehousenew/scripts.pory"
 	.string "...$"
 
 ISLANDNEW_EventScript_sameladyasbefore_Text_6:
-# 46 "data/maps/seashorehousenew/scripts.pory"
+# 47 "data/maps/seashorehousenew/scripts.pory"
 	.string "Oh by the way you cant really escape\n"
 	.string "the forest unless you beat--$"
 
 ISLANDNEW_EventScript_sameladyasbefore_Text_7:
-# 52 "data/maps/seashorehousenew/scripts.pory"
+# 53 "data/maps/seashorehousenew/scripts.pory"
 	.string "OK! The third challenge leader is very\n"
 	.string "young and spends most of his time\l"
 	.string "playing in the ice caves. navigating the\l"
-	.string "caves are treacherous and maybe HM\l"
-	.string "STRENGTH would help..... hmmm.....$"
+	.string "caves are treacherous..... you'll need to\l"
+	.string "be careful .....$"
 
 ISLANDNEW_EventScript_sameladyasbefore_Text_8:
-# 56 "data/maps/seashorehousenew/scripts.pory"
+# 57 "data/maps/seashorehousenew/scripts.pory"
 	.string "Go check if cleverman has any riddles\n"
 	.string "for you before you start the next\l"
 	.string "ISLAND CHALLENGE$"
 
 ISLANDNEW_EventScript_sameladyasbefore_Text_9:
-# 62 "data/maps/seashorehousenew/scripts.pory"
+# 63 "data/maps/seashorehousenew/scripts.pory"
 	.string "Go check Check if cleverman has\n"
 	.string "another riddle ready for you$"
 
 ISLANDNEW_EventScript_sameladyasbefore_Text_10:
-# 65 "data/maps/seashorehousenew/scripts.pory"
+# 66 "data/maps/seashorehousenew/scripts.pory"
 	.string "You've come so far! go talk to cleverman\n"
 	.string "before i give you the briefing on your\l"
 	.string "last challenge!$"
 
 ISLANDNEW_EventScript_sameladyasbefore_Text_11:
-# 69 "data/maps/seashorehousenew/scripts.pory"
+# 70 "data/maps/seashorehousenew/scripts.pory"
 	.string "oh hello. Ready to start the challenge?$"
 
 ISLANDNEW_EventScript_sameladyasbefore_Text_12:
-# 71 "data/maps/seashorehousenew/scripts.pory"
+# 72 "data/maps/seashorehousenew/scripts.pory"
 	.string "are you ready?$"
 
 ISLANDNEW_EventScript_sameladyasbefore_Text_13:
-# 73 "data/maps/seashorehousenew/scripts.pory"
+# 74 "data/maps/seashorehousenew/scripts.pory"
 	.string "Ok! Master trought lies at the end of\n"
 	.string "the CONJOINED TUNNELS in mystery cave,\l"
 	.string "but navigating it is treacherous... find\l"
 	.string "someone who knows the combination$"
 
 ISLANDNEW_EventScript_sameladyasbefore_Text_14:
-# 78 "data/maps/seashorehousenew/scripts.pory"
+# 79 "data/maps/seashorehousenew/scripts.pory"
 	.string "later then. keep exploring$"

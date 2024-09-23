@@ -2,7 +2,7 @@
   "id": "MAP_POKEMON1TUNNEL",
   "name": "pokemon1tunnel",
   "layout": "LAYOUT_POKEMON1TUNNEL",
-  "music": "MUS_DUMMY",
+  "music": "MUS_CAVE_OF_ORIGIN",
   "region_map_section": "MAPSEC_ALTERING_CAVE",
   "requires_flash": false,
   "weather": "WEATHER_NONE",

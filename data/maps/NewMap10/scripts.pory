@@ -6,7 +6,7 @@ NewMap10_MapScripts::
 script NewMap10_Eventscript_finalbattlelesgo {
     MSGBOX(format("You have arrived at the finale.. im impressed youve made it this far... beat me and you'll be free to go home..... "))
     waitmessage
-    trainerbattle_double(TRAINER_LEROY, cleveman_Intro, cleverman_Outro, Postclevermanbattle)
+    trainerbattle_double(TRAINER_LEROY, cleveman_Intro, cleverman_Outro, cleverman_NotEnoughMons, Postclevermanbattle)
 }
 
 
@@ -18,12 +18,17 @@ text cleverman_Outro {
     "you are truly clever...."
 }
 
+text cleverman_NotEnoughMons {
+    "is this a technical softlock? possibly-"
+}
+
 script Postclevermanbattle {
     lockall
     MSGBOX("I have no reason to keep you here any longer")
-    delay(40)
+    waitmessage
     fadescreen(FADE_TO_BLACK)
     setvar(VAR_UNUSED_0x409B, 1)
+    setflag(FLAG_respawnnpc)
     delay(40)
     warpsilent(MAP_ISLANDNEW, 32, 4)
     waitstate

@@ -11,26 +11,28 @@ NewMap10_Eventscript_finalbattlelesgo::
 # 8 "data/maps/NewMap10/scripts.pory"
 	waitmessage
 # 9 "data/maps/NewMap10/scripts.pory"
-	trainerbattle_double TRAINER_LEROY, cleveman_Intro, cleverman_Outro, Postclevermanbattle
+	trainerbattle_double TRAINER_LEROY, cleveman_Intro, cleverman_Outro, cleverman_NotEnoughMons, Postclevermanbattle
 	return
 
 
 Postclevermanbattle::
-# 22 "data/maps/NewMap10/scripts.pory"
-	lockall
-# 23 "data/maps/NewMap10/scripts.pory"
-	MSGBOX Postclevermanbattle_Text_0
-# 24 "data/maps/NewMap10/scripts.pory"
-	delay 40
-# 25 "data/maps/NewMap10/scripts.pory"
-	fadescreen FADE_TO_BLACK
 # 26 "data/maps/NewMap10/scripts.pory"
-	setvar VAR_UNUSED_0x409B, 1
+	lockall
 # 27 "data/maps/NewMap10/scripts.pory"
-	delay 40
+	MSGBOX Postclevermanbattle_Text_0
 # 28 "data/maps/NewMap10/scripts.pory"
-	warpsilent MAP_ISLANDNEW, 32, 4
+	waitmessage
 # 29 "data/maps/NewMap10/scripts.pory"
+	fadescreen FADE_TO_BLACK
+# 30 "data/maps/NewMap10/scripts.pory"
+	setvar VAR_UNUSED_0x409B, 1
+# 31 "data/maps/NewMap10/scripts.pory"
+	setflag FLAG_respawnnpc
+# 32 "data/maps/NewMap10/scripts.pory"
+	delay 40
+# 33 "data/maps/NewMap10/scripts.pory"
+	warpsilent MAP_ISLANDNEW, 32, 4
+# 34 "data/maps/NewMap10/scripts.pory"
 	waitstate
 	return
 
@@ -42,7 +44,7 @@ NewMap10_Eventscript_finalbattlelesgo_Text_0:
 	.string "me and you'll be free to go home.....$"
 
 Postclevermanbattle_Text_0:
-# 23 "data/maps/NewMap10/scripts.pory"
+# 27 "data/maps/NewMap10/scripts.pory"
 	.string "I have no reason to keep you here any longer$"
 
 cleveman_Intro::
@@ -52,3 +54,7 @@ cleveman_Intro::
 cleverman_Outro::
 # 17 "data/maps/NewMap10/scripts.pory"
 	.string "you are truly clever....$"
+
+cleverman_NotEnoughMons::
+# 21 "data/maps/NewMap10/scripts.pory"
+	.string "is this a technical softlock? possibly-$"
