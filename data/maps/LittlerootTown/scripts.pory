@@ -1048,7 +1048,10 @@ script LittlerootTown_EventScript_Porytest {
     lockall
     faceplayer
     msgbox("hi")
-    givemon(SPECIES_CHIKORITA, 5, ITEM_POCKET_SAND)
+    givemon(SPECIES_CHIKORITA, 5, ITEM_POWER_CHARM)
+	giveitem(ITEM_POCKET_SAND)
+	giveitem(ITEM_CRACKED_LENS)
+	giveitem(ITEM_ASSAULT_COAT)
     setflag(FLAG_SYS_POKEMON_GET)
     playfanfare(MUS_OBTAIN_ITEM)
     msgbox("Recieved Chikorita")

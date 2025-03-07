@@ -1567,7 +1567,12 @@ u32 GetTotalAccuracy(u32 battlerAtk, u32 battlerDef, u32 move, u32 atkAbility, u
         if (GetBattlerTurnOrderNum(battlerAtk) > GetBattlerTurnOrderNum(battlerDef))
             calc = (calc * (100 + atkParam)) / 100;
         break;
+    case HOLD_EFFECT_CRACKED_LENS:
+            calc = (calc * 80) / 100; // 1.2 hustle loss
+        break;
     }
+
+    
 
     // Target's hold effect
     switch (defHoldEffect)
@@ -1733,6 +1738,11 @@ static void Cmd_ppreduce(void)
 
     if (gBattleMons[gBattlerAttacker].status2 & STATUS2_MULTIPLETURNS)
         gHitMarker |= HITMARKER_NO_PPDEDUCT;
+
+    if (GetBattlerHoldEffect(gBattlerAttacker, TRUE) == HOLD_EFFECT_POWER_CHARM)
+    {
+        ppToDeduct++;   
+    }
 
     if (moveTarget == MOVE_TARGET_BOTH
         || moveTarget == MOVE_TARGET_FOES_AND_ALLY

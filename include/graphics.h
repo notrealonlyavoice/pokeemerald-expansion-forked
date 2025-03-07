@@ -1114,6 +1114,8 @@ extern const u32 gItemIcon_AdamantOrb[];
 extern const u32 gItemIconPalette_AdamantOrb[];
 extern const u32 gItemIcon_LustrousOrb[];
 extern const u32 gItemIconPalette_LustrousOrb[];
+extern const u32 gItemIcon_PowerCharm[];
+extern const u32 gItemIconPalette_PowerCharm[];
 extern const u32 gItemIcon_GriseousOrb[];
 extern const u32 gItemIconPalette_GriseousOrb[];
 // Incenses
@@ -1265,6 +1267,8 @@ extern const u32 gItemIcon_MuscleBand[];
 extern const u32 gItemIconPalette_MuscleBand[];
 extern const u32 gItemIcon_WiseGlasses[];
 extern const u32 gItemIconPalette_WiseGlasses[];
+extern const u32 gItemIcon_CrackedLens[];
+extern const u32 gItemIconPalette_CrackedLens[];
 extern const u32 gItemIcon_ExpertBelt[];
 extern const u32 gItemIconPalette_ExpertBelt[];
 extern const u32 gItemIcon_LightClay[];

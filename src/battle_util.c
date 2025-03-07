@@ -9639,6 +9639,14 @@ static inline u32 CalcMoveBasePowerAfterModifiers(struct DamageCalculationData *
         if (IsBattleMoveSpecial(move))
             modifier = uq4_12_multiply(modifier, uq4_12_add(UQ_4_12(1.0), PercentToUQ4_12_Floored(holdEffectParamAtk)));
         break;
+    case HOLD_EFFECT_CRACKED_LENS:
+        if (IsBattleMoveSpecial(move))
+            modifier = uq4_12_multiply(modifier, uq4_12_add(UQ_4_12(1.5), PercentToUQ4_12_Floored(holdEffectParamAtk)));
+        break;
+    case HOLD_EFFECT_POWER_CHARM:
+        if (IsBattleMoveSpecial(move) ||  IsBattleMovePhysical(move))
+            modifier = uq4_12_multiply(modifier, uq4_12_add(UQ_4_12(1.3), PercentToUQ4_12_Floored(holdEffectParamAtk)));
+        break;
     case HOLD_EFFECT_LUSTROUS_ORB:
         if (GET_BASE_SPECIES_ID(gBattleMons[battlerAtk].species) == SPECIES_PALKIA && (moveType == TYPE_WATER || moveType == TYPE_DRAGON))
             modifier = uq4_12_multiply(modifier, holdEffectModifier);

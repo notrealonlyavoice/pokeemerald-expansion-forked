@@ -1156,6 +1156,9 @@ const u32 gItemIconPalette_AdamantOrb[] = INCBIN_U32("graphics/items/icon_palett
 const u32 gItemIcon_LustrousOrb[] = INCBIN_U32("graphics/items/icons/lustrous_orb.4bpp.lz");
 const u32 gItemIconPalette_LustrousOrb[] = INCBIN_U32("graphics/items/icon_palettes/lustrous_orb.gbapal.lz");
 
+const u32 gItemIcon_PowerCharm[] = INCBIN_U32("graphics/items/icons/power_charm.4bpp.lz");
+const u32 gItemIconPalette_PowerCharm[] = INCBIN_U32("graphics/items/icon_palettes/power_charm.gbapal.lz");
+
 const u32 gItemIcon_GriseousOrb[] = INCBIN_U32("graphics/items/icons/griseous_orb.4bpp.lz");
 const u32 gItemIconPalette_GriseousOrb[] = INCBIN_U32("graphics/items/icon_palettes/griseous_orb.gbapal.lz");
 
@@ -1390,6 +1393,9 @@ const u32 gItemIconPalette_MuscleBand[] = INCBIN_U32("graphics/items/icon_palett
 
 const u32 gItemIcon_WiseGlasses[] = INCBIN_U32("graphics/items/icons/wise_glasses.4bpp.lz");
 const u32 gItemIconPalette_WiseGlasses[] = INCBIN_U32("graphics/items/icon_palettes/wise_glasses.gbapal.lz");
+
+const u32 gItemIcon_CrackedLens[] = INCBIN_U32("graphics/items/icons/cracked_lens.4bpp.lz");
+const u32 gItemIconPalette_CrackedLens[] = INCBIN_U32("graphics/items/icon_palettes/cracked_lens.gbapal.lz");
 
 const u32 gItemIcon_ExpertBelt[] = INCBIN_U32("graphics/items/icons/expert_belt.4bpp.lz");
 const u32 gItemIconPalette_ExpertBelt[] = INCBIN_U32("graphics/items/icon_palettes/expert_belt.gbapal.lz");

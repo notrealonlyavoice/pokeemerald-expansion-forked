@@ -7176,6 +7176,25 @@ const struct Item gItemsInfo[] =
         .iconPalette = gItemIconPalette_LustrousOrb,
     },
 
+
+    [ITEM_POWER_CHARM] =
+    {
+        .name = _("Power Charm"),
+        .price = (I_PRICE >= GEN_7) ? 0 : 10000,
+        .holdEffect = HOLD_EFFECT_POWER_CHARM,
+        .holdEffectParam = 20,
+        .description = COMPOUND_STRING(
+            "Increases the \n"
+            "Power of moves but\n"
+            "Drains pp"),
+        .pocket = POCKET_ITEMS,
+        .type = ITEM_USE_BAG_MENU,
+        .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
+        .flingPower = 60,
+        .iconPic = gItemIcon_PowerCharm,
+        .iconPalette = gItemIconPalette_PowerCharm,
+    },
+
     [ITEM_GRISEOUS_ORB] =
     {
         .name = _("Griseous Orb"),
@@ -8497,6 +8516,26 @@ const struct Item gItemsInfo[] =
         .iconPic = gItemIcon_WiseGlasses,
         .iconPalette = gItemIconPalette_WiseGlasses,
     },
+
+    [ITEM_CRACKED_LENS] =
+    {
+        .name = _("Cracked Lens"),
+        .pluralName = _("Cracked Lens"),
+        .price = (I_PRICE >= GEN_9) ? 8000 : ((I_PRICE >= GEN_7) ? 4000 : 200),
+        .holdEffect = HOLD_EFFECT_CRACKED_LENS,
+        .holdEffectParam = 10,
+        .description = COMPOUND_STRING(
+            "Lens that Ups damage\n"
+            "of special moves but\n"
+            "lowers accuracy"),
+        .pocket = POCKET_ITEMS,
+        .type = ITEM_USE_BAG_MENU,
+        .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
+        .flingPower = 10,
+        .iconPic = gItemIcon_CrackedLens,
+        .iconPalette = gItemIconPalette_CrackedLens,
+    },
+
 
     [ITEM_EXPERT_BELT] =
     {

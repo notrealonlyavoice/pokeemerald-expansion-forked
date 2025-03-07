@@ -107,7 +107,7 @@
     [DIFFICULTY_NORMAL][PARTNER_THE_CAVE] =
     {
 #line 50
-        .trainerName = _("cave"),
+        .trainerName = _("wild"),
 #line 51
         .trainerClass = TRAINER_CLASS_POKEMON_FROM,
 #line 52

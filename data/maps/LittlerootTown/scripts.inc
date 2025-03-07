@@ -2093,30 +2093,36 @@ LittlerootTown_EventScript_Porytest::
 # 1050 "data//maps/LittlerootTown/scripts.pory"
 	msgbox LittlerootTown_EventScript_Porytest_Text_0
 # 1051 "data//maps/LittlerootTown/scripts.pory"
-	givemon SPECIES_CHIKORITA, 5, ITEM_POCKET_SAND
+	givemon SPECIES_CHIKORITA, 5, ITEM_POWER_CHARM
 # 1052 "data//maps/LittlerootTown/scripts.pory"
-	setflag FLAG_SYS_POKEMON_GET
+	giveitem ITEM_POCKET_SAND
 # 1053 "data//maps/LittlerootTown/scripts.pory"
-	playfanfare MUS_OBTAIN_ITEM
+	giveitem ITEM_CRACKED_LENS
 # 1054 "data//maps/LittlerootTown/scripts.pory"
-	msgbox LittlerootTown_EventScript_Porytest_Text_1
+	giveitem ITEM_ASSAULT_COAT
 # 1055 "data//maps/LittlerootTown/scripts.pory"
-	closemessage
+	setflag FLAG_SYS_POKEMON_GET
 # 1056 "data//maps/LittlerootTown/scripts.pory"
+	playfanfare MUS_OBTAIN_ITEM
+# 1057 "data//maps/LittlerootTown/scripts.pory"
+	msgbox LittlerootTown_EventScript_Porytest_Text_1
+# 1058 "data//maps/LittlerootTown/scripts.pory"
+	closemessage
+# 1059 "data//maps/LittlerootTown/scripts.pory"
 	releaseall
 	return
 
 
 LittlerootTown_EventScript_PIKA::
-# 1062 "data//maps/LittlerootTown/scripts.pory"
-	lockall
-# 1063 "data//maps/LittlerootTown/scripts.pory"
-	faceplayer
-# 1064 "data//maps/LittlerootTown/scripts.pory"
-	msgbox LittlerootTown_EventScript_PIKA_Text_0
 # 1065 "data//maps/LittlerootTown/scripts.pory"
-	closemessage
+	lockall
 # 1066 "data//maps/LittlerootTown/scripts.pory"
+	faceplayer
+# 1067 "data//maps/LittlerootTown/scripts.pory"
+	msgbox LittlerootTown_EventScript_PIKA_Text_0
+# 1068 "data//maps/LittlerootTown/scripts.pory"
+	closemessage
+# 1069 "data//maps/LittlerootTown/scripts.pory"
 	releaseall
 	return
 
@@ -2126,9 +2132,9 @@ LittlerootTown_EventScript_Porytest_Text_0:
 	.string "hi$"
 
 LittlerootTown_EventScript_Porytest_Text_1:
-# 1054 "data//maps/LittlerootTown/scripts.pory"
+# 1057 "data//maps/LittlerootTown/scripts.pory"
 	.string "Recieved Chikorita$"
 
 LittlerootTown_EventScript_PIKA_Text_0:
-# 1064 "data//maps/LittlerootTown/scripts.pory"
+# 1067 "data//maps/LittlerootTown/scripts.pory"
 	.string "The Pikachu seems unintrested$"
