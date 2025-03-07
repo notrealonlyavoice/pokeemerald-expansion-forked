@@ -3,6 +3,7 @@ raw `
 .set LOCALID_MOM, 4
 .set LOCALID_RIVAL, 7
 .set LOCALID_BIRCH, 8
+.set LOCALID_PIKACHU, 11
 
 LittlerootTown_MapScripts::
 	map_script MAP_SCRIPT_ON_TRANSITION, LittlerootTown_OnTransition
@@ -851,6 +852,11 @@ LittlerootTown_Movement_MomReturnHomeFemale3:
 	walk_in_place_faster_up
 	step_end
 
+LittlerootTown_Movement_Pikachutriggered:
+	walk_down
+	walk_down
+	step_end
+
 LittlerootTown_Movement_MomReturnHomeFemale4:
 	walk_right
 	walk_right
@@ -1020,6 +1026,22 @@ LittlerootTown_Text_BirchSomethingToShowYouAtLab:
 	.string "I have something to show you.\n"
 	.string "Let's go to my LAB.$"
 
+LittlerootTown_Text_Wildmonjoinedyou:
+	.string "The wild pikachu joined the Battle!$"
+
+
+
+LittlerootTown_EventScript_Trytestbattle::
+    applymovement LOCALID_PIKACHU, LittlerootTown_Movement_Pikachutriggered
+	waitmovement 0
+	msgbox LittlerootTown_Text_Wildmonjoinedyou, MSGBOX_DEFAULT
+    multi_fixed_2_vs_2 TRAINER_MAXIE_MOSSDEEP, MossdeepCity_SpaceCenter_2F_Text_JustWantToExpandLand, TRAINER_TABITHA_MOSSDEEP, MossdeepCity_SpaceCenter_Text_TabithaDefeat, PARTNER_THE_CAVE
+	switch VAR_RESULT
+	case 1, MossdeepCity_SpaceCenter_2F_EventScript_DefeatedMaxieTabitha
+	fadescreen FADE_TO_BLACK
+	special SetCB2WhiteOut
+	waitstate
+
 `
 
 script LittlerootTown_EventScript_Porytest {
@@ -1030,6 +1052,16 @@ script LittlerootTown_EventScript_Porytest {
     setflag(FLAG_SYS_POKEMON_GET)
     playfanfare(MUS_OBTAIN_ITEM)
     msgbox("Recieved Chikorita")
+    closemessage
+    releaseall
+}
+
+
+
+script LittlerootTown_EventScript_PIKA {
+    lockall
+    faceplayer
+    msgbox("The Pikachu seems unintrested")
     closemessage
     releaseall
 }

@@ -21395,6 +21395,30 @@ gBattleAnimMove_Memento::
 	delay 1
 	end
 
+gBattleAnimMove_GiveUp::
+	setalpha 0, 16
+	delay 1
+	createvisualtask AnimTask_InitMementoShadow, 2
+	delay 1
+	createvisualtask AnimTask_MoveAttackerMementoShadow, 5
+	playsewithpan SE_M_PSYBEAM, SOUND_PAN_ATTACKER
+	delay 48
+	playsewithpan SE_M_PSYBEAM2, SOUND_PAN_ATTACKER
+	waitforvisualfinish
+	createvisualtask AnimTask_MementoHandleBg, 2
+	delay 12
+	setalpha 0, 16
+	delay 1
+	monbg_static ANIM_TARGET
+	createvisualtask AnimTask_MoveTargetMementoShadow, 5
+	playsewithpan SE_M_PSYBEAM, SOUND_PAN_TARGET
+	waitforvisualfinish
+	clearmonbg_static ANIM_TARGET
+	delay 1
+	blendoff
+	delay 1
+	end
+
 gBattleAnimMove_Facade::
 	loadspritegfx ANIM_TAG_SWEAT_DROP
 	createvisualtask AnimTask_SquishAndSweatDroplets, 2, ANIM_ATTACKER, 3

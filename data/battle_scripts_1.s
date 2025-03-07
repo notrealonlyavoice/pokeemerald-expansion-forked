@@ -4943,6 +4943,40 @@ BattleScript_MementoTargetProtectEnd:
 	tryfaintmon BS_ATTACKER
 	goto BattleScript_MoveEnd
 
+
+BattleScript_EffectGiveUp::
+	attackcanceler
+	jumpifbyte CMP_EQUAL, cMISS_TYPE, B_MSG_PROTECTED, BattleScript_GiveUpTargetProtect
+	attackstring
+	ppreduce
+	trygiveup BattleScript_ButItFailed
+	setatkhptozero
+	attackanimation
+	waitanimation
+	jumpifsubstituteblocks BattleScript_EffectGiveUpPrintNoEffect
+BattleScript_EffectGiveUpTryFaint:
+	tryfaintmon BS_ATTACKER
+	goto BattleScript_MoveEnd
+BattleScript_EffectGiveUpPrintNoEffect:
+	printstring STRINGID_BUTNOEFFECT
+	waitmessage B_WAIT_TIME_LONG
+	goto BattleScript_EffectGiveUpTryFaint
+@ If the target is protected there's no need to check the target's stats or animate, the user will just faint
+BattleScript_GiveUpTargetProtect:
+	attackstring
+	ppreduce
+	trygiveup BattleScript_GiveUpTargetProtectEnd
+BattleScript_GiveUpTargetProtectEnd:
+	setatkhptozero
+	pause B_WAIT_TIME_LONG
+	effectivenesssound
+	resultmessage
+	waitmessage B_WAIT_TIME_LONG
+	tryfaintmon BS_ATTACKER
+	goto BattleScript_MoveEnd
+
+
+
 BattleScript_EffectFocusPunch::
 	attackcanceler
 	jumpifnodamage BattleScript_HitFromAccCheck

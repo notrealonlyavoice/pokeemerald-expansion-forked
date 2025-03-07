@@ -906,6 +906,12 @@ const struct BattleMoveEffect gBattleMoveEffects[NUM_BATTLE_MOVE_EFFECTS] =
         .battleTvScore = 7,
     },
 
+    [EFFECT_GIVE_UP] =
+    {
+        .battleScript = BattleScript_EffectGiveUp,
+        .battleTvScore = 7,
+    },
+
     [EFFECT_FACADE] =
     {
         .battleScript = BattleScript_EffectHit,

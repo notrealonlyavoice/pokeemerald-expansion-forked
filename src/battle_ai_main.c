@@ -1819,6 +1819,12 @@ static s32 AI_CheckBadMove(u32 battlerAtk, u32 battlerDef, u32 move, s32 score)
             else if (gBattleMons[battlerDef].statStages[STAT_ATK] == MIN_STAT_STAGE && gBattleMons[battlerDef].statStages[STAT_SPATK] == MIN_STAT_STAGE)
                 ADJUST_SCORE(-10);
             break;
+        case EFFECT_GIVE_UP:
+            if (CountUsablePartyMons(battlerAtk) == 0 || DoesPartnerHaveSameMoveEffect(BATTLE_PARTNER(battlerAtk), battlerDef, move, aiData->partnerMove))
+                ADJUST_SCORE(-10);
+            else if (gBattleMons[battlerDef].statStages[STAT_ATK] == MIN_STAT_STAGE && gBattleMons[battlerDef].statStages[STAT_SPATK] == MIN_STAT_STAGE)
+                ADJUST_SCORE(-10);
+            break;
         case EFFECT_FOLLOW_ME:
         case EFFECT_HELPING_HAND:
             if (!isDoubleBattle
@@ -3374,6 +3380,13 @@ static u32 AI_CalcMoveEffectScore(u32 battlerAtk, u32 battlerDef, u32 move)
         break;
     case EFFECT_EXPLOSION:
     case EFFECT_MEMENTO:
+        if (AI_THINKING_STRUCT->aiFlags[battlerAtk] & AI_FLAG_WILL_SUICIDE && gBattleMons[battlerDef].statStages[STAT_EVASION] < 7)
+        {
+            if (aiData->hpPercents[battlerAtk] < 50 && AI_RandLessThan(128))
+                ADJUST_SCORE(DECENT_EFFECT);
+        }
+        break;
+    case EFFECT_GIVE_UP:
         if (AI_THINKING_STRUCT->aiFlags[battlerAtk] & AI_FLAG_WILL_SUICIDE && gBattleMons[battlerDef].statStages[STAT_EVASION] < 7)
         {
             if (aiData->hpPercents[battlerAtk] < 50 && AI_RandLessThan(128))
@@ -5031,6 +5044,10 @@ static s32 AI_Risky(u32 battlerAtk, u32 battlerDef, u32 move, s32 score)
         if (aiData->hpPercents[battlerAtk] < 50 && AI_RandLessThan(128))
             ADJUST_SCORE(AVERAGE_RISKY_EFFECT);
         break;
+    case EFFECT_GIVE_UP:
+        if (aiData->hpPercents[battlerAtk] < 50 && AI_RandLessThan(128))
+            ADJUST_SCORE(AVERAGE_RISKY_EFFECT);
+        break;
     case EFFECT_REVENGE:
         if (gSpeciesInfo[gBattleMons[battlerDef].species].baseSpeed >= gSpeciesInfo[gBattleMons[battlerAtk].species].baseSpeed + 10)
             ADJUST_SCORE(AVERAGE_RISKY_EFFECT);
@@ -5187,6 +5204,7 @@ static s32 AI_HPAware(u32 battlerAtk, u32 battlerDef, u32 move, s32 score)
             case EFFECT_SOFTBOILED:
             case EFFECT_ROOST:
             case EFFECT_MEMENTO:
+            case EFFECT_GIVE_UP:
             case EFFECT_GRUDGE:
                 ADJUST_SCORE(-2);
                 break;

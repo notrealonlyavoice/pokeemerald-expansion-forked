@@ -2675,7 +2675,8 @@
       "MOVE_SIGNAL_BEAM",
       "MOVE_SNORE",
       "MOVE_SWIFT",
-      "MOVE_THUNDER_PUNCH"
+      "MOVE_THUNDER_PUNCH",
+      "MOVE_GIVE_UP"
     ]
   },
   "RAICHU": {

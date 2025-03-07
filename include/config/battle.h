@@ -96,6 +96,7 @@
 #define B_CAN_SPITE_FAIL            GEN_LATEST // In Gen4+, Spite can no longer fail if the foe's last move only has 1 remaining PP.
 #define B_CRASH_IF_TARGET_IMMUNE    GEN_LATEST // In Gen4+, The user of Jump Kick or High Jump Kick will "keep going and crash" if it attacks a target that is immune to the move.
 #define B_MEMENTO_FAIL              GEN_LATEST // In Gen4+, Memento fails if there is no target or if the target is protected or behind substitute. But not if Atk/Sp. Atk are at -6.
+#define B_GIVE_UP_FAIL              GEN_LATEST // In Gen4+, GIVE UP fails if there is no target or if the target is protected or behind substitute. But not if Atk/Sp. Atk are at -6.
 #define B_GLARE_GHOST               GEN_LATEST // In Gen4+, Glare can hit Ghost-type Pokémon normally.
 #define B_SKILL_SWAP                GEN_LATEST // In Gen4+, Skill Swap triggers switch-in abilities after use.
 #define B_BRICK_BREAK               GEN_LATEST // In Gen4+, you can destroy your own side's screens. In Gen 5+, screens are not removed if the target is immune.
@@ -255,7 +256,7 @@
 #define B_CATCH_SWAP_CHECK_HMS      TRUE       // If TRUE, the catch swap feature above will prevent returning mons to the box if they know HMs.
 
 // Other settings
-#define B_DOUBLE_WILD_CHANCE            0          // % chance of encountering two Pokémon in a Wild Encounter.
+#define B_DOUBLE_WILD_CHANCE            100          // % chance of encountering two Pokémon in a Wild Encounter.
 #define B_DOUBLE_WILD_REQUIRE_2_MONS    FALSE      // If set to TRUE, Wild Double Battles will default to Single Battles when the player only has 1 usable Pokémon, ignoring B_DOUBLE_WILD_CHANCE and B_FLAG_FORCE_DOUBLE_WILD.
 #define B_MULTI_BATTLE_WHITEOUT         GEN_LATEST // In Gen4+, multi battles end when the Player and also their Partner don't have any more Pokémon to fight.
 #define B_EVOLUTION_AFTER_WHITEOUT      GEN_LATEST // In Gen6+, Pokemon that qualify for evolution after battle will evolve even if the player loses.

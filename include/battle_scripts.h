@@ -698,6 +698,7 @@ extern const u8 BattleScript_EffectTorment[];
 extern const u8 BattleScript_EffectFlatter[];
 extern const u8 BattleScript_EffectWillOWisp[];
 extern const u8 BattleScript_EffectMemento[];
+extern const u8 BattleScript_EffectGiveUp[];
 extern const u8 BattleScript_EffectFocusPunch[];
 extern const u8 BattleScript_EffectFollowMe[];
 extern const u8 BattleScript_EffectNaturePower[];

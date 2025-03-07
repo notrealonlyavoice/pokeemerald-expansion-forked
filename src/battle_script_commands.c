@@ -576,7 +576,7 @@ static void Cmd_switchoutabilities(void);
 static void Cmd_jumpifhasnohp(void);
 static void Cmd_jumpifnotcurrentmoveargtype(void);
 static void Cmd_pickup(void);
-static void Cmd_unused_0xE6(void);
+static void Cmd_trygiveup(void);
 static void Cmd_unused_0xE7(void);
 static void Cmd_settypebasedhalvers(void);
 static void Cmd_jumpifsubstituteblocks(void);
@@ -835,7 +835,7 @@ void (* const gBattleScriptingCommandsTable[])(void) =
     Cmd_jumpifhasnohp,                           //0xE3
     Cmd_jumpifnotcurrentmoveargtype,             //0xE4
     Cmd_pickup,                                  //0xE5
-    Cmd_unused_0xE6,                     //0xE6
+    Cmd_trygiveup,                               //0xE6
     Cmd_unused_0xE7,                    //0xE7
     Cmd_settypebasedhalvers,                     //0xE8
     Cmd_jumpifsubstituteblocks,                  //0xE9
@@ -15448,9 +15448,37 @@ static void Cmd_pickup(void)
     gBattlescriptCurrInstr = cmd->nextInstr;
 }
 
-static void Cmd_unused_0xE6(void)
+static void Cmd_trygiveup(void)
 {
+    CMD_ARGS(const u8 *failInstr);
+
+    if (B_GIVE_UP_FAIL >= GEN_4
+        && (gBattleCommunication[MISS_TYPE] == B_MSG_PROTECTED
+          || gStatuses3[gBattlerTarget] & STATUS3_SEMI_INVULNERABLE
+          || IsBattlerProtected(gBattlerAttacker, gBattlerTarget, gCurrentMove)
+          || DoesSubstituteBlockMove(gBattlerAttacker, gBattlerTarget, gCurrentMove)))
+      {
+          // Failed, target was protected.
+          gBattlescriptCurrInstr = cmd->failInstr;
+      }
+      else if (B_GIVE_UP_FAIL < GEN_4
+          && gBattleMons[gBattlerTarget].statStages[STAT_ATK] == MIN_STAT_STAGE
+          && gBattleMons[gBattlerTarget].statStages[STAT_SPATK] == MIN_STAT_STAGE
+          && gBattleCommunication[MISS_TYPE] != B_MSG_PROTECTED)
+      {
+          // Failed, unprotected target already has minimum Attack and Special Attack.
+          gBattlescriptCurrInstr = cmd->failInstr;
+      }
+      else
+      {
+          // Success, drop user's HP bar to 0
+          gBattleStruct->moveDamage[gBattlerAttacker] = gBattleMons[gBattlerAttacker].hp;
+          BtlController_EmitHealthBarUpdate(gBattlerAttacker, BUFFER_A, INSTANT_HP_BAR_DROP);
+          MarkBattlerForControllerExec(gBattlerAttacker);
+          gBattlescriptCurrInstr = cmd->nextInstr;
+      }
 }
+
 
 static void Cmd_unused_0xE7(void)
 {

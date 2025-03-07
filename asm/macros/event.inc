@@ -768,6 +768,13 @@
 	trainerbattle TRAINER_BATTLE_TWO_TRAINERS_NO_INTRO, OBJ_ID_NONE, \trainer_a, NULL, \lose_text_a, NULL, OBJ_ID_NONE, \trainer_b, NULL, \lose_text_b, NULL, NULL, NULL, FALSE, TRUE, FALSE, FALSE
 	.endm
 
+    @ Starts a single battle with the player against two trainers
+	@ Takes two trainers and defeat text for each
+	.macro trainerbattle_two_trainers_unfair trainer_a:req, lose_text_a:req, trainer_b:req, lose_text_b:req
+	trainerbattle TRAINER_BATTLE_TWO_TRAINERS_UNFAIR, OBJ_ID_NONE, \trainer_a, NULL, \lose_text_a, NULL, OBJ_ID_NONE, \trainer_b, NULL, \lose_text_b, NULL, NULL, NULL, FALSE, TRUE, FALSE, FALSE
+	.endm
+
+
 	@ Starts a trainer battle using the battle information stored in RAM (usually by the scripts in trainer_battle.inc, which
 	@ are run by trainerbattle), and blocks script execution until the battle finishes.
 	.macro dotrainerbattle

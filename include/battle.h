@@ -1276,6 +1276,7 @@ static inline bool32 IsDoubleBattle(void)
     return gBattleTypeFlags & BATTLE_TYPE_DOUBLE;
 }
 
+
 static inline bool32 IsSpreadMove(u32 moveTarget)
 {
     return IsDoubleBattle() && (moveTarget == MOVE_TARGET_BOTH || moveTarget == MOVE_TARGET_FOES_AND_ALLY);

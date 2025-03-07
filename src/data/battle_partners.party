@@ -1,9 +1,11 @@
 === PARTNER_NONE ===
-Name:
+Name: 
 Class: Pkmn Trainer 1
 Pic: Brendan
 Gender: Male
 Music: Male
+
+
 
 === PARTNER_STEVEN ===
 Name: STEVEN
@@ -41,3 +43,19 @@ EVs: 252 Atk / 252 SpA / 6 SpD
 - Protect
 - Solar Beam
 - Dragon Claw
+
+
+
+=== PARTNER_THE_CAVE ===
+Name: cave
+Class: Pokemon_from
+Pic: Steven
+Gender: Male
+Music: Male
+
+Pikachu
+Brave Nature
+Level: 3
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 Atk / 252 Def / 6 SpA
+- Give up

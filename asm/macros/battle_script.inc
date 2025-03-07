@@ -1091,6 +1091,12 @@
 	.4byte \failInstr
 	.endm
 
+	.macro trygiveup failInstr:req
+	.byte 0xc9
+	.4byte \failInstr
+	.endm
+
+
 	.macro setforcedtarget
 	.byte 0xca
 	.endm

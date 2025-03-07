@@ -6874,6 +6874,29 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         .validApprenticeMove = TRUE,
     },
 
+    [MOVE_GIVE_UP] =
+    {
+        .name = COMPOUND_STRING("Give up"),
+        .description = COMPOUND_STRING(
+            "The user Gives up\n"
+            "And faints."),
+        .effect = EFFECT_GIVE_UP,
+        .power = 0,
+        .type = TYPE_DARK,
+        .accuracy = 100,
+        .pp = 25,
+        .target = MOVE_TARGET_SELECTED,
+        .priority = 0,
+        .category = DAMAGE_CATEGORY_STATUS,
+        .contestEffect = CONTEST_EFFECT_GREAT_APPEAL_BUT_NO_MORE_MOVES,
+        .contestCategory = CONTEST_CATEGORY_TOUGH,
+        .contestComboStarterId = 0,
+        .contestComboMoves = {0},
+        .battleAnimScript = gBattleAnimMove_Memento,
+        .validApprenticeMove = TRUE,
+    },
+
+
     [MOVE_FACADE] =
     {
         .name = COMPOUND_STRING("Facade"),
