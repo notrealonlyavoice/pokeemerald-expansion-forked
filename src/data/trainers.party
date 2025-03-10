@@ -11356,20 +11356,30 @@ IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_JAMES_1 ===
 Name: JAMES
-Class: Bug Catcher
+Class: Pokemaniac
 Pic: Bug Catcher
 Gender: Male
 Music: Male
 Double Battle: No
 AI: Check Bad Move
 
-Nincada
-Level: 6
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+Cottonee @ Heat Rock 
+Level: 12
+Ability: Prankster  
+Tera Type: Grass  
+IVs: 0 Atk  
+- Sunny Day  
 
-Nincada
-Level: 6
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+Sunkern @ Choice Specs  
+Level: 14
+Ability: Chlorophyll  
+Tera Type: Grass  
+IVs: 0 Atk  
+- Sludge Bomb  
+- Energy Ball  
+- Weather Ball  
+- Earth Power  
+
 
 === TRAINER_JAMES_2 ===
 Name: JAMES
@@ -16873,3 +16883,25 @@ Double Battle: No
 Kyogre
 Level: 5
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+=== TRAINER_JEN ===
+Name: JEN
+Class: Gatekeeper
+Pic: Beauty
+Gender: Female
+Music: Cool
+Double Battle: No
+
+Jigglypuff @ Silk scarf
+Ability: Cute Charm  
+Level: 12  
+- Pain Split  
+- Metronome  
+- Lovely Kiss  
+- Sweet Kiss  
+
+Skitty @ Silk scarf
+Ability: Wonder Skin  
+Level: 12  
+- Last Resort  
+- Fake Out  

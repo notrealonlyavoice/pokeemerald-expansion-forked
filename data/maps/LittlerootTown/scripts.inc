@@ -2093,7 +2093,7 @@ LittlerootTown_EventScript_Porytest::
 # 1050 "data//maps/LittlerootTown/scripts.pory"
 	msgbox LittlerootTown_EventScript_Porytest_Text_0
 # 1051 "data//maps/LittlerootTown/scripts.pory"
-	givemon SPECIES_CHIKORITA, 5, ITEM_POWER_CHARM
+	givemon SPECIES_CHIKORITA, 13, ITEM_POWER_CHARM
 # 1052 "data//maps/LittlerootTown/scripts.pory"
 	giveitem ITEM_POCKET_SAND
 # 1053 "data//maps/LittlerootTown/scripts.pory"
@@ -2107,22 +2107,24 @@ LittlerootTown_EventScript_Porytest::
 # 1057 "data//maps/LittlerootTown/scripts.pory"
 	msgbox LittlerootTown_EventScript_Porytest_Text_1
 # 1058 "data//maps/LittlerootTown/scripts.pory"
-	closemessage
+	setvar VAR_UNUSED_0x40F7, 2
 # 1059 "data//maps/LittlerootTown/scripts.pory"
+	closemessage
+# 1060 "data//maps/LittlerootTown/scripts.pory"
 	releaseall
 	return
 
 
 LittlerootTown_EventScript_PIKA::
-# 1065 "data//maps/LittlerootTown/scripts.pory"
-	lockall
 # 1066 "data//maps/LittlerootTown/scripts.pory"
-	faceplayer
+	lockall
 # 1067 "data//maps/LittlerootTown/scripts.pory"
-	msgbox LittlerootTown_EventScript_PIKA_Text_0
+	faceplayer
 # 1068 "data//maps/LittlerootTown/scripts.pory"
-	closemessage
+	msgbox LittlerootTown_EventScript_PIKA_Text_0
 # 1069 "data//maps/LittlerootTown/scripts.pory"
+	closemessage
+# 1070 "data//maps/LittlerootTown/scripts.pory"
 	releaseall
 	return
 
@@ -2136,5 +2138,5 @@ LittlerootTown_EventScript_Porytest_Text_1:
 	.string "Recieved Chikorita$"
 
 LittlerootTown_EventScript_PIKA_Text_0:
-# 1067 "data//maps/LittlerootTown/scripts.pory"
+# 1068 "data//maps/LittlerootTown/scripts.pory"
 	.string "The Pikachu seems unintrested$"
