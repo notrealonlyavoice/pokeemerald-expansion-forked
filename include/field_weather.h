@@ -29,6 +29,7 @@ struct Weather
         {
             struct Sprite *rainSprites[MAX_RAIN_SPRITES];
             struct Sprite *snowflakeSprites[101];
+            struct Sprite *LeafallLeafSprites[101];
             struct Sprite *cloudSprites[NUM_CLOUD_SPRITES];
         } s1;
         struct
@@ -73,6 +74,11 @@ struct Weather
     u16 snowflakeTimer;
     u8 snowflakeSpriteCount;
     u8 targetSnowflakeSpriteCount;
+    //  leafall
+    u16 LeafallLeafVisibleCounter;
+    u16 LeafallLeafTimer;
+    u8 LeafallLeafSpriteCount;
+    u8 targetLeafallLeafSpriteCount;
     // Thunderstorm
     u16 thunderTimer;        // general-purpose timer for state transitions
     u16 thunderSETimer;      // timer for thunder sound effect
@@ -185,6 +191,10 @@ void Snow_InitVars(void);
 void Snow_Main(void);
 void Snow_InitAll(void);
 bool8 Snow_Finish(void);
+void Leafall_InitVars(void);
+void Leafall_Main(void);
+void Leafall_InitAll(void);
+bool8 Leafall_Finish(void);
 void Thunderstorm_InitVars(void);
 void Thunderstorm_Main(void);
 void Thunderstorm_InitAll(void);

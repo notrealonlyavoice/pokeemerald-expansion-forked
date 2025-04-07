@@ -470,6 +470,7 @@ extern const u8 DebugScript_ZeroDaycareMons[];
 
 extern const u8 Debug_ShowFieldMessageStringVar4[];
 extern const u8 Debug_CheatStart[];
+extern const u8 Debug_PlayerDraftStart[];
 extern const u8 Debug_HatchAnEgg[];
 extern const u8 PlayersHouse_2F_EventScript_SetWallClock[];
 extern const u8 PlayersHouse_2F_EventScript_CheckWallClock[];
@@ -1963,12 +1964,13 @@ static void DebugAction_Util_CheckROMSpace(u8 taskId)
     ScriptContext_SetupScript(Debug_CheckROMSpace);
 }
 
-static const u8 sWeatherNames[WEATHER_COUNT][24] = {
+static const u8 sWeatherNames[WEATHER_COUNT][25] = {
     [WEATHER_NONE]               = _("NONE"),
     [WEATHER_SUNNY_CLOUDS]       = _("SUNNY CLOUDS"),
     [WEATHER_SUNNY]              = _("SUNNY"),
     [WEATHER_RAIN]               = _("RAIN"),
     [WEATHER_SNOW]               = _("SNOW"),
+    [WEATHER_LEAFALL]            = _("LEAF FALL"),
     [WEATHER_RAIN_THUNDERSTORM]  = _("RAIN THUNDERSTORM"),
     [WEATHER_FOG_HORIZONTAL]     = _("FOG HORIZONTAL"),
     [WEATHER_VOLCANIC_ASH]       = _("VOLCANIC ASH"),

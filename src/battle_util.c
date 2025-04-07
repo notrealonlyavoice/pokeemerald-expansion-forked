@@ -4685,7 +4685,7 @@ u32 AbilityBattleEffects(u32 caseID, u32 battler, u32 ability, u32 special, u32 
             effect++;
         }
         else if (B_OVERWORLD_FOG >= GEN_8
-              && (GetCurrentWeather() == WEATHER_FOG_HORIZONTAL || GetCurrentWeather() == WEATHER_FOG_DIAGONAL)
+              && (GetCurrentWeather() == WEATHER_FOG_HORIZONTAL)
               && !(gFieldStatuses & STATUS_FIELD_MISTY_TERRAIN))
         {
             gFieldStatuses = STATUS_FIELD_MISTY_TERRAIN;
@@ -4693,6 +4693,26 @@ u32 AbilityBattleEffects(u32 caseID, u32 battler, u32 ability, u32 special, u32 
             gBattleCommunication[MULTISTRING_CHOOSER] = B_MSG_TERRAIN_SET_MISTY;
             BattleScriptPushCursorAndCallback(BattleScript_OverworldTerrain);
             effect++;
+        }
+        else if (B_OVERWORLD_FOG >= GEN_8
+              && (GetCurrentWeather() == WEATHER_FOG_DIAGONAL)
+              && !(gFieldStatuses & STATUS_FIELD_PSYCHIC_TERRAIN))
+        {
+            gFieldStatuses = STATUS_FIELD_PSYCHIC_TERRAIN;
+            gFieldTimers.terrainTimer = 0;
+            gBattleCommunication[MULTISTRING_CHOOSER] = B_MSG_TERRAIN_SET_PSYCHIC;
+            BattleScriptPushCursorAndCallback(BattleScript_OverworldTerrain);
+            effect++;
+        }
+        else if (B_LEAFALL_TERRAIN == TRUE
+              && (GetCurrentWeather() == WEATHER_LEAFALL)
+              && !(gFieldStatuses & STATUS_FIELD_GRASSY_TERRAIN))
+        {
+                gFieldStatuses = STATUS_FIELD_GRASSY_TERRAIN;
+                gFieldTimers.terrainTimer = 0;
+                gBattleCommunication[MULTISTRING_CHOOSER] = B_MSG_TERRAIN_SET_GRASSY;
+                BattleScriptPushCursorAndCallback(BattleScript_OverworldTerrain);
+                effect++;
         }
         break;
     case ABILITYEFFECT_SWITCH_IN_WEATHER:
@@ -5235,6 +5255,22 @@ u32 AbilityBattleEffects(u32 caseID, u32 battler, u32 ability, u32 special, u32 
             if (TryChangeBattleWeather(battler, BATTLE_WEATHER_STRONG_WINDS, TRUE))
             {
                 BattleScriptPushCursorAndCallback(BattleScript_DeltaStreamActivates);
+                effect++;
+            }
+            if (!gSpecialStatuses[battler].switchInAbilityDone && CompareStat(battler, STAT_ATK, MAX_STAT_STAGE, CMP_LESS_THAN)
+                 && !(gBattleStruct->intrepidSwordBoost[GetBattlerSide(battler)] & (1u << gBattlerPartyIndexes[battler])))
+            {
+                gBattleScripting.savedBattler = gBattlerAttacker;
+                gBattlerAttacker = battler;
+                if (B_INTREPID_SWORD == GEN_9)
+                    gBattleStruct->intrepidSwordBoost[GetBattlerSide(battler)] |= 1u << gBattlerPartyIndexes[battler];
+                gSpecialStatuses[battler].switchInAbilityDone = TRUE;
+                SET_STATCHANGER(STAT_ATK, 1, FALSE);
+                SET_STATCHANGER(STAT_SPATK, 1, FALSE);
+                SET_STATCHANGER(STAT_SPDEF, 1, FALSE);
+                SET_STATCHANGER(STAT_DEF, 1, FALSE);
+                SET_STATCHANGER(STAT_SPEED, 1, FALSE);
+                BattleScriptPushCursorAndCallback(BattleScript_BattlerAbilityStatRaiseOnSwitchIn);
                 effect++;
             }
             break;

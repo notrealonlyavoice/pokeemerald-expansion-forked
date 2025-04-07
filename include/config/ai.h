@@ -42,7 +42,7 @@
 #define SHOULD_SWITCH_NATURAL_CURE_WEAK_PERCENTAGE                  25
 #define SHOULD_SWITCH_NATURAL_CURE_WEAK_STATS_RAISED_PERCENTAGE     10
 #define SHOULD_SWITCH_REGENERATOR_PERCENTAGE                        50
-#define SHOULD_SWITCH_REGENERATOR_STATS_RAISED_PERCENTAGE           20
+#define SHOULD_SWITCH_REGENERATOR_STATS_RAISED_PERCENTAGE           40
 
 // AI held item-based move scoring
 #define LOW_ACCURACY_THRESHOLD                                  75 // Moves with accuracy equal OR below this value are considered low accuracy 

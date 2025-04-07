@@ -640,6 +640,7 @@
 #define ANIM_WEATHER_HAIL 4
 #define ANIM_WEATHER_SNOW 5
 #define ANIM_WEATHER_FOG 6
+#define ANIM_WEATHER_LEAFALL 7
 
 // horseshoe/fist frames
 #define ANIM_RIGHT_FIST  0

@@ -713,105 +713,113 @@ Route103_EventScript_GatekeeperJen::
 # 359 "data//maps/Route103/scripts.pory"
 	lockall
 # 360 "data//maps/Route103/scripts.pory"
-	compare VAR_UNUSED_0x40F7, 1
-	goto_if_eq Route103_EventScript_GatekeeperJen_2
+	goto_if_unset FLAG_UNUSED_0x030, Route103_EventScript_GatekeeperJen_2
 Route103_EventScript_GatekeeperJen_1:
-# 369 "data//maps/Route103/scripts.pory"
-	compare VAR_UNUSED_0x40F7, 2
-	goto_if_eq Route103_EventScript_GatekeeperJen_5
-Route103_EventScript_GatekeeperJen_4:
-# 385 "data//maps/Route103/scripts.pory"
-	goto_if_set FLAG_UNUSED_0x030, Route103_EventScript_GatekeeperJen_7
+# 375 "data//maps/Route103/scripts.pory"
+	goto_if_set FLAG_UNUSED_0x030, Route103_EventScript_GatekeeperJen_4
 	return
 
 Route103_EventScript_GatekeeperJen_2:
 # 361 "data//maps/Route103/scripts.pory"
-	msgbox Route103_EventScript_GatekeeperJen_Text_0
+	msgbox Route103_EventScript_GatekeeperJen_Text_0, MSGBOX_YESNO
 # 362 "data//maps/Route103/scripts.pory"
-	waitmessage
+	switch VAR_RESULT
 # 363 "data//maps/Route103/scripts.pory"
-	closemessage
-# 364 "data//maps/Route103/scripts.pory"
-	applymovement 21, Route103_Movement_Jenmove
+	case YES, Route103_EventScript_GatekeeperJen_7
 # 365 "data//maps/Route103/scripts.pory"
-	waitmovement 5
-# 366 "data//maps/Route103/scripts.pory"
-	setflag FLAG_UNUSED_0x030
-# 367 "data//maps/Route103/scripts.pory"
-	setvar VAR_UNUSED_0x40F7, 3
+	case NO, Route103_EventScript_GatekeeperJen_8
+# 369 "data//maps/Route103/scripts.pory"
+	case MULTI_B_PRESSED, Route103_EventScript_GatekeeperJen_9
 	goto Route103_EventScript_GatekeeperJen_1
 
-Route103_EventScript_GatekeeperJen_5:
-# 370 "data//maps/Route103/scripts.pory"
-	msgbox Route103_EventScript_GatekeeperJen_Text_1, MSGBOX_YESNO
-# 371 "data//maps/Route103/scripts.pory"
-	switch VAR_RESULT
-# 372 "data//maps/Route103/scripts.pory"
-	case YES, Route103_EventScript_GatekeeperJen_10
-# 375 "data//maps/Route103/scripts.pory"
-	case NO, Route103_EventScript_GatekeeperJen_11
-# 379 "data//maps/Route103/scripts.pory"
-	case MULTI_B_PRESSED, Route103_EventScript_GatekeeperJen_12
-	goto Route103_EventScript_GatekeeperJen_4
-
-Route103_EventScript_GatekeeperJen_7:
-# 386 "data//maps/Route103/scripts.pory"
-	msgbox Route103_EventScript_GatekeeperJen_Text_3
-# 387 "data//maps/Route103/scripts.pory"
-	closemessage
-	return
-
-Route103_EventScript_GatekeeperJen_10:
-# 373 "data//maps/Route103/scripts.pory"
-	setvar VAR_UNUSED_0x40F7, 1
-# 374 "data//maps/Route103/scripts.pory"
-	trainerbattle_single TRAINER_JEN, FortreeCity_Gym_Text_JaredIntro, Route103_Text_Jendefeated
-	goto Route103_EventScript_GatekeeperJen_4
-
-Route103_EventScript_GatekeeperJen_11:
+Route103_EventScript_GatekeeperJen_4:
 # 376 "data//maps/Route103/scripts.pory"
 	msgbox Route103_EventScript_GatekeeperJen_Text_2
 # 377 "data//maps/Route103/scripts.pory"
+	closemessage
+# 378 "data//maps/Route103/scripts.pory"
+	releaseall
+	return
+
+Route103_EventScript_GatekeeperJen_7:
+# 364 "data//maps/Route103/scripts.pory"
+	trainerbattle_single TRAINER_JEN, Route103_Text_JenIntro, Route103_Text_Jendefeated, Route103_EventScript_GatekeeperJencontinue
+	goto Route103_EventScript_GatekeeperJen_1
+
+Route103_EventScript_GatekeeperJen_8:
+# 366 "data//maps/Route103/scripts.pory"
+	msgbox Route103_EventScript_GatekeeperJen_Text_1
+# 367 "data//maps/Route103/scripts.pory"
 	releaseall
 	end
 
-Route103_EventScript_GatekeeperJen_12:
-# 380 "data//maps/Route103/scripts.pory"
-	msgbox Route103_EventScript_GatekeeperJen_Text_2
-# 381 "data//maps/Route103/scripts.pory"
+Route103_EventScript_GatekeeperJen_9:
+# 370 "data//maps/Route103/scripts.pory"
+	msgbox Route103_EventScript_GatekeeperJen_Text_1
+# 371 "data//maps/Route103/scripts.pory"
 	releaseall
 	end
 
 
-# 395 "data//maps/Route103/scripts.pory"
-Route103_Movement_Jenmove:
-# 396 "data//maps/Route103/scripts.pory"
-	walk_down
-# 397 "data//maps/Route103/scripts.pory"
+Route103_EventScript_GatekeeperJencontinue::
+# 383 "data//maps/Route103/scripts.pory"
+	lockall
+# 384 "data//maps/Route103/scripts.pory"
+	msgbox Route103_EventScript_GatekeeperJencontinue_Text_0
+# 385 "data//maps/Route103/scripts.pory"
+	setflag FLAG_UNUSED_0x030
+# 386 "data//maps/Route103/scripts.pory"
+	waitmessage
+# 387 "data//maps/Route103/scripts.pory"
+	closemessage
+# 388 "data//maps/Route103/scripts.pory"
+	delay 20
+# 389 "data//maps/Route103/scripts.pory"
+	fadescreen FADE_TO_BLACK
+# 390 "data//maps/Route103/scripts.pory"
+	removeobject 21
+# 391 "data//maps/Route103/scripts.pory"
+	delay 5
+# 392 "data//maps/Route103/scripts.pory"
+	fadescreen FADE_FROM_BLACK
+# 393 "data//maps/Route103/scripts.pory"
+	releaseall
+	return
+
+
+# 406 "data//maps/Route103/scripts.pory"
+Route103_Movement_Jenmove1:
+# 407 "data//maps/Route103/scripts.pory"
 	walk_left
-# 397 "data//maps/Route103/scripts.pory"
-	walk_left
-# 398 "data//maps/Route103/scripts.pory"
+	step_end
+
+# 411 "data//maps/Route103/scripts.pory"
+Route103_Movement_Jenmove2:
+# 412 "data//maps/Route103/scripts.pory"
 	face_right
 	step_end
 
 Route103_EventScript_GatekeeperJen_Text_0:
 # 361 "data//maps/Route103/scripts.pory"
-	.string "Very well, pick up your encounters$"
-
-Route103_EventScript_GatekeeperJen_Text_1:
-# 370 "data//maps/Route103/scripts.pory"
 	.string "You choose to attempt to unlock more\n"
 	.string "encounters?$"
 
-Route103_EventScript_GatekeeperJen_Text_2:
-# 376 "data//maps/Route103/scripts.pory"
+Route103_EventScript_GatekeeperJen_Text_1:
+# 366 "data//maps/Route103/scripts.pory"
 	.string "Hm, you underestimate your power$"
 
-Route103_EventScript_GatekeeperJen_Text_3:
-# 386 "data//maps/Route103/scripts.pory"
+Route103_EventScript_GatekeeperJen_Text_2:
+# 376 "data//maps/Route103/scripts.pory"
 	.string "Go ahead.$"
 
+Route103_EventScript_GatekeeperJencontinue_Text_0:
+# 384 "data//maps/Route103/scripts.pory"
+	.string "Very well, pick up your encounters$"
+
 Route103_Text_Jendefeated::
-# 391 "data//maps/Route103/scripts.pory"
+# 397 "data//maps/Route103/scripts.pory"
 	.string "You are worthy.\n$"
+
+Route103_Text_JenIntro::
+# 401 "data//maps/Route103/scripts.pory"
+	.string "Prepare to Be defeated.\n$"

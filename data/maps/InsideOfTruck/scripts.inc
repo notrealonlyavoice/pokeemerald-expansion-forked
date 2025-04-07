@@ -30,7 +30,9 @@ InsideOfTruck_EventScript_SetIntroFlagsMale::
 	setflag FLAG_HIDE_LITTLEROOT_TOWN_BRENDANS_HOUSE_RIVAL_SIBLING
 	setflag FLAG_HIDE_LITTLEROOT_TOWN_BRENDANS_HOUSE_2F_POKE_BALL
 	setvar VAR_LITTLEROOT_HOUSES_STATE_BRENDAN, 1
+	setvar VAR_UNUSED_0x40FF, 1
 	setdynamicwarp MAP_LITTLEROOT_TOWN, 3, 10
+	goto Debug_PlayerDraftStart
 	releaseall
 	end
 
@@ -43,7 +45,9 @@ InsideOfTruck_EventScript_SetIntroFlagsFemale::
 	setflag FLAG_HIDE_LITTLEROOT_TOWN_MAYS_HOUSE_RIVAL_SIBLING
 	setflag FLAG_HIDE_LITTLEROOT_TOWN_MAYS_HOUSE_2F_POKE_BALL
 	setvar VAR_LITTLEROOT_HOUSES_STATE_MAY, 1
+	setvar VAR_UNUSED_0x40FF, 1
 	setdynamicwarp MAP_LITTLEROOT_TOWN, 12, 10
+	goto Debug_PlayerDraftStart
 	releaseall
 	end
 

@@ -1610,6 +1610,8 @@ extern const u32 gItemIconPalette_Key[];
 extern const u32 gItemIcon_KeyToRoom2[];
 extern const u32 gItemIcon_KeyToRoom4[];
 extern const u32 gItemIcon_KeyToRoom6[];
+extern const u32 gItemIcon_DarkBlueCurse[];
+extern const u32 gItemIconPalette_DarkBlueCurse[];
 extern const u32 gItemIcon_Meteorite[];
 extern const u32 gItemIconPalette_Meteorite[];
 extern const u32 gItemIcon_MagmaEmblem[];

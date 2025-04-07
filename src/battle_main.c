@@ -6014,6 +6014,10 @@ u32 GetDynamicMoveType(struct Pokemon *mon, u32 move, u32 battler, u8 *ateBoost)
                 if (B_OVERWORLD_FOG >= GEN_8)
                     return TYPE_FAIRY;
                 break;
+            case WEATHER_LEAFALL:
+                if (B_LEAFALL_TERRAIN)
+                    return TYPE_GRASS;
+                break;
             }
             return moveType;
         }

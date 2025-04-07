@@ -357,21 +357,11 @@ Route103_Text_RouteSign:
 `
 script Route103_EventScript_GatekeeperJen {
 	lockall
-	if (var(VAR_UNUSED_0x40F7) == 1){
-		msgbox("Very well, pick up your encounters")
-		waitmessage
-		closemessage
-		applymovement(21, Route103_Movement_Jenmove)
-		waitmovement(5)
-		setflag(FLAG_UNUSED_0x030)
-		setvar(VAR_UNUSED_0x40F7, 3)
-	} 
-	if (var(VAR_UNUSED_0x40F7) == 2){
+	if (!flag(FLAG_UNUSED_0x030)){
     msgbox(format("You choose to attempt to unlock more encounters?"), MSGBOX_YESNO)
     switch(var(VAR_RESULT)) {
 		case YES: 
-		setvar(VAR_UNUSED_0x40F7, 1)
-		trainerbattle_single(TRAINER_JEN, FortreeCity_Gym_Text_JaredIntro, Route103_Text_Jendefeated)
+		trainerbattle_single(TRAINER_JEN, Route103_Text_JenIntro, Route103_Text_Jendefeated, Route103_EventScript_GatekeeperJencontinue)
 		case NO: 
 		msgbox("Hm, you underestimate your power")
 		releaseall
@@ -385,15 +375,39 @@ script Route103_EventScript_GatekeeperJen {
 	if (flag(FLAG_UNUSED_0x030)) {
 		msgbox("Go ahead.")
 		closemessage
+		releaseall
 	}
 }
+
+script Route103_EventScript_GatekeeperJencontinue {
+	lockall
+	msgbox("Very well, pick up your encounters")
+	setflag(FLAG_UNUSED_0x030)
+	waitmessage
+	closemessage
+	delay(20)
+    fadescreen(FADE_TO_BLACK)
+    removeobject(21)
+	delay(5)
+    fadescreen(FADE_FROM_BLACK)
+	releaseall
+}
+
 
 text Route103_Text_Jendefeated {
     "You are worthy.\n"
 }
 
-movement Route103_Movement_Jenmove {
-    walk_down
-    walk_left * 2
+text Route103_Text_JenIntro {
+    "Prepare to Be defeated.\n"
+}
+
+
+movement Route103_Movement_Jenmove1 {
+    walk_left * 1
+}
+
+
+movement Route103_Movement_Jenmove2 {
 	face_right
 }

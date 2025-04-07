@@ -63947,7 +63947,8 @@
       "MOVE_INFESTATION",
       "MOVE_SPIT_UP",
       "MOVE_STOCKPILE",
-      "MOVE_SWALLOW"
+      "MOVE_SWALLOW",
+      "MOVE_FREEZE_DRY"
     ],
     "TutorMoves": []
   },

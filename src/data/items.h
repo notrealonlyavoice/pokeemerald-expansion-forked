@@ -12830,6 +12830,23 @@ const struct Item gItemsInfo[] =
         .iconPalette = gItemIconPalette_Key,
     },
 
+    [ITEM_DARK_BLUE_CURSE] =
+    {
+        .name = _("Dark blue cure"),
+        .pluralName = _("Dark blue curse"),
+        .price = 0,
+        .description = COMPOUND_STRING(
+            "A Dark blue\n"
+            "token that\n"
+            "looks unlucky."),
+        .importance = 1,
+        .pocket = POCKET_KEY_ITEMS,
+        .type = ITEM_USE_BAG_MENU,
+        .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
+        .iconPic = gItemIcon_DarkBlueCurse,
+        .iconPalette = gItemIconPalette_Key,
+    },
+
     [ITEM_METEORITE] =
     {
         .name = _("Meteorite"),

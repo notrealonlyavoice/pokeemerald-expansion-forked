@@ -163,6 +163,7 @@ LittlerootTown_EventScript_GoInsideWithMom::
 	waitmovement 0
 	setflag FLAG_HIDE_LITTLEROOT_TOWN_MOM_OUTSIDE
 	setvar VAR_LITTLEROOT_INTRO_STATE, 3
+	setvar VAR_LITTLEROOT_INTRO_STATE, 7
 	hideobjectat OBJ_EVENT_ID_PLAYER, 0
 	closedoor VAR_0x8004, VAR_0x8005
 	waitdooranim
@@ -1056,6 +1057,7 @@ script LittlerootTown_EventScript_Porytest {
     playfanfare(MUS_OBTAIN_ITEM)
     msgbox("Recieved Chikorita")
 	setvar(VAR_UNUSED_0x40F7, 2)
+	setvar(VAR_UNUSED_0x40F8, 3)
     closemessage
     releaseall
 }
@@ -1068,4 +1070,21 @@ script LittlerootTown_EventScript_PIKA {
     msgbox("The Pikachu seems unintrested")
     closemessage
     releaseall
+}
+
+script LittlerootTown_EventScript_TriggerNeedmons {
+	if(var(VAR_UNUSED_0x40FF) ==  1){
+    lockall
+	msgbox(format("Visit lab to start run"))
+	waitmessage
+    applymovement(OBJ_EVENT_ID_PLAYER, collectmonstostartrun)
+	waitmovement(10)
+    closemessage
+    releaseall
+	}
+	
+}
+
+movement collectmonstostartrun {
+	walk_down * 2
 }

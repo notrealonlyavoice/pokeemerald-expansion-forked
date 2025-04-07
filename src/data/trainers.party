@@ -231,9 +231,26 @@ Music: Aqua
 Double Battle: No
 AI: Check Bad Move
 
-Poochyena
-Level: 9
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+Glimmet @ Berry Juice
+Level: 13
+Ability: Toxic Debris
+IVs: 0 Atk
+- Ancient Power
+- Toxic 
+- Acid Armor
+- Acid spray
+
+Mareanie @ Poison Gem
+Level: 13
+Ability: Merciless
+IVs: 0 Atk
+- Venoshock 
+- Freeze dry
+- Chilling Water
+- Attract
+
+
+
 
 === TRAINER_MARCEL ===
 Name: MARCEL
@@ -2123,9 +2140,21 @@ Items: Full Restore
 Double Battle: No
 AI: Check Bad Move
 
-Zigzagoon @ Nugget
-Level: 7
+Zigzagoon @ Sitrus berry
+Level: 12
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+- Extreme speed 
+- Pin Missile
+- Surf
+- Facade
+
+Mothim @ Sitrus berry
+Level: 12
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+- Bug Bite
+- Air Cutter
+- Protect
+
 
 === TRAINER_DAPHNE ===
 Name: DAPHNE
@@ -5133,9 +5162,22 @@ Music: Male
 Double Battle: No
 AI: Check Bad Move
 
-Ralts
-Level: 9
+Kadabra @ life orb
+Level: 16
 IVs: 1 HP / 1 Atk / 1 Def / 1 SpA / 1 SpD / 1 Spe
+- Psybeam
+- Dazzling Gleam
+- Shock Wave
+- Shadow Ball
+
+Butterfree @ Focus sash 
+Level: 16
+IVs: 1 HP / 1 Atk / 1 Def / 1 SpA / 1 SpD / 31 Spe
+- Sleep Powder
+- Dream Eater 
+- Air Cutter
+- Bug Bite
+
 
 === TRAINER_TED ===
 Name: TED
@@ -5962,13 +6004,17 @@ Music: Male
 Double Battle: No
 AI: Check Bad Move
 
+
 Zigzagoon
-Level: 5
+Level: 10
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+- Belly Drum
+- Tackle
 
 Seedot
-Level: 7
+Level: 8
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+- Explosion
 
 === TRAINER_JOSH ===
 Name: JOSH
@@ -6215,13 +6261,23 @@ Music: Male
 Double Battle: No
 AI: Check Bad Move
 
-Zigzagoon
-Level: 4
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+Taillow @ Flame Orb  
+Ability: Guts  
+Level: 14  
+- U-turn  
+- Steel Wing  
+- Quick Attack  
+- Aerial Ace  
 
-Taillow
-Level: 3
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+Zigzagoon-Galar @ Sitrus Berry  
+Ability: Gluttony  
+Careful Nature  
+- Thunder Wave  
+- Substitute  
+- Headbutt  
+- Lash Out  
+
+
 
 === TRAINER_TIMMY ===
 Name: TIMMY
@@ -11053,13 +11109,22 @@ Music: Female
 Double Battle: No
 AI: Check Bad Move
 
-Zigzagoon
-Level: 4
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+Shroomish @ Toxic Orb
+Ability: Poison Heal
+Modest Nature
+IVs: 0 Atk
+- Sludge Bomb
+- Mega Drain
+- Leech Seed
+- Spore
 
-Shroomish
-Level: 4
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+Marill @ Life Orb
+Ability: Huge Power
+Adamant Nature
+- Aqua Jet
+- Trailblaze
+- Waterfall
+- Power-Up Punch
 
 === TRAINER_HALEY_1 ===
 Name: HALEY
@@ -11257,13 +11322,26 @@ Music: Male
 Double Battle: No
 AI: Check Bad Move
 
-Wurmple
-Level: 4
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+Dustox @ Black Sludge  
+Ability: Compound Eyes  
+Level: 13  
+Timid Nature  
+IVs: 0 Atk  
+- Toxic  
+- Venoshock  
+- Moonlight  
+- Whirlwind  
 
-Wurmple
-Level: 4
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+Beautifly @ Focus Sash  
+Ability: Swarm  
+Level: 13  
+Modest Nature  
+IVs: 0 Atk  
+- Electroweb  
+- Silver Wind  
+- Mega Drain  
+- Morning Sun  
+
 
 === TRAINER_LYLE ===
 Name: LYLE
@@ -11274,21 +11352,25 @@ Music: Male
 Double Battle: No
 AI: Check Bad Move
 
-Wurmple
-Level: 3
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+Yanma @ Charti Berry  
+Ability: Speed Boost  
+- Aerial Ace  
+- Leech Life  
+- Swords Dance  
+- Ancient Power
 
-Wurmple
-Level: 3
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+Metapod @ Eviolite  
+Ability: Shed Skin   
+- String Shot  
+- Bug Bite  
+- Electroweb  
 
-Wurmple
-Level: 3
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
-
-Wurmple
-Level: 3
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+Spewpa @ Oran Berry  
+Ability: Shed Skin  
+- Iron Defense  
+- Bug Bite  
+- Poison Powder  
+- Stun Spore  
 
 === TRAINER_JOSE ===
 Name: JOSE

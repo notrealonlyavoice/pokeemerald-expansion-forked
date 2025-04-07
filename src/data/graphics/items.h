@@ -1927,6 +1927,13 @@ const u32 gItemIcon_KeyToRoom4[] = INCBIN_U32("graphics/items/icons/key_to_room_
 
 const u32 gItemIcon_KeyToRoom6[] = INCBIN_U32("graphics/items/icons/key_to_room_6.4bpp.lz");
 
+
+//Curses
+const u32 gItemIcon_DarkBlueCurse[] = INCBIN_U32("graphics/items/icons/dark_blue_curse.4bpp.lz");
+const u32 gItemIconPalette_DarkBlueCurse[] = INCBIN_U32("graphics/items/icon_palettes/dark_blue_curse.gbapal.lz");
+
+// end curses 
+
 const u32 gItemIcon_Meteorite[] = INCBIN_U32("graphics/items/icons/meteorite.4bpp.lz");
 const u32 gItemIconPalette_Meteorite[] = INCBIN_U32("graphics/items/icon_palettes/meteorite.gbapal.lz");
 

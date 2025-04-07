@@ -1,0 +1,29 @@
+raw `
+BirchlabReal_MapScripts::
+	.byte 0
+`
+
+script BirchlabReal_EventScript_givestartrun {
+    lockall 
+    msgbox(format("are you ready to begin your run?"), MSGBOX_YESNO)
+    switch(var(VAR_RESULT)) {
+		case YES:
+        setflag(FLAG_SYS_POKEMON_GET) 
+		givemon(SPECIES_CHIKORITA, 5, ITEM_POWER_CHARM)
+        playfanfare(MUS_OBTAIN_ITEM)
+        msgbox("Recieved Chikorita")
+        waitmessage
+        setvar(VAR_UNUSED_0x40FF, 2)
+        msgbox(format("and may the odds, be in your favor."))
+        releaseall 
+		case NO: 
+		msgbox("Hm, Alright.. best to wait")
+		releaseall
+		end
+		case MULTI_B_PRESSED: 
+		msgbox("Hm, Alright.. best to wait")
+		releaseall
+		end
+		}
+
+}
